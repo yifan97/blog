@@ -7,7 +7,7 @@ language: 'en-uk'
 words_per_minute: 200
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /jasper2/
+baseurl: /
 
 # Website info
 title: Yifan Xu
@@ -16,8 +16,8 @@ cover: assets/images/1.jpg
 # logo: assets/images/blog-icon.png
 # logo_dark: assets/images/favicon.png
 # favicon: assets/images/favicon.png
-production_url: https://jekyller.github.io/jasper2/
-source_url: https://github.com/jekyller/jasper2/
+# production_url: https://jekyller.github.io/jasper2/
+# source_url: https://github.com/jekyller/jasper2/
 CNAME: #add cname for website to be created
 
 # Social info
@@ -70,15 +70,15 @@ feed:
 # repo defaults to USERNAME.github.io
 # Branch defaults to "source" for USERNAME.github.io
 # or "master" otherwise
-safe: False
-lsi: False
-username: jekyller
-repo: jasper2
-branch: master
-relative_source: ../jasper2/
-destination: ../jasper2-pages/
-production_url:  https://jekyller.github.io/jasper2/
-source_url:  https://github.com/jekyller/jasper2/
+# safe: False
+# lsi: False
+# username: jekyller
+# repo: jasper2
+# branch: master
+# relative_source: ../jasper2/
+# destination: ../jasper2-pages/
+# production_url:  https://jekyller.github.io/jasper2/
+# source_url:  https://github.com/jekyller/jasper2/
 
 exclude:
   - assets/css
