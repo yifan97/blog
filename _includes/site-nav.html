@@ -1,0 +1,20 @@
+<nav class="site-nav">
+    <div class="site-nav-left">
+        <!-- {% if page.current != 'home' %}
+            <a class="site-nav-logo" href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
+        {% endif %} -->
+        {% if page.navigation %}
+            {% include navigation.html %}
+        {% endif %}
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            <a class="social-link social-link-ln" href="https://linkedin.com/{{ site.linkedin }}" target="_blank" rel="noopener">{% include linkedin.html %}</a>
+            <a class="social-link social-link-tw" href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener">{% include twitter.html %}</a>
+            <a class="social-link social-link-gi" href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">{% include github.html %}</a>
+        </div>
+        <!-- {% if site.subscribers %}
+            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+        {% endif %} -->
+    </div>
+</nav>

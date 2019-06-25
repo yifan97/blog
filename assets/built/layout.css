@@ -1,0 +1,28 @@
+.wrapper { 
+    border : 100px; 
+    overflow:hidden;
+    margin: 25px;
+}
+  
+.wrapper div {
+    height: auto;
+    padding: 10px;
+}
+
+p a{
+    text-decoration: none !important;
+    color: black;
+    font-weight: bold;
+}
+
+p a:hover{
+    opacity: 0.6;
+}
+
+.nav a{
+    font-size: 20px;
+}
+
+/* .site-nav-left .site-nav-logo{
+    font-size: 20px;
+} */
