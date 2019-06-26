@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: assets/images/grapes.jpg
+cover: assets/images/c1.jpg
 navigation: True
 title: Deploy jekyll website on github pages
 date: 2019-06-25
