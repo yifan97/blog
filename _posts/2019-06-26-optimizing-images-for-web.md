@@ -42,7 +42,7 @@ To begin, let’s pretend we are Stiff Salt (actually owned by a friend and Shop
 
 We set up a scene, make our salt look absolutely incredible and we take a photo with a DSLR camera. Great we have our photo. What a beauty!
 
-<img src="./assets/images/t2.jpg" alt="find url" style="height:400px;">
+<img src="./assets/images/t2.jpg" alt="find url" style="height:350px;">
 
 But… the file size is HUGE! 14.6 MB to be exact. And the dimensions of the photo are 5184 × 3456 pixels. This is completely unusable right now. It’s literally big enough to print a movie-sized poster. At 14.6 MB, this image would take significant time to load on a visitor’s computer. This is no good.
 
