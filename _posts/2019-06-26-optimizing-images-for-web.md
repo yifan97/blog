@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: assets/images/grapes.jpg
+cover: assets/images/c2.jpg
 navigation: True
 title: Optimizing Images for Web
 date: 2019-06-26
