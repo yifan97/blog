@@ -27,14 +27,14 @@ p a:hover{
     font-size: 20px;
 } */
 
+.post-card:hover{
+    transform: scale(1.02, 1.02);
+    transition: all 500ms;
+}
+
 
 @media (min-width: 900px){
     .site-nav-big{
         top: 0 !important;
     }
-}
-
-.post-card:hover{
-    transform: scale(1.02, 1.02);
-    transition: all 500ms;
 }
