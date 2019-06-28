@@ -1,10 +1,11 @@
 ---
 layout: post
 current: post
-cover: assets/images/c2.jpg
+cover: assets/images/c4.jpg
 navigation: True
 title: Articles Bookmark
 date: 2019-06-27
+comments: true
 ---
 
 
@@ -14,8 +15,7 @@ date: 2019-06-27
 
 **Frontend development**
 
-- <a href="https://medium.com/actualize-network/modern-css-explained-for-dinosaurs-5226febe3525" style="font-weight: normal;">Modern CSS Explained For Dinosaurs</a>
-
+<a href="https://medium.com/actualize-network/modern-css-explained-for-dinosaurs-5226febe3525" style="font-weight: normal;">Modern CSS Explained For Dinosaurs</a>
 
 
 **Backend development**

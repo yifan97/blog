@@ -5,6 +5,7 @@ cover: assets/images/c2.jpg
 navigation: True
 title: Optimizing Images for Web
 date: 2019-06-26
+comments: true
 ---
 
 
@@ -36,15 +37,15 @@ As can be expected, large images take longer to load. When I say large, I'm refe
 
 To begin, let’s pretend we are Stiff Salt (actually owned by a friend and Shopify Developer) and we wanted to change the feature image on our online store.
 
-<img src="./assets/images/t1.jpg" alt="img" style="height:300px;">
+<img src="./assets/images/t1.jpg" alt="img" style="width: 80%;">
 
 We set up a scene, make our salt look absolutely incredible and we take a photo with a DSLR camera. Great we have our photo. What a beauty!
 
-<img src="./assets/images/t2.jpg" alt="find url" style="height:350px;">
+<img src="./assets/images/t2.jpg" alt="img" style="width: 80%;">
 
 But… the file size is HUGE! 14.6 MB to be exact. And the dimensions of the photo are 5184 × 3456 pixels. This is completely unusable right now. It’s literally big enough to print a movie-sized poster. At 14.6 MB, this image would take significant time to load on a visitor’s computer. This is no good.
 
-<img src="./assets/images/t3.jpg" alt="find url" style="width: 900px;">
+<img src="./assets/images/t3.jpg" alt="img" style="width: 100%;">
 
 
 Now, it is necessary that we work on the image and reduce file size. There are usually three things that you can do: 
@@ -62,7 +63,7 @@ Choose a reasonable target size, for example 1600 x 800 pixels(remember the orig
 
 In Photoshop, we’re going to select Image > Image Size.
 
-<img src="./assets/images/t4.jpg" alt="find url" style="height: 260px;">
+<img src="./assets/images/t4.jpg" alt="img" style="width: 80%;">
 
 Now, we've reduced the size(dimension) of the image to something more appropritate.
 
@@ -80,7 +81,7 @@ In the “Save For Web” box, we need to make a few selections.
 Based on what we learned at the beginning of this post, we know that JPEG is the best file type for photographs or any image with lots of colors and complexity. We will select JPEG.
 
 
-<img src="./assets/images/t5.jpg" alt="find url" style="height: 350px;">
+<img src="./assets/images/t5.jpg" alt="img" style="width: 80%;">
 
 For Image Quality, you have a scale you can select with 5 presets that range from Maximum to Low. Let’s take a look at the final output file size of each of the quality levels (this information is displayed in the bottom corner of the image-saving window):
 
@@ -119,5 +120,5 @@ Saving images appropriately for the web is an important step to learn early and 
 
 
 <br><br><br>
-**Thanks**: This content is largly adapted from <a href="https://www.abetterlemonadestand.com/optimizing-images-for-web/" style="font-weight:normal;">Richard Lazazzera</a>
+**Ackownledge**: This content is largly adapted from <a href="https://www.abetterlemonadestand.com/optimizing-images-for-web/" style="font-weight:normal;">Richard Lazazzera</a>
 

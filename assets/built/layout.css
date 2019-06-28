@@ -33,3 +33,8 @@ p a:hover{
         top: 0 !important;
     }
 }
+
+.post-card:hover{
+    transform: scale(1.02, 1.02);
+    transition: all 500ms;
+}

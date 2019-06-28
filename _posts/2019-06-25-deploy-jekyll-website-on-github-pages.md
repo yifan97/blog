@@ -5,6 +5,7 @@ cover: assets/images/c1.jpg
 navigation: True
 title: Deploy jekyll website on github pages
 date: 2019-06-25
+comments: true
 ---
 
 **This is a step by step tutorial on how to create a jekyll webiste/blog and deploy it to your own github pages**
@@ -160,3 +161,4 @@ Everything under /Users/USERNAME/.rbenv/versions should be owned by your user ac
 **If you have more issues, check out:**
 - [troubleshooting page](https://jekyllrb.com/docs/troubleshooting/#configuration-problems)
 - [jekyll forum](https://talk.jekyllrb.com/)
+- [jekyll cheatsheet](https://devhints.io/jekyll)
