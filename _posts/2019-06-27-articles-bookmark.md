@@ -15,7 +15,7 @@ comments: true
 
 **Frontend development**
 
-<a href="https://medium.com/actualize-network/modern-css-explained-for-dinosaurs-5226febe3525" style="font-weight: normal;">Modern CSS Explained For Dinosaurs</a>
+- <a href="https://medium.com/actualize-network/modern-css-explained-for-dinosaurs-5226febe3525" style="font-weight: normal;">Modern CSS Explained For Dinosaurs</a>
 
 
 **Backend development**
@@ -24,3 +24,4 @@ comments: true
 
 
 **Machine learning**
+- <a href="https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html" style="font-weight: normal;">Loss Functions</a>
