@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: assets/images/c2.jpg
+cover: assets/images/c5.jpg
 navigation: True
 title: Generative Model v.s Discriminative Model
 date: 2019-06-28
