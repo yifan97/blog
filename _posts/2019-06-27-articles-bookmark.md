@@ -25,3 +25,11 @@ comments: true
 
 **Machine learning**
 - <a href="https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html" style="font-weight: normal;">Loss Functions</a>
+- <a href="https://digitalcommons.utep.edu/cgi/viewcontent.cgi?article=2188&context=cs_techrep" style="font-weight: normal;">Why Deep Learning Methods Use KL Divergence Instead of Least Squares: A Possible Pedagogical Explanation</a>
+
+
+
+
+
+**General programming**
+- <a href="https://hackernoon.com/understanding-the-underscore-of-python-309d1a029edc" style="font-weight: normal;">Understanding the underscore _ of Python</a>
