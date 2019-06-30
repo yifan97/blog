@@ -32,8 +32,8 @@ In fact, if were calculating p(y\|x) in order to make a prediction, then we donâ
 
 $$
 \begin{align}
-\underset{y}{\operatorname{arg\max}} \quad P(y|x) = \underset{y}{\operatorname{arg\max}} \quad \frac{P(x|y)P(y)}{P(x)} \\
- = \underset{y}{\operatorname{arg\max}} \quad P(x|y)P(y)
+\underset{y}{\operatorname{arg\max}} \quad P(y|x) &= \underset{y}{\operatorname{arg\max}} \quad \frac{P(x|y)P(y)}{P(x)} \\
+&= \underset{y}{\operatorname{arg\max}} \quad P(x|y)P(y)
 \end{align}
 $$
 

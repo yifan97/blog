@@ -26,7 +26,7 @@ comments: true
 **Machine learning**
 - <a href="https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html" style="font-weight: normal;">Loss Functions</a>
 - <a href="https://digitalcommons.utep.edu/cgi/viewcontent.cgi?article=2188&context=cs_techrep" style="font-weight: normal;">Why Deep Learning Methods Use KL Divergence Instead of Least Squares: A Possible Pedagogical Explanation</a>
-
+- <a href="https://stats.stackexchange.com/questions/4417/intractable-posterior-distributions" style="font-weight: normal;">Intractabily of posterior distribution</a>
 
 
 
