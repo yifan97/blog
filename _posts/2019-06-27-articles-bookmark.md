@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: assets/images/c4.jpg
+cover: assets/images/cover-img/c4.jpg
 navigation: True
 title: Articles/Videos Bookmark
 date: 2019-06-27

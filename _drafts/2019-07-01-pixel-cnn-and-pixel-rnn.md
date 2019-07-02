@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: assets/images/c5.jpg
+cover: assets/images/cover-img/c5.jpg
 navigation: True
 title: Generative Model 1 - PixelCNN & PixelRNN
 date: 2019-07-01

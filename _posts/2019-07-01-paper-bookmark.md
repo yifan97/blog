@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: assets/images/c4.jpg
+cover: assets/images/cover-img/c6.jpg
 navigation: True
 title: Academic Paper Bookmark
 date: 2019-06-27
