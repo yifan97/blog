@@ -1,7 +1,7 @@
 # Jekyll configuration
 markdown: kramdown
 highlighter: rouge
-paginate: 5 # it will paginate after this number
+paginate: 8 # it will paginate after this number
 paginate_path: /blog/page/:num/
 language: 'en-uk'
 words_per_minute: 200

@@ -3,7 +3,7 @@ layout: post
 current: post
 cover: assets/images/c5.jpg
 navigation: True
-title: Variational AutoEncoder(VAE)
+title: Generative Model 2 - Variational AutoEncoder(VAE)
 date: 2019-06-29
 comments: true
 ---
@@ -135,7 +135,4 @@ Note: Different dimensions of latent variable z encode intepretable factors of v
 **Summary**
 
 <img src="assets/images/VAE-15.jpg" alt="VAE-15" style="width: 100%;">
-
-
-<a href="http://cs229.stanford.edu/notes/cs229-notes2.pdf" style="font-weight:normal;">Andrew Ng</a>
 
