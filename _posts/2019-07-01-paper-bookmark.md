@@ -21,4 +21,8 @@ comments: true
 
 - <a href="https://arxiv.org/pdf/1502.03509.pdf" style="font-weight: normal;">MADE: Masked Autoencoder for Distribution Estimation</a>
 
+- <a href="https://arxiv.org/pdf/1601.06759.pdf" style="font-weight: normal;">Pixel Recurrent Neural Networks</a>
+
+
+
 

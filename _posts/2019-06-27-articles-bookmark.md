@@ -30,7 +30,9 @@ comments: true
 - <a href="https://www.quora.com/What-is-meant-by-held-out-likelihood-in-statistics-or-machine-learning" style="font-weight: normal;">Held-out likelihood</a>
 - <a href="https://www.cs.cmu.edu/~epxing/Class/10708-17/notes-17/10708-scribe-lecture13.pdf" style="font-weight: normal;">Mean-field approximation</a>
 
-- <a href="https://www.youtube.com/watch?v=FeJT8ejgsL0" style="font-weight: normal;">PixelCNN, Wavenet & Variational Autoencoders </a>
+- <a href="https://www.youtube.com/watch?v=FeJT8ejgsL0" style="font-weight: normal;">PixelCNN, Wavenet & Variational Autoencoders</a>
+
+- <a href="https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf" style="font-weight: normal;">A Few Useful Things to Know about Machine Learning</a>
 
 
 
