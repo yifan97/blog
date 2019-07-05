@@ -119,6 +119,6 @@ To recap, our photo was insanely huge when we started, however, with a few simpl
 Saving images appropriately for the web is an important step to learn early and implement religiously. Even if you only save 10-20% on each image, over time, as your store and website grow, every little KB can add up to some significant savings that will lead to a much more pleasant experience overall for your visitors, customers, and Google.
 
 
-<br><br><br>
+<br><br>
 **Ackownledge**: This content is largly adapted from <a href="https://www.abetterlemonadestand.com/optimizing-images-for-web/" style="font-weight:normal;">Richard Lazazzera</a>
 

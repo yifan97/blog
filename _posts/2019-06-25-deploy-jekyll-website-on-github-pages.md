@@ -17,7 +17,7 @@ comments: true
 
 Using Jekyll to create a blog let you focus on blog content itself rather than building a blogging platform
 
-
+<br><br>
 **Quickstart** 
 
 1. Before installinbg any Jekyll packages, make sure that you have all environments that Jekyll needs: Ruby and RubyGems.<br>Install a full <a href="https://jekyllrb.com/docs/installation/" style="font-weight: normal;">Ruby development environment</a>
@@ -46,7 +46,7 @@ After you run this for the first time, you can build the site with just ```jekyl
 
 6. Browse to http://localhost:4000
 
-
+<br><br>
 **Breakdown**
 
 After you create your new Jekyll site in step 3, there should be a folder called myblog(or whateber you name it) in your targeted directory where you run that code. This is a simple Jekyll website with the default template *minima* 
@@ -101,7 +101,7 @@ Each Mardown file contains Front Matter, which specifies attributes of each post
  I hope you like it!
 ```
 
-
+<br><br>
 **What is Github pages**
 > Github Pages is a free static site hosting service designed to host your personal, organization, or project pages directly from a Github repository. That being said, as long as you have a github account, you can host your Jekyll website for free.
 
@@ -138,7 +138,7 @@ There are many but similar ways to host your Jekyll webite, here is the one that
 
 
 
-
+<br><br>
 **Toubleshooting**
 
 > Everything works fine on localhost but no styling rendered on github pages.
@@ -157,7 +157,7 @@ Everything under /Users/USERNAME/.rbenv/versions should be owned by your user ac
 
 
 
-
+<br><br>
 **If you have more issues, check out:**
 - [troubleshooting page](https://jekyllrb.com/docs/troubleshooting/#configuration-problems)
 - [jekyll forum](https://talk.jekyllrb.com/)
