@@ -15,7 +15,7 @@ comments: true
 
 The use of images are vital in a website as it leaves the visual impression on website visitors. That being said, your images need to be high-resolution and crisp. But this comes at a price. Large, high definition images can have hug files sizes and end up with loading very slowly. Hence, we need to find a good balance between image quality and image file size when you save an image for your site, whether it is a homepage background or a cover photo.
 
-<br><br><br>
+<br><br>
 **Image Types**
 
 There are three main image file types: ```GIF```, ```JPG``` and ```PNG```. Each file type has its own strengths and weaknesses and it is important to know and keep in mind when using.
@@ -27,12 +27,12 @@ There are three main image file types: ```GIF```, ```JPG``` and ```PNG```. Each 
 - ```GIF``` is another popular type but is restricted to only 256 colors(in contrast with **JPF**). It's use case is narrower than the above two.
 
 
-<br><br><br>
+<br><br>
 **Image size**
 
 As can be expected, large images take longer to load. When I say large, I'm referring to the file size rather than the dimensions of an image, i.e. the value in KB, MB, etc. Seeing as <a href="https://neilpatel.com/blog/loading-time/?wide=1" style="font-weight:normal;">47% of users expect a webpage to load in under 2 seconds, and 40% will abandon a page that takes more than 3 seconds to load</a>, it’s important that your images are small enough to ensure a speedy site.
 
-<br><br><br>
+<br><br>
 **Optimization Scenario**
 
 To begin, let’s pretend we are Stiff Salt (actually owned by a friend and Shopify Developer) and we wanted to change the feature image on our online store.
@@ -54,7 +54,7 @@ Now, it is necessary that we work on the image and reduce file size. There are u
 - **Compress Image file**: get rid of any additional hidden data taking up space
 
 
-
+<br><br>
 **Reduce Image Size**
 
 To keep things simple, we’re going to first reduce the image size. To do this, we’re going to open the image in Adobe Photoshop (you can use whatever image program you feel most comfortable with).
@@ -67,7 +67,7 @@ In Photoshop, we’re going to select Image > Image Size.
 
 Now, we've reduced the size(dimension) of the image to something more appropritate.
 
-<br><br><br>
+<br><br>
 **Save Image Appropriately for Web**
 
 In Photoshop, there’s a specific command called “Save For Web” that optimizes the image file for displaying online. This is important as the regular “Save” command can end up creating file sizes 2-3 times larger than the “Save For Web” command.
@@ -101,7 +101,7 @@ Essentially, saving for the web is a balancing act — you must balance the qual
     <p><strong>Rule of thumb</strong>, we like our product photos to be a maximum 80-150 KB, and for large homepage hero images to be a maximum of 250-350 KB. Those are good benchmark numbers for you to aim for as well.</p>
 </div>
 
-<br><br><br>
+<br><br>
 **Compress Image for Web**
 
 If you used Adobe Photoshop, it will have already done a really great job at reducing the image size, however, you can still likely shave off another 5-10% of image size by using a compression app like ImageOptim and/or ShortPixel.
@@ -111,7 +111,7 @@ ImageOptim is also the easiest way to quickly reduce image file size if you have
 Dropping each of the files from the previous step into ImageOptim, we were able to further reduce the image size by another 5%. Not huge, but again, these were already optimized with Photoshop. Regardless, every KB counts.
 
 
-<br><br><br>
+<br><br>
 **Conclusion**
 
 To recap, our photo was insanely huge when we started, however, with a few simple steps, we reduced the photo size from 5184 × 3456 to 1600 x 800 so that it’s a perfect fit for our homepage and, at the same time, took it from a computer-crashing 14.4MB, down to a much more reasonable 336KB.
