@@ -9,7 +9,7 @@ comments: true
 ---
 
 
-**This blog intends to bookmark the academic papers in the field of computer science--mainly machine learning--that I plan to or have already read**
+**This blog intends to bookmark the academic papers in the field of computer science--mainly machine learning--that I plan to or have already read (continuing)**
 
 ------------------
 

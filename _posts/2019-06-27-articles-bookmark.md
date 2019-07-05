@@ -9,7 +9,7 @@ comments: true
 ---
 
 
-**This blog intends to bookmark the academic articles/videos that I plan to go over**
+**This blog intends to bookmark the academic articles/videos that I plan to go over (continuing)**
 
 ------------------
 
