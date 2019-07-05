@@ -34,6 +34,10 @@ comments: true
 
 - <a href="https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf" style="font-weight: normal;">A Few Useful Things to Know about Machine Learning</a>
 
+- <a href="https://eigenfoo.xyz/deep-autoregressive-models/" style="font-weight: normal;">Deep Autoregressive Model</a>
+
+
+
 
 
 

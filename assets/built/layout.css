@@ -38,3 +38,7 @@ p a:hover{
         top: 0 !important;
     }
 }
+
+p{
+    font-size: 20px !important;
+} 
