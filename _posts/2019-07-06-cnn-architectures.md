@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: assets/images/cover-img/c8.jpg
+cover: assets/images/cover-img/c10.jpg
 navigation: True
 title: CNN Architectures
 date: 2019-07-06
