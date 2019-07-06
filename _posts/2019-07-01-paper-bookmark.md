@@ -34,7 +34,8 @@ in Deep Generative Models</a>
 
 - <a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf" style="font-weight: normal;">ImageNet Classification with Deep Convolutional Neural Networks</a>
 
+- <a href="https://arxiv.org/pdf/1409.4842.pdf" style="font-weight: normal;">Going deeper with convolutions</a>
 
-
+- <a href="https://arxiv.org/pdf/1512.03385.pdf" style="font-weight: normal;">Deep Residual Learning for Image Recognition</a>
 
 
