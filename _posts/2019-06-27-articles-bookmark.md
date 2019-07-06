@@ -29,12 +29,16 @@ comments: true
 - <a href="https://stats.stackexchange.com/questions/4417/intractable-posterior-distributions" style="font-weight: normal;">Intractabily of posterior distribution</a>
 - <a href="https://www.quora.com/What-is-meant-by-held-out-likelihood-in-statistics-or-machine-learning" style="font-weight: normal;">Held-out likelihood</a>
 - <a href="https://www.cs.cmu.edu/~epxing/Class/10708-17/notes-17/10708-scribe-lecture13.pdf" style="font-weight: normal;">Mean-field approximation</a>
-
 - <a href="https://www.youtube.com/watch?v=FeJT8ejgsL0" style="font-weight: normal;">PixelCNN, Wavenet & Variational Autoencoders</a>
-
 - <a href="https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf" style="font-weight: normal;">A Few Useful Things to Know about Machine Learning</a>
-
 - <a href="https://eigenfoo.xyz/deep-autoregressive-models/" style="font-weight: normal;">Deep Autoregressive Model</a>
+- <a href="http://repository.countway.harvard.edu/xmlui/bitstream/handle/10473/1297/2211529.pdf?sequence=1" style="font-weight: normal;">Why is Real-World Visual Object Recognition Hard</a>
+- <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf" style="font-weight: normal;">gradient based learning applied to document recognition</a>
+- <a href="https://www.learnopencv.com/understanding-alexnet/" style="font-weight: normal;">Understanding AlexNet</a>
+- <a href="https://arxiv.org/pdf/1207.0580.pdf" style="font-weight: normal;">Improving neural networks by preventing co-adaptation of feature detectors</a>
+- <a href="https://arxiv.org/pdf/1409.1556.pdf" style="font-weight: normal;">VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION</a>
+
+
 
 
 
