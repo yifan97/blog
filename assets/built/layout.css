@@ -11,8 +11,6 @@
 
 p a{
     text-decoration: none !important;
-    color: black;
-    font-weight: bold;
 }
 
 p a:hover{
@@ -45,4 +43,8 @@ p, li{
 
 .wrapper #content p{
     line-height: 1.5em !important;
+}
+
+.mjx-chtml, .MathJax_CHTML, .MathJax_Preview{
+    max-width: 100% !important;
 }

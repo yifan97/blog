@@ -44,7 +44,7 @@ Remember that AutoEncoder is defined as a technique for dimension reduction. So 
 
 So intuitively, fetures z that we learn in AutoEncoder has the capability of being able to capture some meaningful and important factors of variations of original data. Now based off this intuition, a natural question is can we use these latent features z and use the similar setup to generate new data, in the above example, new images.This is when AVE comes in.
 
-So we assume that training data $$\{x^{(i)}\}^N_{i=1}$$ is generated from underlying unobserved(latent) representation z. So we want to use a prior distribution $$P_{\theta^*}(z)$$ to represent how these features z might be generated. And a typical prior would be Guassian. Then we are going to generate the data x by sampling from a conditional distribution given z. 
+So we assume that training data $$\{x^{(i)}\}^N_{i=1}$$ is generated from underlying unobserved(latent) representation z. So we want to use a prior distribution $$P_{\theta^*}(z)$$ to represent how these features z might be generated. And a typical prior would be Gaussian. Then we are going to generate the data x by sampling from a conditional distribution given z. 
 $$p_{\theta^*}(x|z^{(i)})$$
 
 <img src="assets/images/VAE/VAE-6.jpg" alt="VAE-6" style="width: 50%;">
@@ -57,8 +57,8 @@ Goal: we want to estimate the true parameters $$\theta^*$$ of this generative mo
 
 **How should we represent this model?**
 
-- Choose prior P(x) to be simple, e.g. Gussian
-- Conditional P(x|z) is complex(generates image) $$\to$$ represent with Neural Networks, and we are going to call it decoder network
+- Choose prior $$p(z)$$ to be simple, e.g. Gaussian
+- Conditional $$p(x|z)$$ is complex (generates image) $$\to$$ represent with Neural Networks, and we are going to call it decoder network
 <img src="assets/images/VAE/VAE-7.jpg" alt="VAE-7" style="width: 50%;">
 
 
@@ -66,11 +66,11 @@ Goal: we want to estimate the true parameters $$\theta^*$$ of this generative mo
 
 Remember a strategy for trainig generative models: learn model parameters to maximize likelihood of training data 
 
-$$P_{\theta} = \int P_{\theta}(z) P_{\theta}(x|z)dz$$
+$$p_{\theta} = \int p_{\theta}(z) p_{\theta}(x|z)dz$$
 
 However, we have a problem with this method: This integral is not tractable. 
 <img src="assets/images/VAE/VAE-8.jpg" alt="VAE-8" style="width: 50%;">
-we are good with $$P_{\theta}(z)$$(Guassian) and $$P_{\theta}(x|z)$$(encoder network) but the integral is not tractable if we want to compute  $$P_{\theta}(x|z)$$ for every z.
+we are good with $$p_{\theta}(z)$$(Gaussian) and $$p_{\theta}(x|z)$$(encoder network) but the integral is not tractable if we want to compute  $$p_{\theta}(x|z)$$ for every z.
 
 So data likelihood is intractable. In fact, if we look at other alternative, e.g. posterior density, it is also intractable.
 <img src="assets/images/VAE/VAE-9.jpg" alt="VAE-9" style="width: 60%;">
@@ -78,10 +78,11 @@ So data likelihood is intractable. In fact, if we look at other alternative, e.g
 
 So we can't directly optimize this. 
 
+<br>
 **Solution**
 
-a solution to this problem is, in addition to decoder network modeling 
-$$p_{\theta}(x|z)$$, we define additional encoder network $$q_{\phi}(z|x)$$ that approximates $$p_{\theta}(z|x)$$, which is also intractable.
+A solution to this problem is, in addition to decoder network modeling 
+$$p_{\theta}(x|z)$$, we define additional encoder network $$q_{\phi}(z|x)$$ that approximates $$p_{\theta}(z|x)$$, which is intractable.
 
 We will see that this allows us to deriive a lower bound on the data likelihood that is tractable, which we can optimize.
 
@@ -93,23 +94,18 @@ Note: Encoder and decoer networks also called "recognition/inference" and "gener
 
 Now, equipped with our encoder and decoder networks, let's work out the log data likelihood:
 
+
 $$
 \begin{align}
-\qquad \qquad \qquad \qquad log \ p_{\theta}(x^{(i)}) &= E_{z \sim q_{\phi}(z|x^{(i)})} \left[ log \ p_{\theta}(x^{(i)}) \right] \qquad (p_{\theta}(x^{(i)}) \ does \ not \ depend \ on \ z)\\n
-&= E_z \left[ log \ \frac{p_{\theta}(z) p_{\theta}(x^{(i)}|z)}{p_{\theta}(z|x)} \right] \qquad (Bayes' \ Rule)\\
-&= E_z \left[ log \ \frac{p_{\theta}(z) p_{\theta}(x^{(i)}|z)}{p_{\theta}(z|x)} \frac{q_{\phi}(z|x^{(i)})}{q_{\phi}(z|x^{(i)})}\right] \qquad (Multiply \ by \ 1)\\
-&= E_z \left[ log \ p_{\theta}(x^{(i)}|z) \right] - E_z \left[ log \ \frac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z)} \right] + E_z \left[ log \ \frac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z|x^{(i)})} \right] \\ 
-&= E_z \left[ log \ p_{\theta}(x^{(i)}|z) \right] -D_{KL}(q_{\phi}(z|x^{(i)})\|p_{\theta}(z)) + D_{KL}(q_{\phi}(z|x^{(i)})\|p_{\theta}(z|x^{(i)}))\\
+\text{log }p_{\theta}(x^{(i)}) &= E_{z \sim q_{\phi}(z|x^{(i)})} \left[ log \ p_{\theta}(x^{(i)}) \right] \qquad \qquad \qquad ( (p_{\theta}(x^{(i)}) \text{ does not depend on z})\\
+&= E_z \left[ \text{log } \frac{p_{\theta}(z) p_{\theta}(x^{(i)}|z)}{p_{\theta}(z|x)} \right] \ \quad \qquad \qquad \qquad \qquad \qquad \qquad (\text{Bayes' Rule})\\
+&= E_z \left[ \text{log } \frac{p_{\theta}(z) p_{\theta}(x^{(i)}|z)}{p_{\theta}(z|x)} \frac{q_{\phi}(z|x^{(i)})}{q_{\phi}(z|x^{(i)})}\right] \ \qquad \qquad \qquad \qquad (\text{Multiply by 1})\\
+&= E_z \left[ \text{log } p_{\theta}(x^{(i)}|z) \right] - E_z \left[ \text{log } \frac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z)} \right] + E_z \left[ \text{log } \frac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z|x^{(i)})} \right] \\
 
-
-& \qquad \qquad \uparrow \qquad \qquad \qquad \qquad \qquad \qquad \uparrow \qquad \qquad \qquad \qquad \qquad \qquad \uparrow \\
-
-& \color{red}{Decoder \ network \ gives \qquad \quad \ This \ KL \ term(btw \qquad \qquad p_{\theta}(z|x) \ intractable \ so \ we \ can't} \\
-& \color{red}{p_{\theta}(x|z), \ can\ compute \qquad \qquad Guassians \ for \ encoder \qquad compute \ this \ KL \ term, \ but}\\
-& \color{red}{estimate \ of \ this \ term \qquad \quad \ \ and \ z \ prior \ has \ closed \qquad \ \ we \ know \ that \ KL \ divergence} \\
-& \color{red}{through \ sampling \qquad \qquad \quad \ form \ solution \qquad \qquad \qquad always \ge 0}
+&= \underbrace{E_z \left[ \text{log } p_{\theta}(x^{(i)}|z) \right]}_{\substack{\text{Decoder network gives } p_{\theta}(x|z) \\ \text{can compute estinate of this term} \\ \text{through sampling. (Sampling} \\ \text{differentiable through reparam. trick}}} - \underbrace{D_{KL}(q_{\phi}(z|x^{(i)})\|p_{\theta}(z)))}_{\substack{\text{This KL term (between Gaussians} \\ \text{for encoder and z prior) has nice } \\ \text{closed-form solution!} }} + \underbrace{D_{KL}(q_{\phi}(z|x^{(i)})\|p_{\theta}(z|x^{(i)}))}_{\substack{p_{\theta}(z|x) \text{ intractable, can't compute} \\ \text{this KL term. But we know KL} \\ \text{divergence always non-negative}}}
 \end{align}
 $$
+
 
 So, we now have a tractable lower bound which we can optimize
 

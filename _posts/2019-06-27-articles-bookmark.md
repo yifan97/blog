@@ -20,6 +20,7 @@ comments: true
 
 **Backend development**
 
+- <a href="https://stackoverflow.com/questions/244882/what-is-the-best-way-to-implement-remember-me-for-a-website" style="font-weight: normal;">Implement Remember Me</a>
 
 
 
@@ -37,6 +38,9 @@ comments: true
 - <a href="https://www.learnopencv.com/understanding-alexnet/" style="font-weight: normal;">Understanding AlexNet</a>
 - <a href="https://arxiv.org/pdf/1207.0580.pdf" style="font-weight: normal;">Improving neural networks by preventing co-adaptation of feature detectors</a>
 - <a href="https://arxiv.org/pdf/1409.1556.pdf" style="font-weight: normal;">VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION</a>
+- <a href="https://www.inference.vc/high-dimensional-gaussian-distributions-are-soap-bubble/" style="font-weight: normal;">Gaussian Distributions are Soap Bubbles</a>
+- <a href="https://blogs.nvidia.com/blog/2018/09/05/whats-the-difference-between-a-cnn-and-an-rnn/" style="font-weight: normal;">What’s the Difference Between a CNN and an RNN?</a>
+- <a href="https://blog.evjang.com/2018/01/nf1.html" style="font-weight: normal;">Normalizing Flows Tutorial, Part 1: Distributions and Determinants</a>
 
 
 
@@ -50,3 +54,10 @@ comments: true
 
 **General programming**
 - <a href="https://hackernoon.com/understanding-the-underscore-of-python-309d1a029edc" style="font-weight: normal;">Understanding the underscore _ of Python</a>
+- <a href="https://micropyramid.com/blog/understand-self-and-__init__-method-in-python-class/" style="font-weight: normal;">Understanding self and __init__ method in python Class.</a>
+
+
+
+
+**Math**
+- <a href="https://www.khanacademy.org/math/linear-algebra/matrix-transformations/determinant-depth/v/linear-algebra-determinant-and-area-of-a-parallelogram" style="font-weight: normal;">Determinant and area of a parallelogram</a>
