@@ -178,7 +178,7 @@ MAF directly uses equations $$(18)$$ and $$(19)$$ to transform as random variabl
 
 Like MAF, IAF is a normalizing flow which uses MADE as its component layer. Each layer of IAF is defined by the following resursion:
 
-$$ x_i = u_i \text{ exp } \sigma_i + \mu_i $$
+$$ x_i = u_i \text{ exp } \sigma_i + \mu_i \tag{22}$$
 
 Similar to MAF, functions $${\mu_i, \sigma_i}$$ are computed using a MADE with Gaussian conditionals. The difference is architectural: in **MAF** $$\mu_i$$ and $$\sigma_i$$ are directly computed from previous data variables $$\mathbf{x}_{1:i-1}$$, whereas in **IAF** $$\mu_i$$ and $$\sigma_i$$ are directly computed from precious random numbers $$\mathbf{u}_{1:i-1}$$ 
 
@@ -186,9 +186,9 @@ where $$ \mu_i$$ and $$\sigma_i$$ are unconstraied scalar functions(through neur
 
 
 
-IAF defines a pdf by using a reparametrised version of equations $$(20)$$ and $$(21)$$, which we derive later. In this case, the transformed variable is defined as an inverse autoregressive mapping of the form
+IAF defines a $$pdf$$ by using a reparametrised version of equations $$(20)$$ and $$(21)$$, which we derive later. In this case, the transformed variable is defined as an inverse autoregressive mapping of the form
 
-$$ y_i = z_i \sigma(\mathbf{z}_{1:i-1}) + \mu(\mathbf{z}_{1:i-1}) \tag{22}$$
+$$ y_i = z_i \sigma(\mathbf{z}_{1:i-1}) + \mu(\mathbf{z}_{1:i-1}) \tag{23}$$
 
 Since all $$\mu$$ and $$\sigma$$ depend only on $$mathbf{z}$$ but not on $$\mathbf{y}$$, they can be all computed in parallel, in a single forward pass.
 

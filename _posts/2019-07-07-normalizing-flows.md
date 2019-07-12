@@ -194,7 +194,7 @@ It's important to know the trade-off of MAF and IAF as they present different co
 <br><br><br>
 **Summary**
 
-In this article, I attempt to understand a) what is normalizing flows, b) what is the mathematical background of this normallizing flows, c) R-NVP that utilizes deep normalizing flows, d) two generalization of R-NVP--MAF and IAF--that use autoregressive models as normalizing flows, called autoregressive flows. 
+In this article, I attempt to understand **a)** what is normalizing flows, **b)** what is the mathematical background of this normallizing flows, **c)** R-NVP that utilizes deep normalizing flows, **d)** two generalization of R-NVP--MAF and IAF--that use autoregressive models as normalizing flows, called autoregressive flows. 
 
 Moreover, I demonstrate the pros and cons of R-NVP, MAF, and IAF, depending on the intention of usage:
 
