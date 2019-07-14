@@ -41,9 +41,7 @@ comments: true
 - <a href="https://www.inference.vc/high-dimensional-gaussian-distributions-are-soap-bubble/" style="font-weight: normal;">Gaussian Distributions are Soap Bubbles</a>
 - <a href="https://blogs.nvidia.com/blog/2018/09/05/whats-the-difference-between-a-cnn-and-an-rnn/" style="font-weight: normal;">What’s the Difference Between a CNN and an RNN?</a>
 - <a href="https://blog.evjang.com/2018/01/nf1.html" style="font-weight: normal;">Normalizing Flows Tutorial, Part 1: Distributions and Determinants</a>
-
-
-
+- <a href="https://stats.stackexchange.com/questions/199605/how-does-the-reparameterization-trick-for-vaes-work-and-why-is-it-important" style="font-weight: normal;">Reparametrization in VAEs</a>
 
 
 

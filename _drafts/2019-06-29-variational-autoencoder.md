@@ -102,7 +102,7 @@ $$
 &= E_z \left[ \text{log } \frac{p_{\theta}(z) p_{\theta}(x^{(i)}|z)}{p_{\theta}(z|x)} \frac{q_{\phi}(z|x^{(i)})}{q_{\phi}(z|x^{(i)})}\right] \ \qquad \qquad \qquad \qquad (\text{Multiply by 1})\\
 &= E_z \left[ \text{log } p_{\theta}(x^{(i)}|z) \right] - E_z \left[ \text{log } \frac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z)} \right] + E_z \left[ \text{log } \frac{q_{\phi}(z|x^{(i)})}{p_{\theta}(z|x^{(i)})} \right] \\
 
-&= \underbrace{E_z \left[ \text{log } p_{\theta}(x^{(i)}|z) \right]}_{\substack{\text{Decoder network gives } p_{\theta}(x|z) \\ \text{can compute estinate of this term} \\ \text{through sampling. (Sampling} \\ \text{differentiable through reparam. trick}}} - \underbrace{D_{KL}(q_{\phi}(z|x^{(i)})\|p_{\theta}(z)))}_{\substack{\text{This KL term (between Gaussians} \\ \text{for encoder and z prior) has nice } \\ \text{closed-form solution!} }} + \underbrace{D_{KL}(q_{\phi}(z|x^{(i)})\|p_{\theta}(z|x^{(i)}))}_{\substack{p_{\theta}(z|x) \text{ intractable, can't compute} \\ \text{this KL term. But we know KL} \\ \text{divergence always non-negative}}}
+&= \underbrace{E_z \left[ \text{log } p_{\theta}(x^{(i)}|z) \right]}_{\substack{\text{Decoder network gives } p_{\theta}(x|z) \\ \text{can compute estinate of this term} \\ \text{through sampling. (Sampling} \\ \text{differentiable through reparam. trick)}}} - \underbrace{D_{KL}(q_{\phi}(z|x^{(i)})\|p_{\theta}(z)))}_{\substack{\text{This KL term (between Gaussians} \\ \text{for encoder and z prior) has nice } \\ \text{closed-form solution!} }} + \underbrace{D_{KL}(q_{\phi}(z|x^{(i)})\|p_{\theta}(z|x^{(i)}))}_{\substack{p_{\theta}(z|x) \text{ intractable, can't compute} \\ \text{this KL term. But we know KL} \\ \text{divergence always non-negative}}}
 \end{align}
 $$
 
