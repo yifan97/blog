@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> - Articles</title>
+    <description>AI Enthusiast | Software Engineer</description>
+    <link>
+    http://localhost:4000</link>
+    
+      
+      <item>
+        <title>Training, Validation and Test Set</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;In this article, I will explain what is training set, validation set and test set. I will also differentiate them in terms of machine learning process&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 12 Jul 2019 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/training-validation-test-set</link>
+        <guid isPermaLink="true">http://localhost:4000/training-validation-test-set</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Normalizing Flows and Autoregressive Flows</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;This is a note that I took when I read the &lt;a href=&quot;https://arxiv.org/pdf/1705.07057.pdf&quot; style=&quot;color: #0074D9;&quot;&gt;MAF paper&lt;/a&gt;, &lt;a href=&quot;https://blog.evjang.com/2018/01/nf1.html&quot; style=&quot;color: #0074D9;&quot;&gt;Normalizing Flows Tutorials&lt;/a&gt; by Eric Jang and &lt;a href=&quot;http://akosiorek.github.io/ml/2018/04/03/norm_flows.html&quot; style=&quot;color: #0074D9;&quot;&gt;its variations&lt;/a&gt; by Adam Kosiorek&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 12 Jul 2019 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/normalizing-flows</link>
+        <guid isPermaLink="true">http://localhost:4000/normalizing-flows</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>CNN Architectures</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;In this article, I will introduce some popular CNN architectures&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 06 Jul 2019 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/cnn-architectures</link>
+        <guid isPermaLink="true">http://localhost:4000/cnn-architectures</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>CPU v.s GPU in Machine Learning</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;In this article, I will explain what CPU and GPU are and how do these two compare in mahine learning&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 04 Jul 2019 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/cpu-v.s-gpu</link>
+        <guid isPermaLink="true">http://localhost:4000/cpu-v.s-gpu</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Academic Paper Bookmark</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;This blog intends to bookmark the academic papers in the field of computer science–mainly machine learning–that I plan to or have already read (continuing)&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 27 Jun 2019 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/paper-bookmark</link>
+        <guid isPermaLink="true">http://localhost:4000/paper-bookmark</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Articles/Videos Bookmark</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;This blog intends to bookmark the academic articles/videos that I plan to go over (continuing)&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 27 Jun 2019 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/articles-bookmark</link>
+        <guid isPermaLink="true">http://localhost:4000/articles-bookmark</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Optimizing Images for Web</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;In this article, I will talk about how to optimize your website images to ensure they provide the best user experience for visitors&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 26 Jun 2019 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/optimizing-images-for-web</link>
+        <guid isPermaLink="true">http://localhost:4000/optimizing-images-for-web</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Deploy jekyll website on github pages</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;This is a step by step tutorial on how to create a jekyll webiste/blog and deploy it to your own github pages&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 25 Jun 2019 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/deploy-jekyll-website-on-github-pages</link>
+        <guid isPermaLink="true">http://localhost:4000/deploy-jekyll-website-on-github-pages</guid>
+      </item>
+      
+    
+  </channel>
+</rss>

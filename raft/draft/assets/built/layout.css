@@ -1,0 +1,50 @@
+.wrapper { 
+    border : 100px; 
+    overflow:hidden;
+    margin: 25px;
+}
+  
+.wrapper div {
+    height: auto;
+    padding: 10px;
+}
+
+p a{
+    text-decoration: none !important;
+}
+
+p a:hover{
+    opacity: 0.6;
+}
+
+.nav a{
+    font-size: 18px;
+}
+
+/* .site-nav-left .site-nav-logo{
+    font-size: 20px;
+} */
+
+.post-card:hover{
+    transform: scale(1.02, 1.02);
+    transition: all 500ms;
+}
+
+
+@media (min-width: 900px){
+    .site-nav-big{
+        top: 0 !important;
+    }
+}
+
+p, li{
+    font-size: 20px !important;
+} 
+
+.wrapper #content p{
+    line-height: 1.5em !important;
+}
+
+.mjx-chtml, .MathJax_CHTML, .MathJax_Preview{
+    max-width: 100% !important;
+}

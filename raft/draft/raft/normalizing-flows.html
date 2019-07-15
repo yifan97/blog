@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143238901-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-143238901-1');
+    </script>
+
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Normalizing Flows and Autoregressive Flows</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/blog/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/blog/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/blog/assets/built/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="/blog/assets/built/layout.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="AI Enthusiast | Software Engineer" />
+    <link rel="shortcut icon" href="http://localhost:4000/blog/" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/blog/normalizing-flows" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Yifan Xu" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Normalizing Flows and Autoregressive Flows" />
+    <meta property="og:description" content="This is a note that I took when I read the MAF paper, Normalizing Flows Tutorials by Eric Jang and its variations by Adam Kosiorek Machine learning is all about probability. To train a model, we typically tune its parameters to maximize the probability of the training dataset under the" />
+    <meta property="og:url" content="http://localhost:4000/blog/normalizing-flows" />
+    <meta property="og:image" content="http://localhost:4000/blog/assets/images/cover-img/c11.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2019-07-12T00:00:00-04:00" />
+    <meta property="article:modified_time" content="2019-07-12T00:00:00-04:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Normalizing Flows and Autoregressive Flows" />
+    <meta name="twitter:description" content="This is a note that I took when I read the MAF paper, Normalizing Flows Tutorials by Eric Jang and its variations by Adam Kosiorek Machine learning is all about probability. To train a model, we typically tune its parameters to maximize the probability of the training dataset under the" />
+    <meta name="twitter:url" content="http://localhost:4000/blog/" />
+    <meta name="twitter:image" content="http://localhost:4000/blog/assets/images/cover-img/c11.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Yifan Xu" />
+    <meta name="twitter:site" content="@nbv__x" />
+    <meta name="twitter:creator" content="@nbv__x" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Yifan Xu",
+        "logo": "http://localhost:4000/blog/"
+    },
+    "url": "http://localhost:4000/blog/normalizing-flows",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:4000/blog/assets/images/cover-img/c11.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/blog/normalizing-flows"
+    },
+    "description": "This is a note that I took when I read the MAF paper, Normalizing Flows Tutorials by Eric Jang and its variations by Adam Kosiorek Machine learning is all about probability. To train a model, we typically tune its parameters to maximize the probability of the training dataset under the"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Normalizing Flows and Autoregressive Flows" href="/blog/feed.xml" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+
+
+</head>
+<body class="home-template">
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav site-nav-big">
+    <div class="site-nav-left">
+        <!-- 
+            <a class="site-nav-logo" href="http://localhost:4000/blog/">Yifan Xu</a>
+         -->
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/blog/">Home</a></li>
+    <li class="nav-blog" role="menuitem"><a href="/blog/blog/">Blog</a></li>
+</ul>
+
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            <a class="social-link social-link-ln" href="https://linkedin.com/in/yifan-xu-945552bb" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg></a>
+            <a class="social-link social-link-tw" href="https://twitter.com/nbv__x" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+            <a class="social-link social-link-gi" href="https://github.com/yifan97" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+        </div>
+    </div>
+</nav>
+    
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  " style="max-width: 100%;">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="12 July 2019">12 July 2019</time>
+                    <a style="text-decoration: none">&nbsp| Yifan Xu</a>
+                </section>
+                <h1 class="post-full-title">Normalizing Flows and Autoregressive Flows</h1>
+            </header>
+
+            
+            <figure class="post-full-image" style="background-image: url(/blog/assets/images/cover-img/c11.jpg);">
+            </figure>
+            
+
+            <section class="post-full-content" style="max-width: 100%;">
+                <div class="kg-card-markdown">
+                    <p><strong>This is a note that I took when I read the <a href="https://arxiv.org/pdf/1705.07057.pdf" style="color: #0074D9;">MAF paper</a>, <a href="https://blog.evjang.com/2018/01/nf1.html" style="color: #0074D9;">Normalizing Flows Tutorials</a> by Eric Jang and <a href="http://akosiorek.github.io/ml/2018/04/03/norm_flows.html" style="color: #0074D9;">its variations</a> by Adam Kosiorek</strong></p>
+
+<hr />
+
+<p>Machine learning is all about probability. To train a model, we typically tune its parameters to maximize the probability of the training dataset under the model. To do so, we have to assume some probability distribution as the output of our model. The most common one, Gaussian distribution, can be problematic, as the true probability density function (<script type="math/tex">pdf</script>) of real data is often far from Gaussian. If we use the Gaussian as likelihood for image-generation models, we end up with blurry reconstructions, as proved in <a href="https://arxiv.org/pdf/1312.6114.pdf" style="color: #0074D9; font-weight:normal;">Variational Autoencoders (VAEs)</a>. We can circumvent this issue by adversarial training, which is an example of likelihood-free inference, but this approach has its own issues.</p>
+
+<p>It is fact that Gaussians are also used, and often prove too simple. Fortunately, we can often take a simple probability distribution, take a sample from it and then transform the sample. This is equivalent to change of variables in probability distributions and, if the transformation meets some mild conditions, can result in a very complex <script type="math/tex">pdf</script> of the transformed variable. Danilo Rezende formalized this in his paper on <a href="https://arxiv.org/pdf/1505.05770.pdf" style="color: #0074D9; font-weight: normal;">Normalizing Flows (NF)</a>. NFs are usually used to parametrize the approximate posterior <script type="math/tex">q</script> in VAEs but can also be applied for the likelihood function.</p>
+
+<p><br /><br /><br />
+<strong>Change of Variables</strong></p>
+
+<p>Let’s build up some intuition by examining linear transformations of <script type="math/tex">1</script>D random variables. Suppose <script type="math/tex">X</script> is Uniform<script type="math/tex">(0,1)</script>. Let random variable <script type="math/tex">Y=f(X)=2X+1</script> be a simple affine transformation of the underlying “source distribution” <script type="math/tex">X</script>. What this means is that a sample <script type="math/tex">x^i</script> from <script type="math/tex">X</script> can be converted into a sample <script type="math/tex">y^i</script> from <script type="math/tex">Y</script> by simply applying the function <script type="math/tex">f</script> to it. 
+<img src="assets/images/NF/NF-1.jpg" alt="NF-1" style="width: 50%;" /></p>
+
+<p>Becasue of the linear transformation, the spanning of <script type="math/tex">X</script> transforms from <script type="math/tex">[0, 1] \text{ to } [1, 3]</script>. Since the probability mass must integrate to <script type="math/tex">1</script> for both distributions, we have density <script type="math/tex">p(x) = 1 \text{ and } p(y) = 0.5</script></p>
+
+<p>Let’s zoom in on a particular <script type="math/tex">x</script> and an infinitesimally nearby point <script type="math/tex">x+dx</script>, then applying <script type="math/tex">f</script> to them takes us to the pair <script type="math/tex">(y,y+dy)</script>. 
+<img src="assets/images/NF/NF-2.jpg" alt="NF-2" style="width: 50%;" /></p>
+
+<p>That being said, to preserve the total probability (<script type="math/tex">=1</script>), the change of <script type="math/tex">p(x)</script> along <script type="math/tex">dx</script> must be equivalent to the change of <script type="math/tex">p(y)</script> along <script type="math/tex">dy</script> :</p>
+
+<script type="math/tex; mode=display">p(x)\left|dx\right| = p(y)\left|dy\right| \tag{1}</script>
+
+<p>Then, we have the density after transformation 
+<script type="math/tex">p(y) = p(x)\left|\frac{dx}{dy}\right|</script></p>
+
+<p>To make it numerical stabler, we often take <script type="math/tex">log</script>.</p>
+
+<script type="math/tex; mode=display">\text{log} \ p(y) = \text{log} \ p(x) + \text{log}\left|\frac{dx}{dy}\right| \tag{2}</script>
+
+<p><br />
+Now, let’s look at multivariate case, specifically with 2 variabels. 
+<img src="assets/images/NF/NF-3.jpg" alt="NF-3" style="width: 60%;" /></p>
+
+<p>We have a square from four initial vertices <script type="math/tex">(0,0), (0,1), (1,0), (1,1)</script>. After appling the matrix transformation <script type="math/tex">% <![CDATA[
+\begin{bmatrix}a & b\\c & d\end{bmatrix} %]]></script>, they are taken into a parallelogram and each vertice is sent to <script type="math/tex">(0,0), (c,d), (a,b), (a+c,b+d)</script> respectively.</p>
+
+<p>Thus, the area <script type="math/tex">dA = 1</script> changes to <script type="math/tex">dA = ad-bc</script>. <strong>It’s important to notice that <script type="math/tex">ad-bc</script> is nothing but the determinant of the linear transformation.</strong></p>
+
+<p>Mathematically,</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+p(y) &=  p(f^{-1}(y)) \cdot \left|\text{det} J(f^{-1}(y))\right| \\
+&= p(x) \cdot \left|\text{det} J(f^{-1}(y))\right| \tag{3} \\
+\end{align} %]]></script>
+
+<p><strong>Notice:</strong> As far, we just explore linear transformation, which is the simplest case. Non-linear transformation is essentially the same but just need to meet one condition: bijection (linear transformation is for sure invertible).</p>
+
+<p>In Danilo’s paper,  let <script type="math/tex">\mathbf{z} \in \mathbb{R}</script> be a random variable and <script type="math/tex">f :\mathbb{R}^d \mapsto \mathbb{R}^d</script> an invertible smooth mapping. We can use <script type="math/tex">f</script> to transform <script type="math/tex">\mathbf{z}∼q(\mathbf{z})</script>. The resulting random variable <script type="math/tex">\mathbf{y}=f(\mathbf{z})</script> has the following probability distribution:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+q_y(\mathbf{y}) &=  q(\mathbf{z}) \left| \text{det} \frac{\partial{f^{-1}}}{\partial{\mathbf{z}}} \right|\\
+&= q(\mathbf{z}) \left| \text{det} \frac{\partial{f}}{\partial{\mathbf{z}}} \right|^{-1} \tag{4} \\
+\end{align} %]]></script>
+
+<p>We can apply a series of invertible mappings <script type="math/tex">f_k, k \in 1, ... ,K, \text{with } K \in \mathbb{N_+}</script> and obtain a normalizing flow.</p>
+
+<script type="math/tex; mode=display">\mathbf{z} = f_K \circ \cdots \circ f_1(\mathbf{z}_0), \qquad \mathbf{z}_0 \sim q_0(\mathbf{z}_0) \tag{5}</script>
+
+<script type="math/tex; mode=display">\mathbf{z} \sim q_K(\mathbf{z}_K) = q_0(\mathbf{z}_0) \prod_{k=1}^{K} \left| \text{det} \frac{\partial{f_k}}{\partial{\mathbf{z_k}}} \right|^{-1}\tag{6}</script>
+
+<p>This series of transformations can transform a simple probability distribution (e.g. Gaussian) into a complicated multi-modal one. To be of practical use, however, we can consider only transformations whose determinants of Jacobians are easy to compute. The original paper considered two simple family of transformations, named <strong>planar</strong> and <strong>radial</strong> flows.</p>
+
+<p><br /></p>
+<ul>
+  <li><strong>Planar Flow</strong></li>
+</ul>
+
+<script type="math/tex; mode=display">f(\mathbf{z}) = \mathbf{z} + \mathbf{u}h(\mathbf{w}^{\intercal}\mathbf{z} + b) \tag{7}</script>
+
+<p>with <script type="math/tex">\mathbf{u}, \mathbf{w} \in \mathbb{R}^d \text{ and b} \in \mathbb{R}</script>, and h an element-wise non-linearity. Let <script type="math/tex">\psi(\mathbf{z}) = h^{\prime}(\mathbf{w}^{\intercal}\mathbf{z} + b)\mathbf{w}</script>. Then determinant can be easily computed as</p>
+
+<p>We can compute the logdet-Jacobian term in <script type="math/tex">O(D)</script> time using the matrix determinant lemma:</p>
+
+<script type="math/tex; mode=display">\left| \text{det} \frac{\partial{f}}{\partial{\mathbf{z}}} \right| = \left| \text{det}({\mathbf{I} + \mathbf{u} \psi(\mathbf{z}))^{\intercal}} \right|= \left| 1 + \mathbf{u}^{\intercal} \psi(\mathbf{z}) \right| \tag{8}</script>
+
+<p>We conclude that the density <script type="math/tex">q_K(\mathbf{z})</script> obtained by transforming an arbitraty initial density <script type="math/tex">q_0(\mathbf{z})</script> through the sequence of maps <script type="math/tex">f_k</script> is implicitly given by:</p>
+
+<script type="math/tex; mode=display">\text{ln } q_K(\mathbf{z_K}) = \text{ln } q_0(\mathbf{z}) - \sum_{k=1}^K \text{ln } \left| 1 + \mathbf{u_k}^{\intercal} \psi_k(\mathbf{z_k}) \right| \tag{9}</script>
+
+<p><br /></p>
+<ul>
+  <li><strong>Radial Flow</strong></li>
+</ul>
+
+<script type="math/tex; mode=display">f(\mathbf{z}) = \mathbf{z} + \beta h(\alpha, r)(\mathbf{z}-\mathbf{z_0})\tag{10}</script>
+
+<p>with <script type="math/tex">r = \|\mathbf{z} - \mathbf{z_0}\|_2, h(\alpha, r) = \frac{1}{\alpha+r} \text{ and parameters } \mathbf{z_0} \in \mathbb{R}^d, \alpha \in \mathbb{R_+} \text{ and } \beta \in \mathbb{R}</script></p>
+
+<p>This family allows for a linear-time computation of the determinant.</p>
+
+<script type="math/tex; mode=display">\left| \text{det} \frac{\partial{f}}{\partial{\mathbf{z}}} \right| = \left[ 1 + \beta h(\alpha, r) \right]^{d-1} \left[ 1 + \beta h(\alpha, r) + h^{\prime}(\alpha, r)r \right] \tag{11}</script>
+
+<p><br />
+<strong>Discussion</strong></p>
+
+<p>Here is the result of two families on Gaussian and Uniform distribution.
+<img src="assets/images/NF/NF-4.jpg" alt="NF-4" style="width: 100%;" /></p>
+
+<p>These simple flows are useful only for low dimensional spaces, since each transformation affects only a small volume in the original space. As the volume of the space grows exponentially with the number of dimensions <script type="math/tex">d</script>, we need a lot of layers in a high-dimensional space.</p>
+
+<p>Another way to understand the need for many layers is to look at the form of the mappings. Each mapping behaves as a hidden layer of a neural network with one hidden unit and a skip connection. Since a single hidden unit is not very expressive, we need a lot of transformations. Recently introduced <a href="https://arxiv.org/abs/1803.05649" style="font-weight: normal; color: #0074D9;">Sylvester Normalizing Flows</a> overcome the single-hidden-unit issue of these simple flows.</p>
+
+<p><br /><br /><br />
+<strong>Autoregressive Flows</strong></p>
+
+<p>Enhancing expressivity of normalizing flows is not easy, since we are constrained by functions, whose Jacobians are easy to compute. It turns out, though, that we can combine it with autoregressive model. We introduce dependencies between different dimensions of the latent variable, and still end up with a tractable Jacobian. Namely, if after a transformation, the dimension <script type="math/tex">i</script> of the resulting variable depends only on demension <script type="math/tex">1 : i</script> of the input variable, then the Jacobian of this transformation is triangular. As we know, a determinant of a triangular matrix is equal to the product of the terms on the diagonal. More formally, let <script type="math/tex">J \in \mathbb{R}^{d\text{x}d}</script> be the Jacobian of the mapping <script type="math/tex">f</script>, then</p>
+
+<script type="math/tex; mode=display">y_i = f(\mathbf{z}_{1:i}) \qquad J = \frac{\partial{\mathbf{y}}}{\partial{\mathbf{z}}} \tag{12}</script>
+
+<script type="math/tex; mode=display">\text{det} J = \prod_{i=1}^d J_{ii} \tag{13}</script>
+
+<p>Here are three flows that use the above concept, albeit in different ways, and arrive at mappings with very different properties.</p>
+
+<p><br /></p>
+<ul>
+  <li><strong>Real Non-Volume Preserving Flows (R-NVP)</strong></li>
+</ul>
+
+<p>R-NVPs are arguably the least expressive but the most generally applicable of the three. Let <script type="math/tex">% <![CDATA[
+1 < k < d %]]></script>, <script type="math/tex">\odot</script> element-wise multiplication and <script type="math/tex">\mu</script> and <script type="math/tex">\sigma</script> two mappings (through neural networks) <script type="math/tex">\mathbb{R}^k \mapsto \mathbb{R}^{d-k}</script> (Note that <script type="math/tex">\sigma</script> is not the sigmoid function). What’s called <strong>Coupling layer</strong> that transforms a density to another density is defined as:</p>
+
+<script type="math/tex; mode=display">\mathbf{y}_{1:k} = \mathbf{z}_{1:k} \tag{14}</script>
+
+<script type="math/tex; mode=display">\mathbf{y}_{k+1:d} = \mathbf{z}_{k+1:d} \odot \text{exp }\sigma(\mathbf{z}_{1:k}) + \mu(\mathbf{z}_{1:k}) \tag{15}</script>
+
+<p>It is an autoregressive transformation, although not as general as equation <script type="math/tex">(13)</script> allows. It copies the first <script type="math/tex">k</script> dimensions, while shifting and scaling all the remaining ones. The first part of the Jacobian(up to dimension <script type="math/tex">k</script>) is just an identity matrix, while the second part is lower-triangular with <script type="math/tex">\sigma(\mathbf{z}_{1:k})</script> on the diagonal. Hence, the determinant of the Jacobian is</p>
+
+<script type="math/tex; mode=display">\frac{\partial{\mathbf{y}}}{\partial{\mathbf{z}}} = \prod_{i=1}^{d-k}\sigma_i(\mathbf{z}_{1:k}) \tag{16}</script>
+
+<p>R-NVPs are particularly attractive because both sampling and evaluating probability of some external sample are very efficient. Computational complexity of both operations is, in fact, exactly the same. This allows to use R-NVPs as a parametrization of an approximate posterior <script type="math/tex">q</script> in VAEs, but also as the output likelihood (in VAEs or general regression models). To see this, first note that we can compute all elements of <script type="math/tex">\mu</script> and <script type="math/tex">\sigma</script> in parallel, since all inputs (<script type="math/tex">\mathbf{z}</script>) are available. We can therefore compute <script type="math/tex">\mathbf{y}</script> in a single forward pass. Next, note that the inverse transformation has the following form, with all divisions done element-wise,</p>
+
+<script type="math/tex; mode=display">\mathbf{z}_{1:k} = \mathbf{y}_{1:k} \tag{17}</script>
+
+<script type="math/tex; mode=display">\mathbf{z}_{k+1:d} = \frac{\mathbf{y}_{k+1:d}-\mu(\mathbf{y}_{1:k})}{\sigma({\mathbf{y}_{1:k}})}</script>
+
+<p>Note that <script type="math/tex">\mu</script> and <script type="math/tex">\sigma</script> are usually implemented as Neural networks, which are generally not invertible. Thanks to equation <script type="math/tex">(17)</script>, however, they do not have to be invertible for the whole R-NVP transformation to be invertible. In original paper, the authors apply stacking coupling layers of this mapping and permute the ordering of copied dimensions. This way, variables that are just copied in one step, are to be transformed in the following step.</p>
+
+<p><br />
+<strong>Autoregressive models as normalizing flows</strong></p>
+
+<p>We can be even more expressive than R-NVPs. Consider an autoregressive model whose conditionals are parameterize as single Gaussian. That is, the <script type="math/tex">i^{th}</script> conditional is given by</p>
+
+<script type="math/tex; mode=display">p(x_i|\mathbf{x}_{1:i-1}) = \mathcal{N} (x_i|\mu_i, (\text{exp } \sigma_i)^2) \tag{18}</script>
+
+<p>where <script type="math/tex">\mu_i</script> and <script type="math/tex">\sigma_i</script> are unconstraied scalar functions(through neural nets) that compute the mean and log standard deviation of the <script type="math/tex">i^{th}</script> conditional given all previous variables. Thus,we can generate data from the above model using the following recursion:</p>
+
+<script type="math/tex; mode=display">x_i = u_i \text{ exp }{\sigma_i} + \mu_i \tag{19}</script>
+
+<p>where <script type="math/tex">u_i \sim \mathcal{N}(0,1)</script> and <script type="math/tex">\mathbf{u} = (u_1, u_2, ..., u_K)</script> is the vecotr of random numbes the model uses internally to generate data.</p>
+
+<p><script type="math/tex">(19)</script> provides an alternative characterization of the autoregressive model as a transformation <script type="math/tex">f</script> from the space of random numbers <script type="math/tex">\mathbf{u}</script> to the space of data <script type="math/tex">\mathbf{x}</script>. That is, we can express the model as <script type="math/tex">\mathbf{x} = f(\mathbf{u})</script>. Given a datapoint <script type="math/tex">\mathbf{x}</script>, the random numbers <script type="math/tex">\mathbf{u}</script> that were used to generate it are obtained by:</p>
+
+<script type="math/tex; mode=display">u_i = (x_i-\mu_i) \text{exp} (-\sigma_i) \tag{20}</script>
+
+<p>Due to the autoregressive structure, the Jacobian of <script type="math/tex">f^{-1}</script> is triangular by design, hence its absolute determinant can be easily obtained as follows:</p>
+
+<script type="math/tex; mode=display">\left| \text{det} \left( \frac{\partial{f^{-1}}}{\partial{\mathbf{x}}} \right) \right| = \text{exp} \left( -\sum_i \sigma_i \right) \tag{21}</script>
+
+<p><br /></p>
+<ul>
+  <li><strong>Masked Autoregressive Flow (MAF)</strong></li>
+</ul>
+
+<p>MAF directly uses equations <script type="math/tex">(18)</script> and <script type="math/tex">(19)</script> to transform as random variable. It is named <strong>Masked</strong> because it used <a href="https://arxiv.org/pdf/1502.03509.pdf" style="font-weight: normal; color: #0074D9;">Masked Autoencoder for distribution Estimation</a> (MADE) as a building block. Specifically, we choose to implement the set of functions <script type="math/tex">{\mu, \sigma}</script> with masking. The benefit of using maskng is that it enables transforming from data <script type="math/tex">\mathbf{x}</script> to random numbers <script type="math/tex">\mathbf{u}</script> and thus calcupating <script type="math/tex">p(\mathbf{x})</script> in one forward pass through the flow, thus eliminating the need for sequential recursion in <script type="math/tex">(20)</script>. In practice, we adds flexibility to this model by stacking multiple instances of the model into a deeper flow.</p>
+
+<p><br /></p>
+<ul>
+  <li><strong>Inverse Autoregressive Flow (IAF)</strong></li>
+</ul>
+
+<p>Like MAF, IAF is a normalizing flow which uses MADE as its component layer. Each layer of IAF is defined by the following resursion:</p>
+
+<script type="math/tex; mode=display">x_i = u_i \text{ exp } \sigma_i + \mu_i \tag{22}</script>
+
+<p>Similar to MAF, functions <script type="math/tex">{\mu_i, \sigma_i}</script> are computed using a MADE with Gaussian conditionals. The difference is architectural: in <strong>MAF</strong> <script type="math/tex">\mu_i</script> and <script type="math/tex">\sigma_i</script> are directly computed from previous data variables <script type="math/tex">\mathbf{x}_{1:i-1}</script>, whereas in <strong>IAF</strong> <script type="math/tex">\mu_i</script> and <script type="math/tex">\sigma_i</script> are directly computed from precious random numbers <script type="math/tex">\mathbf{u}_{1:i-1}</script></p>
+
+<p>where <script type="math/tex">\mu_i</script> and <script type="math/tex">\sigma_i</script> are unconstraied scalar functions(through neural nets) that compute the mean and log standard deviation of the <script type="math/tex">i^{th}</script> conditional given all previous variables.</p>
+
+<p><br /><br /><br />
+<strong>MAF v.s IAF</strong></p>
+
+<p>It’s important to know the trade-off of MAF and IAF as they present different consequences. MAF is capable of calculating the density <script type="math/tex">p(\mathbf{x})</script> of any datapoint <script type="math/tex">\mathbf{x}</script> in one pass through the model, however samping from it requires performing D sequential passes(D is the dimensionality of <script type="math/tex">\mathbf{x}</script>). In contrast, IAF can generate samples and calculate their density with one pass, however calculating the density <script type="math/tex">p(\mathbf{x})</script> of externally provided datapint <script type="math/tex">\mathbf{x}</script> requires D passes to find the random number <script type="math/tex">\mathbf{u}</script> associated with <script type="math/tex">\mathbf{x}</script>. Hence, the design choice depends on the intended usage. IAF is suitable  as a recognition model for stochastic variational inference, where it only ever needs to calculate the density of its own samples. In contrast, MAF is more suitable for density estimation, because each example requires only one pass through the model.</p>
+
+<p><br /><br /><br />
+<strong>Summary</strong></p>
+
+<p>In this article, I attempt to understand <strong>a)</strong> what is normalizing flows, <strong>b)</strong> what is the mathematical background of this normallizing flows, <strong>c)</strong> R-NVP that utilizes deep normalizing flows, <strong>d)</strong> two generalization of R-NVP–MAF and IAF–that use autoregressive models as normalizing flows, called autoregressive flows.</p>
+
+<p>Moreover, I demonstrate the pros and cons of R-NVP, MAF, and IAF, depending on the intention of usage:</p>
+
+<ul>
+  <li>
+    <p>MAF can calculate the density <script type="math/tex">p(\mathbf{x})</script> in a single pass so it’s useful for explicit density estimation. However, it takes D passes to generate the data, thus not suitable for variational inference.</p>
+  </li>
+  <li>
+    <p>IAF, on the other hand, can generate data in single pass but is slow in computing density <script type="math/tex">p(\mathbf{x})</script></p>
+  </li>
+  <li>
+    <p>R-NVP, is a special case of MAF but the benefits of it is that it can both generate data and estimate densities with one forward pass only.</p>
+  </li>
+</ul>
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            <!-- 
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to Yifan Xu</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    <form method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
+    </div>
+    <button class="" type="submit" disabled><span>Subscribe</span></button>
+    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
+</form>
+
+                </section>
+             -->
+
+
+            
+                <div id="disqus_thread"></div>
+                <script>
+                
+                /*
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                */
+                
+                var disqus_config = function () {
+                    this.page.url = 'https://yifan97.github.io/blog/normalizing-flows';  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = '/normalizing-flows'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://yifan-blog.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>      
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card ">
+        
+            <a class="post-card-image-link" href="/blog/training-validation-test-set">
+                <div class="post-card-image" style="background-image: url(/blog/assets/images/cover-img/c12.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/blog/training-validation-test-set">
+                <header class="post-card-header">
+                    
+
+                    <h2 class="post-card-title">Training, Validation and Test Set</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card ">
+        
+            <a class="post-card-image-link" href="/blog/cnn-architectures">
+                <div class="post-card-image" style="background-image: url(/blog/assets/images/cover-img/c10.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/blog/cnn-architectures">
+                <header class="post-card-header">
+                    
+
+                    <h2 class="post-card-title">CNN Architectures</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="http://localhost:4000/blog/">
+            
+            <span>Yifan Xu</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Normalizing Flows and Autoregressive Flows</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Normalizing+Flows+and+Autoregressive+Flows&amp;url=normalizing-flows"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=normalizing-flows"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="http://localhost:4000/blog/">Yifan Xu</a> &copy; 2019</section>
+
+                <nav class="site-footer-nav">
+                    <a href="/blog/blog/">Latest Posts</a>
+                    
+                    <a href="https://twitter.com/nbv__x" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://linkedin.com/in/yifan-xu-945552bb" target="_blank" rel="noopener">LinkedIn</a>
+                    <!-- <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> -->
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    <!-- 
+        <div id="subscribe" class="subscribe-overlay">
+            <a class="subscribe-overlay-close" href="#"></a>
+            <div class="subscribe-overlay-content">
+                
+                <h1 class="subscribe-overlay-title">Subscribe to Yifan Xu</h1>
+                <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
+                <form method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
+    </div>
+    <button class="" type="submit" disabled><span>Subscribe</span></button>
+    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
+</form>
+
+            </div>
+        </div>
+     -->
+
+    <!-- highlight.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script> -->
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/blog/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/blog/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+ 
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+    <script>
+        MathJax = {
+          "HTML-CSS": {fonts: ["STIX"]},
+          SVG: {font: "STIX-Web"}
+        }
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+</body>
+</html>
