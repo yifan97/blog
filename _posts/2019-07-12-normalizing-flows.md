@@ -122,7 +122,7 @@ $$ y_i = f(\mathbf{z}_{1:i}) \qquad J = \frac{\partial{\mathbf{y}}}{\partial{\ma
 
 $$ \text{det} J = \prod_{i=1}^d J_{ii} \tag{13}$$
 
-Here are three flows that use the above concept, albeit in different ways, and arrive at mappings with very different properties.
+Here are four flows that use the above concept, albeit in different ways, and arrive at mappings with very different properties.
 
 <br>
 - **Real Non-Volume Preserving Flows (R-NVP)**
@@ -189,6 +189,37 @@ where $$ \mu_i$$ and $$\sigma_i$$ are unconstraied scalar functions(through neur
 **MAF v.s IAF**
 
 It's important to know the trade-off of MAF and IAF as they present different consequences. MAF is capable of calculating the density $$p(\mathbf{x})$$ of any datapoint $$\mathbf{x}$$ in one pass through the model, however samping from it requires performing D sequential passes(D is the dimensionality of $$\mathbf{x}$$). In contrast, IAF can generate samples and calculate their density with one pass, however calculating the density $$p(\mathbf{x})$$ of externally provided datapint $$\mathbf{x}$$ requires D passes to find the random number $$\mathbf{u}$$ associated with $$\mathbf{x}$$. Hence, the design choice depends on the intended usage. IAF is suitable  as a recognition model for stochastic variational inference, where it only ever needs to calculate the density of its own samples. In contrast, MAF is more suitable for density estimation, because each example requires only one pass through the model. 
+
+<br><br><br>
+**Neural Autoregressive Flows (NAF)**
+
+This is a relatively state-of-the-art work by <a href="https://arxiv.org/pdf/1804.00779.pdf">Huang, et al.</a> which substantially improve the above-mentioned autoregressive flows in terms of expressiveness.
+
+Let's recall what we got so far from IAF and MAF. Our initial motivation is that autoregressive model can be combined with normalizing flows to produce good results in density estimation and that different ways to combine these two, as shown in IAF and MAF, give us different results, depending the usage case. However, both IAF and MAF limit themsleves with affine transformation throughout normalizing flows for computational simplicity. For instance, $$x_i = u_i \text{ exp }{\sigma_i} + \mu_i $$.
+
+One problem of this restriction is that because of this restriction, we are limiting ourselves in a small family of functions, and thus a small famil of densities. However, we observed that for computational simplicity, we just need to satisfy two requirements:
+
+- transforming functions are invertible w.r.t $$x_i$$
+- $$\frac{dy_i}{dx_i}$$ is cheap to compute
+
+This raised the possibility to using a more poweful transformation in order to increase the expressivity of the flow. 
+
+We define an autoregressive **conditioner** c, and an invertible **transformer** $$\tau$$, and then the function that transform $$x_i$$ to $$y_i$$ is defined as:
+
+$$ y_i = f(x_{1:i}) = \tau(c(x_{1:i-1}), x_i)  \tag{23}$$
+
+In NAF, we replace the affine transformer with a neural network, and yields a more rich family of distributions with only a minor increae in computation and memory requirements:
+
+$$ \tau(c(x_{1:i-1}), x_i) = \text{DNN}(x_i; \phi=c(x_{1:i-1}))  \tag{24}$$
+
+where in deep neural network, $$x_i$$ is input, $$y_i$$ is output and its weights and biases are given by the output of $$c(x_{1:i-1})$$
+
+Now the question is, **how to make sure that the two requirements for computational simplicity are satisfied?**
+
+In original paper, the author makes the network to be monotonic by forcing strictly positive weights and strictly monotonic activation functions for $$\tau_i$$. Strictly monotonic NAF will thus be invertible (as per requirement $$1$$). Meanwhile, $$\frac{dy_i}{dx_i}$$ and gradients w.r.t to parameters can be computed efficiently via backpropagation (as per requirement 2).
+
+Two neural architectures for $$\tau_i$$ is proposed performing well: **deep sigmoidal flows (DSF)** and **deep dense sigmoidal flows (DDSF)** 
+<img src="assets/images/NF/NF-5.jpg" alt="NF-5" style="width: 60%;">
 
 
 <br><br><br>

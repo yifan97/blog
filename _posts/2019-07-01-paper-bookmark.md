@@ -41,3 +41,6 @@ in Deep Generative Models</a>
 - <a href="https://arxiv.org/abs/1505.05770" style="font-weight: normal;">Variational Inference with Normalizing Flows</a>
 
 - <a href="https://arxiv.org/abs/1803.05649" style="font-weight: normal;">Sylvester Normalizing Flows for Variational Inference</a>
+
+- <a href="https://arxiv.org/pdf/1710.02248.pdf" style="font-weight: normal;">Learnable Explicit Density for Continuous Latent Space and Variational Inference</a>
+
