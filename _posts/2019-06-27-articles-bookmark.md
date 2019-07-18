@@ -42,8 +42,8 @@ comments: true
 - <a href="https://blogs.nvidia.com/blog/2018/09/05/whats-the-difference-between-a-cnn-and-an-rnn/" style="font-weight: normal;">What’s the Difference Between a CNN and an RNN?</a>
 - <a href="https://blog.evjang.com/2018/01/nf1.html" style="font-weight: normal;">Normalizing Flows Tutorial, Part 1: Distributions and Determinants</a>
 - <a href="https://stats.stackexchange.com/questions/199605/how-does-the-reparameterization-trick-for-vaes-work-and-why-is-it-important" style="font-weight: normal;">Reparametrization in VAEs</a>
-- - <a href="https://www.quora.com/What-is-variational-inferences" style="font-weight: normal;">What is variational inference?</a>
-
+- <a href="https://www.quora.com/What-is-variational-inferences" style="font-weight: normal;">What is variational inference?</a>
+- <a href="https://www.oreilly.com/library/view/machine-learning-with/9781785889936/ff082869-751b-4de3-9a59-edff60ad4e94.xhtml" style="font-weight: normal;">Prior, likelihood, and posterior</a>
 
 
 

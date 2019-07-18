@@ -9,7 +9,7 @@ comments: true
 ---
 
 
-**This is a note that I took when I read the <a href="https://arxiv.org/pdf/1705.07057.pdf" style="color: #0074D9;">MAF paper</a>, <a href="https://blog.evjang.com/2018/01/nf1.html" style="color: #0074D9;">Normalizing Flows Tutorials</a> by Eric Jang and <a href="http://akosiorek.github.io/ml/2018/04/03/norm_flows.html" style="color: #0074D9;">its variations</a> by Adam Kosiorek**
+**This is a note that I took when I read the <a href="https://arxiv.org/pdf/1705.07057.pdf" style="color: #0074D9;">MAF paper</a>, <a href="https://arxiv.org/pdf/1804.00779.pdf" style="color: #0074D9;">NAF paper</a>, <a href="https://blog.evjang.com/2018/01/nf1.html" style="color: #0074D9;">Normalizing Flows Tutorials</a> by Eric Jang and <a href="http://akosiorek.github.io/ml/2018/04/03/norm_flows.html" style="color: #0074D9;">its variations</a> by Adam Kosiorek**
 
 ------------------
 
@@ -81,22 +81,27 @@ This series of transformations can transform a simple probability distribution (
 
 $$ f(\mathbf{z}) = \mathbf{z} + \mathbf{u}h(\mathbf{w}^{\intercal}\mathbf{z} + b) \tag{7} $$
 
-with $$\mathbf{u}, \mathbf{w} \in \mathbb{R}^d \text{ and b} \in \mathbb{R}$$, and h an element-wise non-linearity. Let $$\psi(\mathbf{z}) = h^{\prime}(\mathbf{w}^{\intercal}\mathbf{z} + b)\mathbf{w}$$. Then determinant can be easily computed as 
+where $$ \lambda = \{\mathbf{u}, \mathbf{w} \in \mathbb{R}^d, b \in \mathbb{R}\} $$ are free parameters, and h is a smooth element-wise non-linearity. We can then compute the logdet-Jacobian term in $$O(D)$$ time using the matrix determinant lemma:
 
-We can compute the logdet-Jacobian term in $$O(D)$$ time using the matrix determinant lemma:
+$$\psi(\mathbf{z}) = h^{\prime}(\mathbf{w}^{\intercal}\mathbf{z} + b)\mathbf{w}$$
 
 $$ \left| \text{det} \frac{\partial{f}}{\partial{\mathbf{z}}} \right| = \left| \text{det}({\mathbf{I} + \mathbf{u} \psi(\mathbf{z}))^{\intercal}} \right|= \left| 1 + \mathbf{u}^{\intercal} \psi(\mathbf{z}) \right| \tag{8}$$
 
-We conclude that the density $$q_K(\mathbf{z})$$ obtained by transforming an arbitraty initial density $$q_0(\mathbf{z})$$ through the sequence of maps $$f_k$$ is implicitly given by:
+We conclude that the log density $$q_K(\mathbf{z})$$ obtained by transforming an arbitraty initial density $$q_0(\mathbf{z})$$ through the sequence of maps $$f_k$$ is implicitly given by:
 
 $$ \text{ln } q_K(\mathbf{z_K}) = \text{ln } q_0(\mathbf{z}) - \sum_{k=1}^K \text{ln } \left| 1 + \mathbf{u_k}^{\intercal} \psi_k(\mathbf{z_k}) \right| \tag{9} $$
+
+The flow defined by $$(9)$$ modifies the initial density $$q_0$$ by applying a series of contractions and expansions in the direction perpendicular to the hyperplane $$\mathbf{w}^{\intercal}\mathbf{z} + b = 0$$, hence we refer to these maps as planar flows. 
 
 <br>
 - **Radial Flow**
 
+As an alternative, we can consider a family of transformation that modify an initial density $$q_0$$ around a reference point $$\mathbf{z}_0$$ 
+
 $$ f(\mathbf{z}) = \mathbf{z} + \beta h(\alpha, r)(\mathbf{z}-\mathbf{z_0})\tag{10} $$
 
-with $$r = \|\mathbf{z} - \mathbf{z_0}\|_2, h(\alpha, r) = \frac{1}{\alpha+r} \text{ and parameters } \mathbf{z_0} \in \mathbb{R}^d, \alpha \in \mathbb{R_+} \text{ and } \beta \in \mathbb{R}$$
+where 
+$$r = |\mathbf{z} - \mathbf{z_0}|, h(\alpha, r) = \frac{1}{\alpha+r} \text{ and parameters are } \lambda = \{ \mathbf{z_0} \in \mathbb{R}^d, \alpha \in \mathbb{R}, \beta \in \mathbb{R} \}$$
 
 This family allows for a linear-time computation of the determinant. 
 
@@ -137,14 +142,13 @@ It is an autoregressive transformation, although not as general as equation $$(1
 
 $$ \frac{\partial{\mathbf{y}}}{\partial{\mathbf{z}}} = \prod_{i=1}^{d-k}\sigma_i(\mathbf{z}_{1:k}) \tag{16} $$
 
-R-NVPs are particularly attractive because both sampling and evaluating probability of some external sample are very efficient. Computational complexity of both operations is, in fact, exactly the same. This allows to use R-NVPs as a parametrization of an approximate posterior $$q$$ in VAEs, but also as the output likelihood (in VAEs or general regression models). To see this, first note that we can compute all elements of $$\mu$$ and $$ \sigma$$ in parallel, since all inputs ($$\mathbf{z}$$) are available. We can therefore compute $$\mathbf{y}$$ in a single forward pass. Next, note that the inverse transformation has the following form, with all divisions done element-wise,
+R-NVPs are particularly attractive because both sampling and inference are equally efficient.  This allows to use R-NVPs as a parametrization of an approximate posterior $$q$$ in VAEs, but also as the output likelihood (in VAEs or general regression models). To see this, first note that we can compute all elements of $$\mu$$ and $$ \sigma$$ in parallel, since all inputs ($$\mathbf{z}$$) are available. We can therefore compute $$\mathbf{y}$$ in a single forward pass. Next, note that the inverse transformation has the following form, with all divisions done element-wise,
 
 $$ \mathbf{z}_{1:k} = \mathbf{y}_{1:k} \tag{17} $$
 
 $$ \mathbf{z}_{k+1:d} = \frac{\mathbf{y}_{k+1:d}-\mu(\mathbf{y}_{1:k})}{\sigma({\mathbf{y}_{1:k}})} $$
 
-Note that $$\mu$$ and $$\sigma$$ are usually implemented as Neural networks, which are generally not invertible. Thanks to equation $$(17)$$, however, they do not have to be invertible for the whole R-NVP transformation to be invertible. In original paper, the authors apply stacking coupling layers of this mapping and permute the ordering of copied dimensions. This way, variables that are just copied in one step, are to be transformed in the following step.
-
+Note that $$\mu$$ and $$\sigma$$ are usually implemented as Neural networks, which are generally not invertible. Thanks to equation $$(17)$$, however, they do not have to be invertible for the whole R-NVP transformation to be invertible. Notice that with a single coupling layer, some components are unchanged in forward transformation. In original paper, this problem is overcome by stacking multiple coupling layers and permute the ordering of copied dimensions. **The Jacobian determinant remains tractable**.
 <br>
 **Autoregressive models as normalizing flows**
 

@@ -9,10 +9,6 @@
     padding: 10px;
 }
 
-p a{
-    text-decoration: none !important;
-}
-
 p a:hover{
     opacity: 0.6;
 }
