@@ -149,6 +149,8 @@ $$ \mathbf{z}_{1:k} = \mathbf{y}_{1:k} \tag{17} $$
 $$ \mathbf{z}_{k+1:d} = \frac{\mathbf{y}_{k+1:d}-\mu(\mathbf{y}_{1:k})}{\sigma({\mathbf{y}_{1:k}})} $$
 
 Note that $$\mu$$ and $$\sigma$$ are usually implemented as Neural networks, which are generally not invertible. Thanks to equation $$(17)$$, however, they do not have to be invertible for the whole R-NVP transformation to be invertible. Notice that with a single coupling layer, some components are unchanged in forward transformation. In original paper, this problem is overcome by stacking multiple coupling layers and permute the ordering of copied dimensions. **The Jacobian determinant remains tractable**.
+
+
 <br>
 **Autoregressive models as normalizing flows**
 
@@ -175,7 +177,9 @@ $$ \left| \text{det} \left( \frac{\partial{f^{-1}}}{\partial{\mathbf{x}}} \right
 <br>
 - **Masked Autoregressive Flow (MAF)**
 
-MAF directly uses equations $$(18)$$ and $$(19)$$ to transform as random variable. It is named **Masked** because it used <a href="https://arxiv.org/pdf/1502.03509.pdf" style="font-weight: normal; color: #0074D9;">Masked Autoencoder for distribution Estimation</a> (MADE) as a building block. Specifically, we choose to implement the set of functions $${\mu, \sigma}$$ with masking. The benefit of using maskng is that it enables transforming from data $$\mathbf{x}$$ to random numbers $$\mathbf{u}$$ and thus calcupating $$p(\mathbf{x})$$ in one forward pass through the flow, thus eliminating the need for sequential recursion in $$(20)$$. In practice, we adds flexibility to this model by stacking multiple instances of the model into a deeper flow. 
+MAF directly uses equations $$(18)$$ and $$(19)$$ to transform as random variable. It is named **Masked** because it used <a href="https://arxiv.org/pdf/1502.03509.pdf" style="font-weight: normal; color: #0074D9;">Masked Autoencoder for distribution Estimation</a> (MADE) as a building block. Specifically, we choose to implement the set of functions $${\mu, \sigma}$$ with masking. The benefit of using maskng is that it enables transforming from data $$\mathbf{x}$$ to random numbers $$\mathbf{u}$$ and thus calculating $$p(\mathbf{x})$$ in one forward pass through the flow, thus eliminating the need for sequential recursion in $$(20)$$. In practice, we adds flexibility to this model by stacking multiple instances of the model into a deeper flow. 
+
+
 
 <br>
 - **Inverse Autoregressive Flow (IAF)**
@@ -192,7 +196,13 @@ where $$ \mu_i$$ and $$\sigma_i$$ are unconstraied scalar functions(through neur
 <br><br><br>
 **MAF v.s IAF**
 
-It's important to know the trade-off of MAF and IAF as they present different consequences. MAF is capable of calculating the density $$p(\mathbf{x})$$ of any datapoint $$\mathbf{x}$$ in one pass through the model, however samping from it requires performing D sequential passes(D is the dimensionality of $$\mathbf{x}$$). In contrast, IAF can generate samples and calculate their density with one pass, however calculating the density $$p(\mathbf{x})$$ of externally provided datapint $$\mathbf{x}$$ requires D passes to find the random number $$\mathbf{u}$$ associated with $$\mathbf{x}$$. Hence, the design choice depends on the intended usage. IAF is suitable  as a recognition model for stochastic variational inference, where it only ever needs to calculate the density of its own samples. In contrast, MAF is more suitable for density estimation, because each example requires only one pass through the model. 
+It's important to know the trade-off of MAF and IAF as they present different consequences. MAF is capable of calculating the density $$p(\mathbf{x})$$ of any datapoint $$\mathbf{x}$$ in one pass through the model, however samping from it requires performing D sequential passes (D is the dimensionality of $$\mathbf{x}$$). This can be seen from $$(20)$$ and $$(21)$$ that they can be immediately used in exact density estimation: 
+
+$$p(x) = p(u) \left| \text{det} \left( \frac{\partial{f^{-1}}}{\partial{\mathbf{x}}} \right) \right| \tag{23}$$
+
+where $$p(u)$$ is the base/unstructured distribution that is easy to compute. In this post, we use standard normal.
+
+In contrast, for IAF calculating the density $$p(\mathbf{x})$$ of externally provided datapint $$\mathbf{x}$$ requires D passes to find the random number $$\mathbf{u}$$ associated with $$\mathbf{x}$$ because $$u_i$$ depends on the computation of previous $$u_{1:i-1}$$. However, IAF can generate samples and calculate their density with one pass since all the $$x_i$$ can be computed in a sinle pass of $$D$$ threads in parallel. Hence, the design choice depends on the intended usage. IAF is suitable  as a recognition model for stochastic variational inference, where it only ever needs to calculate the density of its own samples. In contrast, MAF is more suitable for density estimation, because each example requires only one pass through the model. 
 
 <br><br><br>
 **Neural Autoregressive Flows (NAF)**
@@ -210,11 +220,11 @@ This raised the possibility to using a more poweful transformation in order to i
 
 We define an autoregressive **conditioner** c, and an invertible **transformer** $$\tau$$, and then the function that transform $$x_i$$ to $$y_i$$ is defined as:
 
-$$ y_i = f(x_{1:i}) = \tau(c(x_{1:i-1}), x_i)  \tag{23}$$
+$$ y_i = f(x_{1:i}) = \tau(c(x_{1:i-1}), x_i)  \tag{24}$$
 
 In NAF, we replace the affine transformer with a neural network, and yields a more rich family of distributions with only a minor increae in computation and memory requirements:
 
-$$ \tau(c(x_{1:i-1}), x_i) = \text{DNN}(x_i; \phi=c(x_{1:i-1}))  \tag{24}$$
+$$ \tau(c(x_{1:i-1}), x_i) = \text{DNN}(x_i; \phi=c(x_{1:i-1}))  \tag{25}$$
 
 where in deep neural network, $$x_i$$ is input, $$y_i$$ is output and its weights and biases are given by the output of $$c(x_{1:i-1})$$
 
