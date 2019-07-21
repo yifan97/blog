@@ -207,7 +207,7 @@ In contrast, for IAF calculating the density $$p(\mathbf{x})$$ of externally pro
 <br><br><br>
 **Neural Autoregressive Flows (NAF)**
 
-This is a relatively state-of-the-art work by <a href="https://arxiv.org/pdf/1804.00779.pdf">Huang, et al.</a> which substantially improve the above-mentioned autoregressive flows in terms of expressiveness.
+This is a relatively state-of-the-art work by <a href="https://arxiv.org/pdf/1804.00779.pdf">Huang, et al.</a>,  which substantially improve the above-mentioned autoregressive flows in terms of expressiveness.
 
 Let's recall what we got so far from IAF and MAF. Our initial motivation is that autoregressive model can be combined with normalizing flows to produce good results in density estimation and that different ways to combine these two, as shown in IAF and MAF, give us different results, depending the usage case. However, both IAF and MAF limit themsleves with affine transformation throughout normalizing flows for computational simplicity. For instance, $$x_i = u_i \text{ exp }{\sigma_i} + \mu_i $$.
 
