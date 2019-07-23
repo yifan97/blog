@@ -44,8 +44,10 @@ comments: true
 - <a href="https://stats.stackexchange.com/questions/199605/how-does-the-reparameterization-trick-for-vaes-work-and-why-is-it-important" style="font-weight: normal;">Reparametrization in VAEs</a>
 - <a href="https://www.quora.com/What-is-variational-inferences" style="font-weight: normal;">What is variational inference?</a>
 - <a href="https://www.oreilly.com/library/view/machine-learning-with/9781785889936/ff082869-751b-4de3-9a59-edff60ad4e94.xhtml" style="font-weight: normal;">Prior, likelihood, and posterior</a>
-- <a href="http://www.lichun.cc/blog/2013/07/understand-bayes-theorem-prior-likelihood-posterior-evidence/
-" style="font-weight: normal;">Another explanation of Prior, likelihood, and posterior</a>
+- <a href="http://www.lichun.cc/blog/2013/07/understand-bayes-theorem-prior-likelihood-posterior-evidence/" style="font-weight: normal;">Another explanation of Prior, likelihood, and posterior</a>
+- <a href="http://bjlkeng.github.io/posts/autoregressive-autoencoders/" style="font-weight: normal;">MADE</a>
+- <a href="https://stackoverflow.com/questions/42733971/understanding-the-dimensions-of-a-fully-connected-layer-that-follows-a-max-pooli" style="font-weight: normal;">Fully connected layer</a>
+- <a href="https://www.learnopencv.com/number-of-parameters-and-tensor-sizes-in-convolutional-neural-network/" style="font-weight: normal;">Number of Parameters and Tensor Sizes in a Convolutional Neural Network (CNN)</a>
 
 
 
@@ -56,6 +58,8 @@ comments: true
 - <a href="https://hackernoon.com/understanding-the-underscore-of-python-309d1a029edc" style="font-weight: normal;">Understanding the underscore _ of Python</a>
 - <a href="https://micropyramid.com/blog/understand-self-and-__init__-method-in-python-class/" style="font-weight: normal;">Understanding self and __init__ method in python Class</a>
 - <a href="https://softwareengineering.stackexchange.com/questions/102090/why-isnt-java-used-for-modern-web-application-development" style="font-weight: normal;">Why isn't Java used for modern web application development?</a>
+- <a href="https://stackoverflow.com/questions/419163/what-does-if-name-main-do" style="font-weight: normal;">What does if __name__ == “__main__”: do?</a>
+
 
 
 
