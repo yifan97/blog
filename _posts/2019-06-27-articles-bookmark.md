@@ -48,7 +48,7 @@ comments: true
 - <a href="http://bjlkeng.github.io/posts/autoregressive-autoencoders/" style="font-weight: normal;">MADE</a>
 - <a href="https://stackoverflow.com/questions/42733971/understanding-the-dimensions-of-a-fully-connected-layer-that-follows-a-max-pooli" style="font-weight: normal;">Fully connected layer</a>
 - <a href="https://www.learnopencv.com/number-of-parameters-and-tensor-sizes-in-convolutional-neural-network/" style="font-weight: normal;">Number of Parameters and Tensor Sizes in a Convolutional Neural Network (CNN)</a>
-
+- <a href="https://www.youtube.com/watch?v=vMh0zPT0tLI" style="font-weight: normal;">Stochastic Gradient Descent</a>
 
 
 

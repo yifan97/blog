@@ -44,3 +44,11 @@ in Deep Generative Models</a>
 
 - <a href="https://arxiv.org/pdf/1710.02248.pdf" style="font-weight: normal;">Learnable Explicit Density for Continuous Latent Space and Variational Inference</a>
 
+- <a href="http://www.jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf?utm_content=buffer79b43&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer" style="font-weight: normal;">Dropout: A Simple Way to Prevent Neural Networks from
+Overfitting</a>
+
+- <a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf" style="font-weight: normal;">ImageNet Classification with Deep Convolutional Neural Networks</a>
+
+- <a href="http://www.cs.toronto.edu/~nitish/msc_thesis.pdf" style="font-weight: normal;">Improving Neural Networks with Dropout</a>
+
+
