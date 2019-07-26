@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: assets/images/cover-img/c12.jpg
+cover: assets/images/cover-img/c13.jpg
 navigation: True
 title: Pytorch Autograd
 date: 2019-07-25
