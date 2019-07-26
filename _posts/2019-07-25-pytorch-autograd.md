@@ -79,3 +79,6 @@ with torch.no_grad():
     y = x*2
     print(y.requires_grad)  #False
 ```
+
+
+In earlier versions of PyTorch, the ```torch.autograd.Variable``` class was used to create tensors that support gradient calculations and operation tracking but as of PyTorch v$$0.4.0$$ Variable class has been deprecated. ```torch.tensor```and ```torch.autograd. Variable``` are now the same class. More precisely, ```torch.tensor``` is capable of tracking history and behaves like the old ```Variable```.
