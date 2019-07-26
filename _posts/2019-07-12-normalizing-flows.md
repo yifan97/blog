@@ -9,13 +9,13 @@ comments: true
 ---
 
 
-**This is a note that I took when I read the <a href="https://arxiv.org/pdf/1705.07057.pdf" style="color: #0074D9;">MAF paper</a>, <a href="https://arxiv.org/pdf/1804.00779.pdf" style="color: #0074D9;">NAF paper</a>, <a href="https://blog.evjang.com/2018/01/nf1.html" style="color: #0074D9;">Normalizing Flows Tutorials</a> by Eric Jang and <a href="http://akosiorek.github.io/ml/2018/04/03/norm_flows.html" style="color: #0074D9;">its variations</a> by Adam Kosiorek**
+**This is a note that I took when I read the <a href="https://arxiv.org/pdf/1705.07057.pdf" target="_blank" style="color: #0074D9;">MAF paper</a>, <a href="https://arxiv.org/pdf/1804.00779.pdf" target="_blank" style="color: #0074D9;">NAF paper</a>, <a href="https://blog.evjang.com/2018/01/nf1.html" target="_blank" style="color: #0074D9;">Normalizing Flows Tutorials</a> by Eric Jang and <a href="http://akosiorek.github.io/ml/2018/04/03/norm_flows.html" target="_blank" style="color: #0074D9;">its variations</a> by Adam Kosiorek**
 
 ------------------
 
 Machine learning is all about probability. To train a model, we typically tune its parameters to maximize the probability of the training dataset under the model. To do so, we have to assume some probability distribution as the output of our model. The most common one, Gaussian distribution, can be problematic, as the true probability density function ($$pdf$$) of real data is often far from Gaussian. If we use the Gaussian as likelihood for image-generation models, we end up with blurry reconstructions, as proved in <a href="https://arxiv.org/pdf/1312.6114.pdf" style="color: #0074D9; font-weight:normal;">Variational Autoencoders (VAEs)</a>. We can circumvent this issue by adversarial training, which is an example of likelihood-free inference, but this approach has its own issues.
 
-It is fact that Gaussians are also used, and often prove too simple. Fortunately, we can often take a simple probability distribution, take a sample from it and then transform the sample. This is equivalent to change of variables in probability distributions and, if the transformation meets some mild conditions, can result in a very complex $$pdf$$ of the transformed variable. Danilo Rezende formalized this in his paper on <a href="https://arxiv.org/pdf/1505.05770.pdf" style="color: #0074D9; font-weight: normal;">Normalizing Flows (NF)</a>. NFs are usually used to parametrize the approximate posterior $$q$$ in VAEs but can also be applied for the likelihood function.
+It is fact that Gaussians are also used, and often prove too simple. Fortunately, we can often take a simple probability distribution, take a sample from it and then transform the sample. This is equivalent to change of variables in probability distributions and, if the transformation meets some mild conditions, can result in a very complex $$pdf$$ of the transformed variable. Danilo Rezende formalized this in his paper on <a href="https://arxiv.org/pdf/1505.05770.pdf" target="_blank" style="color: #0074D9; font-weight: normal;">Normalizing Flows (NF)</a>. NFs are usually used to parametrize the approximate posterior $$q$$ in VAEs but can also be applied for the likelihood function.
 
 <br><br><br>
 **Change of Variables**
@@ -116,7 +116,7 @@ Here is the result of two families on Gaussian and Uniform distribution.
 
 These simple flows are useful only for low dimensional spaces, since each transformation affects only a small volume in the original space. As the volume of the space grows exponentially with the number of dimensions $$d$$, we need a lot of layers in a high-dimensional space.
 
-Another way to understand the need for many layers is to look at the form of the mappings. Each mapping behaves as a hidden layer of a neural network with one hidden unit and a skip connection. Since a single hidden unit is not very expressive, we need a lot of transformations. Recently introduced <a href="https://arxiv.org/abs/1803.05649" style="font-weight: normal; color: #0074D9;">Sylvester Normalizing Flows</a> overcome the single-hidden-unit issue of these simple flows.
+Another way to understand the need for many layers is to look at the form of the mappings. Each mapping behaves as a hidden layer of a neural network with one hidden unit and a skip connection. Since a single hidden unit is not very expressive, we need a lot of transformations. Recently introduced <a href="https://arxiv.org/abs/1803.05649" target="_blank" style="font-weight: normal; color: #0074D9;">Sylvester Normalizing Flows</a> overcome the single-hidden-unit issue of these simple flows.
 
 <br><br><br>
 **Autoregressive Flows**
@@ -177,7 +177,7 @@ $$ \left| \text{det} \left( \frac{\partial{f^{-1}}}{\partial{\mathbf{x}}} \right
 <br>
 - **Masked Autoregressive Flow (MAF)**
 
-MAF directly uses equations $$(18)$$ and $$(19)$$ to transform as random variable. It is named **Masked** because it used <a href="https://arxiv.org/pdf/1502.03509.pdf" style="font-weight: normal; color: #0074D9;">Masked Autoencoder for distribution Estimation</a> (MADE) as a building block. Specifically, we choose to implement the set of functions $${\mu, \sigma}$$ with masking. The benefit of using maskng is that it enables transforming from data $$\mathbf{x}$$ to random numbers $$\mathbf{u}$$ and thus calculating $$p(\mathbf{x})$$ in one forward pass through the flow, thus eliminating the need for sequential recursion in $$(20)$$. In practice, we adds flexibility to this model by stacking multiple instances of the model into a deeper flow. 
+MAF directly uses equations $$(18)$$ and $$(19)$$ to transform as random variable. It is named **Masked** because it used <a href="https://arxiv.org/pdf/1502.03509.pdf" target="_blank" style="font-weight: normal; color: #0074D9;">Masked Autoencoder for distribution Estimation</a> (MADE) as a building block. Specifically, we choose to implement the set of functions $${\mu, \sigma}$$ with masking. The benefit of using maskng is that it enables transforming from data $$\mathbf{x}$$ to random numbers $$\mathbf{u}$$ and thus calculating $$p(\mathbf{x})$$ in one forward pass through the flow, thus eliminating the need for sequential recursion in $$(20)$$. In practice, we adds flexibility to this model by stacking multiple instances of the model into a deeper flow. 
 
 
 
@@ -207,7 +207,7 @@ In contrast, for IAF calculating the density $$p(\mathbf{x})$$ of externally pro
 <br><br><br>
 **Neural Autoregressive Flows (NAF)**
 
-This is a relatively state-of-the-art work by <a href="https://arxiv.org/pdf/1804.00779.pdf">Huang, et al.</a>,  which substantially improve the above-mentioned autoregressive flows in terms of expressiveness.
+This is a relatively state-of-the-art work by <a href="https://arxiv.org/pdf/1804.00779.pdf" target="_blank">Huang, et al.</a>,  which substantially improve the above-mentioned autoregressive flows in terms of expressiveness.
 
 Let's recall what we got so far from IAF and MAF. Our initial motivation is that autoregressive model can be combined with normalizing flows to produce good results in density estimation and that different ways to combine these two, as shown in IAF and MAF, give us different results, depending the usage case. However, both IAF and MAF limit themsleves with affine transformation throughout normalizing flows for computational simplicity. For instance, $$x_i = u_i \text{ exp }{\sigma_i} + \mu_i $$.
 
