@@ -49,8 +49,9 @@ comments: true
 - <a href="https://stackoverflow.com/questions/42733971/understanding-the-dimensions-of-a-fully-connected-layer-that-follows-a-max-pooli" style="font-weight: normal;">Fully connected layer</a>
 - <a href="https://www.learnopencv.com/number-of-parameters-and-tensor-sizes-in-convolutional-neural-network/" style="font-weight: normal;">Number of Parameters and Tensor Sizes in a Convolutional Neural Network (CNN)</a>
 - <a href="https://www.youtube.com/watch?v=vMh0zPT0tLI" style="font-weight: normal;">Stochastic Gradient Descent</a>
-
-
+- <a href="https://discuss.pytorch.org/t/what-is-the-difference-between-register-buffer-and-register-parameter-of-nn-module/32723" style="font-weight: normal;">What is the difference between `register_buffer` and `register_parameter` of `nn.Module`</a>
+- <a href="https://towardsdatascience.com/pytorch-autograd-understanding-the-heart-of-pytorchs-magic-2686cd94ec95
+" style="font-weight: normal;">PyTorch Autograd</a>
 
 
 
@@ -59,8 +60,8 @@ comments: true
 - <a href="https://micropyramid.com/blog/understand-self-and-__init__-method-in-python-class/" style="font-weight: normal;">Understanding self and __init__ method in python Class</a>
 - <a href="https://softwareengineering.stackexchange.com/questions/102090/why-isnt-java-used-for-modern-web-application-development" style="font-weight: normal;">Why isn't Java used for modern web application development?</a>
 - <a href="https://stackoverflow.com/questions/419163/what-does-if-name-main-do" style="font-weight: normal;">What does if __name__ == “__main__”: do?</a>
-
-
+- <a href="https://docs.python.org/3/tutorial/modules.html" style="font-weight: normal;">Module in python</a>
+- <a href="https://docs.python.org/3/tutorial/classes.html" style="font-weight: normal;">Classes in python</a>
 
 
 
