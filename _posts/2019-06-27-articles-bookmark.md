@@ -57,9 +57,9 @@ comments: true
 
 **General programming**
 - <a href="https://hackernoon.com/understanding-the-underscore-of-python-309d1a029edc" style="font-weight: normal;">Understanding the underscore _ of Python</a>
-- <a href="https://micropyramid.com/blog/understand-self-and-__init__-method-in-python-class/" style="font-weight: normal;">Understanding self and __init__ method in python Class</a>
+- <a href="https://micropyramid.com/blog/understand-self-and-__init__-method-in-python-class/" style="font-weight: normal;">Understanding self and \__init__ method in python Class</a>
 - <a href="https://softwareengineering.stackexchange.com/questions/102090/why-isnt-java-used-for-modern-web-application-development" style="font-weight: normal;">Why isn't Java used for modern web application development?</a>
-- <a href="https://stackoverflow.com/questions/419163/what-does-if-name-main-do" style="font-weight: normal;">What does if __name__ == “__main__”: do?</a>
+- <a href="https://stackoverflow.com/questions/419163/what-does-if-name-main-do" style="font-weight: normal;">What does if \__name__ == “\__main__”: do?</a>
 - <a href="https://docs.python.org/3/tutorial/modules.html" style="font-weight: normal;">Module in python</a>
 - <a href="https://docs.python.org/3/tutorial/classes.html" style="font-weight: normal;">Classes in python</a>
 
