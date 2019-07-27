@@ -120,5 +120,5 @@ Saving images appropriately for the web is an important step to learn early and 
 
 
 <br><br>
-**Ackownledge**: This content is largly adapted from <a href="https://www.abetterlemonadestand.com/optimizing-images-for-web/" style="font-weight:normal;">Richard Lazazzera</a>
+**Acknowledgement**: This content is largly adapted from <a href="https://www.abetterlemonadestand.com/optimizing-images-for-web/" style="font-weight:normal;">Richard Lazazzera</a>
 
