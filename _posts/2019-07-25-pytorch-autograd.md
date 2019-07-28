@@ -64,9 +64,19 @@ y = x * x + 2
 y[0].backward()
 x.grad      # tensor([2., 0.])
 ```
-You might be wondering, I just said that if we want a vector output, we should explicitly pass input gradient as an argument of ```.backward()```,then why does above code work fine?
+You might be wondering, I just said that if we want a vector output, we should explicitly pass input gradient as an argument of ```.backward()```, then why does above code work fine?
 
 Actually, when you look at the code, I used ```y[0]``` which means I just computed the gradient of a scaler, i.e. the first dimention of input. That being said, the output is indeed a scaler but because we ignore the rest dimensions(in this example, the second dimension), we do the zero-filling.
+
+Another tricker example is 
+```python
+x = torch.tensor([1., 2.], requires_grad=True)
+y = 2 * x[0] * x[0] + 4 * x[1] * [1]
+
+y.backward()
+x.grad      # tensor([4., 16.])
+```
+We don't get an error in this case because although it looks like we output a vector, we essentially sequentially output two scalers and then put two scalers in a list as the final output. **This manipulation happens a lot in neural nets** where x[$$0$$] is the weight, and x[$$1$$] is the feature. 
 
 **grad_fn**: This is the backward function used to calculate the gradient
 
@@ -94,8 +104,3 @@ with torch.no_grad():
 
 
 In earlier versions of Pytorch, the ```torch.autograd.Variable``` class was used to create tensors that support gradient calculations and operation tracking but as of Pytorch v0.4.0 ```Variable``` class has been deprecated. ```torch.tensor```and ```torch.autograd. Variable``` are now the same class. More precisely, ```torch.tensor``` is capable of tracking history and behaves like the old ```Variable```.
-
-
-$$\ell_c(x, y) = L_c = \{l_{1,c},\dots,l_{N,c}\}^\top, \quad
-        l_{n,c} = - w_{n,c} \left[ p_c y_{n,c} \cdot \log \sigma(x_{n,c})
-        + (1 - y_{n,c}) \cdot \log (1 - \sigma(x_{n,c})) \right]$$
