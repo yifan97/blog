@@ -62,7 +62,7 @@ comments: true
 - <a href="https://stackoverflow.com/questions/419163/what-does-if-name-main-do" style="font-weight: normal;">What does if \__name__ == “\__main__”: do?</a>
 - <a href="https://docs.python.org/3/tutorial/modules.html" style="font-weight: normal;">Module in python</a>
 - <a href="https://docs.python.org/3/tutorial/classes.html" style="font-weight: normal;">Classes in python</a>
-
+ <a href="https://www.geeksforgeeks.org/python-map-function/" style="font-weight: normal;">map() in python</a>
 
 
 

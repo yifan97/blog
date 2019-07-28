@@ -9,7 +9,7 @@ comments: true
 ---
 
 
-**This article serves as a note after reading <a href="https://arxiv.org/pdf/1705.07057.pdf" target="_blank"  style="color: #0074D9;">Pytorch autograd docs</a> and <a href="https://towardsdatascience.com/pytorch-autograd-understanding-the-heart-of-pytorchs-magic-2686cd94ec95" target="_blank" style="color: #0074D9;">this tutorial</a>**
+**This article serves as a note after reading <a href="https://arxiv.org/pdf/1705.07057.pdf" target="_blank"  style="color: #0074D9;">Pytorch autograd docs</a> and this <a href="https://towardsdatascience.com/pytorch-autograd-understanding-the-heart-of-pytorchs-magic-2686cd94ec95" target="_blank" style="color: #0074D9;">tutorial</a>**
 
 ------------------
 
@@ -56,6 +56,18 @@ The leaves of this graph are input tensors and the roots are output tensors. Gra
 
 **.backward()**: This is the function that actually calculates the gradient by passing its argument through the backward graph all the way up to specific traceable leaf. Note that ```.backward()``` without argument passed is default for scalar output. Actually, it automatically passed as ```.backward(torch.tensor(1.0))```. This means that if we the gradient we want to compute is not a scaler tensor, we should explicitly pass tensor of the same dimension of intended gradient. Take the code above as an example, we want to compute the gradient of ```x = tensor([1. ,2. ,3.])```, we should use ```.backward(torch.tensor([1. ,1.]))```. And note that the backward graph is already made dynamically during the forward pass. Backward function only calculates the gradient using the already made graph and stores them in leaf nodes.
 
+I want to specifically point out a confusing use of .backward() that many people have trouble understanding:
+```python
+x = torch.tensor([1., 2.], requires_grad=True)
+y = x * x + 2
+
+y[0].backward()
+x.grad      # tensor([2., 0.])
+```
+You might wondering, I just said that if we want a vector output, we should explicitly pass input gradient as an argument of .backward(),then why does above code work fine?
+
+Actually, when you look at the code, I used ```y[0]``` which means I just computed the gradient of a scaler, i.e. the first dimention of input. That being said, the output is indeed a scaler but because we ignore the rest dimensions(in this example, the second dimension), we do the zero-filling.
+
 **grad_fn**: This is the backward function used to calculate the gradient
 
 
@@ -82,3 +94,8 @@ with torch.no_grad():
 
 
 In earlier versions of Pytorch, the ```torch.autograd.Variable``` class was used to create tensors that support gradient calculations and operation tracking but as of Pytorch v0.4.0 ```Variable``` class has been deprecated. ```torch.tensor```and ```torch.autograd. Variable``` are now the same class. More precisely, ```torch.tensor``` is capable of tracking history and behaves like the old ```Variable```.
+
+
+$$\ell_c(x, y) = L_c = \{l_{1,c},\dots,l_{N,c}\}^\top, \quad
+        l_{n,c} = - w_{n,c} \left[ p_c y_{n,c} \cdot \log \sigma(x_{n,c})
+        + (1 - y_{n,c}) \cdot \log (1 - \sigma(x_{n,c})) \right]$$
