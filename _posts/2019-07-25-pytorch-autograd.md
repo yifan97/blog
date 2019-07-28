@@ -52,11 +52,11 @@ The leaves of this graph are input tensors and the roots are output tensors. Gra
 
 **requires_grad**: If this attribute is true, then this tensor starts to track all the operation history and forms a backward graph for gradient calculation. For an arbitraty tensor $$a$$, it can be done in place by ```a.requires_grad_(True)```. Note that only tensors of floating point dtype can require gradients. That's why I initiate like this ```x = np.arrary([1., 2., 3.])```
 
-**grad**: grad holds the value of gradient. If ```requires_grad=False``` it will hold a ```None```. Even if ```requires_grad=True```, it will hold a None unless .backward() is called. 
+**grad**: grad holds the value of gradient. If ```requires_grad=False``` it will hold a ```None```. Even if ```requires_grad=True```, it will hold a None unless ```.backward()``` is called. 
 
 **.backward()**: This is the function that actually calculates the gradient by passing its argument through the backward graph all the way up to specific traceable leaf. Note that ```.backward()``` without argument passed is default for scalar output. Actually, it automatically passed as ```.backward(torch.tensor(1.0))```. This means that if we the gradient we want to compute is not a scaler tensor, we should explicitly pass tensor of the same dimension of intended gradient. Take the code above as an example, we want to compute the gradient of ```x = tensor([1. ,2. ,3.])```, we should use ```.backward(torch.tensor([1. ,1.]))```. And note that the backward graph is already made dynamically during the forward pass. Backward function only calculates the gradient using the already made graph and stores them in leaf nodes.
 
-I want to specifically point out a confusing use of .backward() that many people have trouble understanding:
+I want to specifically point out a confusing use of ```.backward()``` that many people have trouble understanding:
 ```python
 x = torch.tensor([1., 2.], requires_grad=True)
 y = x * x + 2
@@ -64,7 +64,7 @@ y = x * x + 2
 y[0].backward()
 x.grad      # tensor([2., 0.])
 ```
-You might wondering, I just said that if we want a vector output, we should explicitly pass input gradient as an argument of .backward(),then why does above code work fine?
+You might be wondering, I just said that if we want a vector output, we should explicitly pass input gradient as an argument of ```.backward()```,then why does above code work fine?
 
 Actually, when you look at the code, I used ```y[0]``` which means I just computed the gradient of a scaler, i.e. the first dimention of input. That being said, the output is indeed a scaler but because we ignore the rest dimensions(in this example, the second dimension), we do the zero-filling.
 
