@@ -54,7 +54,7 @@ The leaves of this graph are input tensors and the roots are output tensors. Gra
 
 **grad**: grad holds the value of gradient. If ```requires_grad=False``` it will hold a ```None```. Even if ```requires_grad=True```, it will hold a None unless ```.backward()``` is called. 
 
-**.backward()**: This is the function that actually calculates the gradient by passing its argument through the backward graph all the way up to specific traceable leaf. Note that ```.backward()``` without argument passed is default for scalar output. Actually, it automatically passed as ```.backward(torch.tensor(1.0))```. This means that if we the gradient we want to compute is not a scaler tensor, we should explicitly pass tensor of the same dimension of intended gradient. Take the code above as an example, we want to compute the gradient of ```x = tensor([1. ,2. ,3.])```, we should use ```.backward(torch.tensor([1. ,1.]))```. And note that the backward graph is already made dynamically during the forward pass. Backward function only calculates the gradient using the already made graph and stores them in leaf nodes.
+**.backward()**: This is the function that actually calculates the gradient by passing its argument through the backward graph all the way up to specific traceable leaf. Note that ```.backward()``` without argument passed is default for scalar output. Actually, it automatically passed as ```.backward(torch.tensor(1.0))```. This means that if we the gradient we want to compute is not a scaler tensor, we should explicitly pass an external gradient of the same dimension input tensor. Take the code above as an example, we want to compute the gradient of ```x = tensor([1. ,2. ,3.])```, we should use ```.backward(torch.tensor([1. ,1.]))``` (you can pass different tensors, e.g. torch.tensor([$$0.5 , 0.5$$]), it just shrinks the direct gradient by $$2$$--that's why it's called external gradient, or upstream gradient). And note that the backward graph is already made dynamically during the forward pass. Backward function only calculates the gradient using the already made graph and stores them in leaf nodes.
 
 I want to specifically point out a confusing use of ```.backward()``` that many people have trouble understanding:
 ```python
@@ -83,7 +83,7 @@ We don't get an error in this case because although it looks like we output a ve
 
 
 <br>
-To stop Pytorch from tracking the history and forming the backward graph, the code can be wrapped inside ```with torch.no_grad():``` It will make the code run faster whenever gradient tracking is not needed.
+To stop Pytorch from tracking the history and forming the backward graph, you can either call ```.detach()``` or wrapp the code inside ```with torch.no_grad():``` It will make the code run faster whenever gradient tracking is not needed by saving memory. This is particually useful when evaluating a model where we **don't** need the gradients even with trainable parameters with ```requires_grad=True```
 
 ```python
 import torch

@@ -52,3 +52,4 @@ Overfitting</a>
 - <a href="http://www.cs.toronto.edu/~nitish/msc_thesis.pdf" style="font-weight: normal;">Improving Neural Networks with Dropout</a>
 
 
+
