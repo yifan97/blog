@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: assets/images/cover-img/c15.jpg
+cover: assets/images/cover-img/c16.jpg
 navigation: True
 title: Loss Function in Machine Learning 
 date: 2019-08-01
