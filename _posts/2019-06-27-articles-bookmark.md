@@ -52,7 +52,10 @@ comments: true
 - <a href="https://discuss.pytorch.org/t/what-is-the-difference-between-register-buffer-and-register-parameter-of-nn-module/32723" style="font-weight: normal;">What is the difference between `register_buffer` and `register_parameter` of `nn.Module`</a>
 - <a href="https://towardsdatascience.com/pytorch-autograd-understanding-the-heart-of-pytorchs-magic-2686cd94ec95
 " style="font-weight: normal;">PyTorch Autograd</a>
-- <a href="https://www.inference.vc/masked-autoencoders-icml-paper-highlight/" style="font-weight: normal;">From Autoencoders to Autoregressive Models </a>
+- <a href="https://www.inference.vc/masked-autoencoders-icml-paper-highlight/" style="font-weight: normal;">From Autoencoders to Autoregressive Models</a>
+- <a href="https://www.quora.com/Does-the-order-of-training-data-matter-when-training-neural-networks
+" style="font-weight: normal;">Does Training set shuffling matter?</a>
+
 
 
 
