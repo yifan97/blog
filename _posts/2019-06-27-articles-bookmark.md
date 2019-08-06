@@ -55,6 +55,8 @@ comments: true
 - <a href="https://www.inference.vc/masked-autoencoders-icml-paper-highlight/" style="font-weight: normal;">From Autoencoders to Autoregressive Models</a>
 - <a href="https://www.quora.com/Does-the-order-of-training-data-matter-when-training-neural-networks" style="font-weight: normal;">Does Training set shuffling matter?</a>
 - <a href="https://datascience.stackexchange.com/questions/54620/when-to-use-model-train-vs-model-eval-in-pytoch" style="font-weight: normal;">mode.train() v.s model.eval()</a>
+- <a href="http://ruder.io/optimizing-gradient-descent/" style="font-weight: normal;">optimizing-gradient-descent</a>
+
 
 
 

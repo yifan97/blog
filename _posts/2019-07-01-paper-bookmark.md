@@ -51,5 +51,13 @@ Overfitting</a>
 
 - <a href="http://www.cs.toronto.edu/~nitish/msc_thesis.pdf" style="font-weight: normal;">Improving Neural Networks with Dropout</a>
 
+- <a href="https://arxiv.org/pdf/1412.6980.pdf%20%22%20entire%20document" style="font-weight: normal;">ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION</a>
+
+- <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.65.3526&rep=rep1&type=pdf" style="font-weight: normal;">On the momentum term in gradient descent learning algorithms</a>
+
+- <a href="https://arxiv.org/pdf/1609.04747.pdf" style="font-weight: normal;">An overview of gradient descent optimization
+algorithms</a>
+
+
 
 
