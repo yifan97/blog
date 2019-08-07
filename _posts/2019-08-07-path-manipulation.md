@@ -9,7 +9,7 @@ comments: true
 ---
 
 
-**This post serves as a self-practice and introduction of common path manipulation, such as how to write a file, read a file, serialize a file to json format as well as some pitfalls and tricks. I will use Python as examples, but other languages are essentially the same**
+**This post serves as a self-practice and introduction of common path manipulation and file handling, such as how to write a file, read a file, serialize a file to json format as well as some pitfalls and tricks. I will use Python as examples, but other languages are essentially the same.**
 
 ------------------
 
