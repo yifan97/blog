@@ -9,7 +9,7 @@ comments: true
 ---
 
 
-**In this article, I will introduce some popular CNN architectures**
+**In this post, I will introduce some popular CNN architectures**
 
 ------------------
 

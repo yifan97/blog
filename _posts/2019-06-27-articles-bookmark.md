@@ -72,6 +72,8 @@ comments: true
 - <a href="https://docs.python.org/3/tutorial/classes.html" style="font-weight: normal;">Classes in python</a>
 - <a href="https://www.geeksforgeeks.org/python-map-function/" style="font-weight: normal;">map() in python</a>
 - <a href="https://realpython.com/intro-to-python-threading/" style="font-weight: normal;">An Intro to Threading in Python</a>
+- <a href="https://www.geeksforgeeks.org/args-kwargs-python/" style="font-weight: normal;">*args and **kwargs in Python</a>
+- <a href="https://www.pythonforbeginners.com/files/reading-and-writing-files-in-python" style="font-weight: normal;">Reading and writing files in python</a>
 
 
 

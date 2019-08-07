@@ -9,7 +9,7 @@ comments: true
 ---
 
 
-**This article serves as a note after reading this <a href="https://pytorch.org/tutorials/beginner/data_loading_tutorial.html" target="_blank"  style="color: #0074D9;">Pytorch official tutorial</a>.**
+**This post serves as a note after reading this <a href="https://pytorch.org/tutorials/beginner/data_loading_tutorial.html" target="_blank"  style="color: #0074D9;">Pytorch official tutorial</a>.**
 
 ------------------
 

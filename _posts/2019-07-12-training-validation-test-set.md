@@ -9,7 +9,7 @@ comments: true
 ---
 
 
-**In this article, I will explain what is training set, validation set and test set. I will also differentiate them in terms of machine learning process**
+**In this post, I will explain what is training set, validation set and test set. I will also differentiate them in terms of machine learning process**
 
 ------------------
 

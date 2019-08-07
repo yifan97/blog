@@ -9,7 +9,7 @@ comments: true
 ---
 
 
-**This article introduces some basic loss functions used in machine learning training task, mostly in neural nets**
+**This post introduces some basic loss functions used in machine learning training task, mostly in neural nets**
 
 ------------------
 

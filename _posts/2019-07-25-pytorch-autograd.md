@@ -9,7 +9,7 @@ comments: true
 ---
 
 
-**This article serves as a note after reading <a href="https://arxiv.org/pdf/1705.07057.pdf" target="_blank"  style="color: #0074D9;">Pytorch autograd docs</a> and this <a href="https://towardsdatascience.com/pytorch-autograd-understanding-the-heart-of-pytorchs-magic-2686cd94ec95" target="_blank" style="color: #0074D9;">tutorial</a>**
+**This post serves as a note after reading <a href="https://arxiv.org/pdf/1705.07057.pdf" target="_blank"  style="color: #0074D9;">Pytorch autograd docs</a> and this <a href="https://towardsdatascience.com/pytorch-autograd-understanding-the-heart-of-pytorchs-magic-2686cd94ec95" target="_blank" style="color: #0074D9;">tutorial</a>**
 
 ------------------
 

@@ -9,7 +9,7 @@ comments: true
 ---
 
 
-**In this article, I will talk about how to optimize your website images to ensure they provide the best user experience for visitors**
+**In this post, I will talk about how to optimize your website images to ensure they provide the best user experience for visitors**
 
 ------------------
 
