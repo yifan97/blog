@@ -89,3 +89,17 @@ Again, the path argument can be either a string representation or a path object.
 - ```json.loads()```: This method returns an object from a string representing a json object. It is usually used in reading mode.
 
 - ```json.dumps()```: This method takes an object and produces a string:. It is usually used in writing mode. Notice that ```.loads()``` and ```.dumps()``` convert betweeen objects and strings.
+
+There might be some confusions about ```json.loads()``` and ```json.load()```.  The **s** in ```json.loads()``` actually means string. So ```json.loads()``` takes as an input a string, usually ```file.read()```. Whereas, ```json.load()``` accepts file stream as the input argument. For example:
+
+```python
+import json
+
+open(file_path, 'r') as content:
+    file = json.loads(content.read())
+
+open(file_path, 'r') as content:
+    file = json.load(content)
+```
+
+Similarly, we can differentiate ```json.dumps()``` and ```json.dump()```. 
