@@ -74,6 +74,8 @@ comments: true
 - <a href="https://realpython.com/intro-to-python-threading/" style="font-weight: normal;">An Intro to Threading in Python</a>
 - <a href="https://www.geeksforgeeks.org/args-kwargs-python/" style="font-weight: normal;">*args and **kwargs in Python</a>
 - <a href="https://www.pythonforbeginners.com/files/reading-and-writing-files-in-python" style="font-weight: normal;">Reading and writing files in python</a>
+- <a href="https://stackoverflow.com/questions/22439177/why-stringbuilder-is-much-faster-than-string/22439433" style="font-weight: normal;">Why StringBuilder is much faster than String</a>
+- <a href="http://blog.jenkster.com/2015/12/what-is-functional-programming.html" style="font-weight: normal;">What is functional programming?</a>
 
 
 
