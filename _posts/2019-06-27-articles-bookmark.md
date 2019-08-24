@@ -76,6 +76,8 @@ comments: true
 - <a href="https://www.pythonforbeginners.com/files/reading-and-writing-files-in-python" style="font-weight: normal;">Reading and writing files in python</a>
 - <a href="https://stackoverflow.com/questions/22439177/why-stringbuilder-is-much-faster-than-string/22439433" style="font-weight: normal;">Why StringBuilder is much faster than String</a>
 - <a href="http://blog.jenkster.com/2015/12/what-is-functional-programming.html" style="font-weight: normal;">What is functional programming?</a>
+- <a href="https://stackoverflow.com/questions/20839352/why-is-c-used-as-the-main-programming-language-for-operating-systems" style="font-weight: normal;">Why is C used as the main programming language for operating systems?</a>
+
 
 
 
