@@ -77,6 +77,10 @@ comments: true
 - <a href="https://stackoverflow.com/questions/22439177/why-stringbuilder-is-much-faster-than-string/22439433" style="font-weight: normal;">Why StringBuilder is much faster than String</a>
 - <a href="http://blog.jenkster.com/2015/12/what-is-functional-programming.html" style="font-weight: normal;">What is functional programming?</a>
 - <a href="https://stackoverflow.com/questions/20839352/why-is-c-used-as-the-main-programming-language-for-operating-systems" style="font-weight: normal;">Why is C used as the main programming language for operating systems?</a>
+- <a href="https://zhidao.baidu.com/question/1834247962689096020.html" style="font-weight: normal;">为什么现在的操作系统基本上用C语言来实现</a>
+- <a href="http://www.thejavageek.com/2013/07/21/using-javac-and-java-commands-to-compile-and-launch-java-programs/" style="font-weight: normal;">Using javac and java commands to compile and launch java programs</a>
+
+
 
 
 
