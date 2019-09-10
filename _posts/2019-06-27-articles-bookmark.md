@@ -79,6 +79,8 @@ comments: true
 - <a href="https://stackoverflow.com/questions/20839352/why-is-c-used-as-the-main-programming-language-for-operating-systems" style="font-weight: normal;">Why is C used as the main programming language for operating systems?</a>
 - <a href="https://zhidao.baidu.com/question/1834247962689096020.html" style="font-weight: normal;">为什么现在的操作系统基本上用C语言来实现</a>
 - <a href="http://www.thejavageek.com/2013/07/21/using-javac-and-java-commands-to-compile-and-launch-java-programs/" style="font-weight: normal;">Using javac and java commands to compile and launch java programs</a>
+- <a href="https://stackoverflow.com/questions/40286470/android-java-dot-class-syntax-mainactivity-class-getsimplename" style="font-weight: normal;">android java dot class syntax MainActivity.class.getSimpleName();</a>
+
 
 
 
