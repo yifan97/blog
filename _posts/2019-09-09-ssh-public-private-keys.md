@@ -73,7 +73,20 @@ We must sote the keys in .ssh file under the user's account because that's where
 
 **Now that we have a pair of public/private keys, how do you share your public key with a server for authentication?**
 
-Unfortunately, if it is the first time ever to log into a server, you have to use another mathod(ex. password authentication) to authenticate. Then, once you log in, you neet to setup the **.ssh** directory and create a file in this directory called **authorized_keys** file . You also set their permissions to be when needed. Then you just need to transfer your id_rsa.pub to the server's authorized_keys file via ```scp``` 
+Unfortunately, if it is the first time ever to log into a server, you have to use another method(ex. password authentication) to authenticate. Then, once you log in, you neet to setup the **.ssh** directory and create a file in this directory called **authorized_keys** file . You also set their permissions to be when needed. Then you just need to transfer your id_rsa.pub to the server's authorized_keys file via ```scp``` 
+
+When you log into the server for the first time. Run the following command.
+```c
+mkdir -p .ssh                        // make a direcoty names .ssh and don't complain if one already exists (-p)
+chmod 700 .ssh                       // Change the permissions of this directory such that only you can read/write/list it (700)
+touch .ssh/authorized_keys           // Create an empty file in .ssh directory named authorized_keys
+chmod 600 .ssh/authorized_keys       // Change the permissions of this file so that only you can read/write to it
+```
+
+And in your local machine, ```scp``` the public key to server's authorized_keys file
+```c
+scp ../.ssh/id_rsa.pub ssh <user>@<hostname>:.ssh/authorized_keys
+```
 
 **Notice:** You can have more than one public keys registered with a user. It's common to have one key per device like
 laptop/desktop so if it gets stolen you can revoke just its key
