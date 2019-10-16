@@ -80,6 +80,9 @@ comments: true
 - <a href="https://zhidao.baidu.com/question/1834247962689096020.html" style="font-weight: normal;">为什么现在的操作系统基本上用C语言来实现</a>
 - <a href="http://www.thejavageek.com/2013/07/21/using-javac-and-java-commands-to-compile-and-launch-java-programs/" style="font-weight: normal;">Using javac and java commands to compile and launch java programs</a>
 - <a href="https://stackoverflow.com/questions/40286470/android-java-dot-class-syntax-mainactivity-class-getsimplename" style="font-weight: normal;">android java dot class syntax MainActivity.class.getSimpleName();</a>
+- <a href="https://stackoverflow.com/questions/3900549/what-is-runtime" style="font-weight: normal;">What is runtime</a>
+
+
 
 
 
