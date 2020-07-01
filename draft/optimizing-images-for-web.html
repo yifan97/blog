@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143238901-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-143238901-1"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'UA-143238901-1');
+      gtag("config", "UA-143238901-1");
     </script>
-
 
     <!-- Document Settings -->
     <meta charset="utf-8" />
@@ -19,55 +23,110 @@
     <!-- Base Meta -->
     <!-- dynamically fixing the title for tag/author pages -->
 
-
-
     <title>Optimizing Images for Web</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/favicon.ico"
+    />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="/blog/assets/built/screen.css" />
-    <link rel="stylesheet" type="text/css" href="/blog/assets/built/screen.edited.css" />
-    <link rel="stylesheet" type="text/css" href="/blog/assets/built/syntax.css" />
-    <link rel="stylesheet" type="text/css" href="/blog/assets/built/layout.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/assets/built/screen.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/assets/built/screen.edited.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/assets/built/syntax.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/assets/built/layout.css"
+    />
     <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    <style>.hljs { background: none; }</style>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"
+    />
+    <style>
+      .hljs {
+        background: none;
+      }
+    </style>
 
     <!--[if IE]>
-        <style>
-            p, ol, ul{
-                width: 100%;
-            }
-            blockquote{
-                width: 100%;
-            }
-        </style>
+      <style>
+        p,
+        ol,
+        ul {
+          width: 100%;
+        }
+        blockquote {
+          width: 100%;
+        }
+      </style>
     <![endif]-->
-    
+
     <!-- This tag outputs SEO meta+structured data and other important settings -->
-    <meta name="description" content="AI Enthusiast | Software Engineer" />
-    <link rel="shortcut icon" href="http://localhost:4000/blog/" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/blog/optimizing-images-for-web" />
+    <meta name="description" content="Software Engineer" />
+    <link
+      rel="shortcut icon"
+      href="http://localhost:4000/blog/"
+      type="image/png"
+    />
+    <link
+      rel="canonical"
+      href="http://localhost:4000/blog/optimizing-images-for-web"
+    />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
-     <!--title below is coming from _includes/dynamic_title-->
+    <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Yifan Xu" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Optimizing Images for Web" />
-    <meta property="og:description" content="In this article, I will talk about how to optimize your website images to ensure they provide the best user experience for visitors The use of images are vital in a website as it leaves the visual impression on website visitors. That being said, your images need to be high-resolution" />
-    <meta property="og:url" content="http://localhost:4000/blog/optimizing-images-for-web" />
-    <meta property="og:image" content="http://localhost:4000/blog/assets/images/cover-img/c2.jpg" />
+    <meta
+      property="og:description"
+      content="In this article, I will talk about how to optimize your website images to ensure they provide the best user experience for visitors The use of images are vital in a website as it leaves the visual impression on website visitors. That being said, your images need to be high-resolution"
+    />
+    <meta
+      property="og:url"
+      content="http://localhost:4000/blog/optimizing-images-for-web"
+    />
+    <meta
+      property="og:image"
+      content="http://localhost:4000/blog/assets/images/cover-img/c2.jpg"
+    />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2019-06-26T00:00:00-04:00" />
-    <meta property="article:modified_time" content="2019-06-26T00:00:00-04:00" />
+    <meta
+      property="article:published_time"
+      content="2019-06-26T00:00:00-04:00"
+    />
+    <meta
+      property="article:modified_time"
+      content="2019-06-26T00:00:00-04:00"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Optimizing Images for Web" />
-    <meta name="twitter:description" content="In this article, I will talk about how to optimize your website images to ensure they provide the best user experience for visitors The use of images are vital in a website as it leaves the visual impression on website visitors. That being said, your images need to be high-resolution" />
+    <meta
+      name="twitter:description"
+      content="In this article, I will talk about how to optimize your website images to ensure they provide the best user experience for visitors The use of images are vital in a website as it leaves the visual impression on website visitors. That being said, your images need to be high-resolution"
+    />
     <meta name="twitter:url" content="http://localhost:4000/blog/" />
-    <meta name="twitter:image" content="http://localhost:4000/blog/assets/images/cover-img/c2.jpg" />
+    <meta
+      name="twitter:image"
+      content="http://localhost:4000/blog/assets/images/cover-img/c2.jpg"
+    />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Yifan Xu" />
     <meta name="twitter:site" content="@nbv__x" />
@@ -76,27 +135,27 @@
     <meta property="og:image:height" content="933" />
 
     <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Website",
-    "publisher": {
-        "@type": "Organization",
-        "name": "Yifan Xu",
-        "logo": "http://localhost:4000/blog/"
-    },
-    "url": "http://localhost:4000/blog/optimizing-images-for-web",
-    "image": {
-        "@type": "ImageObject",
-        "url": "http://localhost:4000/blog/assets/images/cover-img/c2.jpg",
-        "width": 2000,
-        "height": 666
-    },
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "http://localhost:4000/blog/optimizing-images-for-web"
-    },
-    "description": "In this article, I will talk about how to optimize your website images to ensure they provide the best user experience for visitors The use of images are vital in a website as it leaves the visual impression on website visitors. That being said, your images need to be high-resolution"
-}
+      {
+        "@context": "https://schema.org",
+        "@type": "Website",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Yifan Xu",
+          "logo": "http://localhost:4000/blog/"
+        },
+        "url": "http://localhost:4000/blog/optimizing-images-for-web",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://localhost:4000/blog/assets/images/cover-img/c2.jpg",
+          "width": 2000,
+          "height": 666
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "http://localhost:4000/blog/optimizing-images-for-web"
+        },
+        "description": "In this article, I will talk about how to optimize your website images to ensure they provide the best user experience for visitors The use of images are vital in a website as it leaves the visual impression on website visitors. That being said, your images need to be high-resolution"
+      }
     </script>
 
     <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
@@ -108,191 +167,456 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Optimizing Images for Web" href="/blog/feed.xml" />
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
-
-
-</head>
-<body class="home-template">
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Optimizing Images for Web"
+      href="/blog/feed.xml"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/favicon.ico"
+    />
+  </head>
+  <body class="home-template">
     <div class="site-wrapper">
-        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
-        <!-- default -->
+      <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+      <!-- default -->
 
-<!-- The tag above means: insert everything in this file
+      <!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template -->
 
-<header class="site-header outer">
-    <div class="inner">
-        <nav class="site-nav site-nav-big">
-    <div class="site-nav-left">
-        <!-- 
+      <header class="site-header outer">
+        <div class="inner">
+          <nav class="site-nav site-nav-big">
+            <div class="site-nav-left">
+              <!-- 
             <a class="site-nav-logo" href="http://localhost:4000/blog/">Yifan Xu</a>
          -->
-        
-            <ul class="nav" role="menu">
-    <li class="nav-home" role="menuitem"><a href="/blog/">Home</a></li>
-    <li class="nav-blog" role="menuitem"><a href="/blog/blog/">Blog</a></li>
-</ul>
 
-        
-    </div>
-    <div class="site-nav-right">
-        <div class="social-links">
-            <a class="social-link social-link-ln" href="https://linkedin.com/in/yifan-xu-945552bb" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg></a>
-            <a class="social-link social-link-tw" href="https://twitter.com/nbv__x" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
-</a>
-            <a class="social-link social-link-gi" href="https://github.com/yifan97" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+              <ul class="nav" role="menu">
+                <li class="nav-home" role="menuitem">
+                  <a href="/blog/">Home</a>
+                </li>
+                <li class="nav-blog" role="menuitem">
+                  <a href="/blog/blog/">Blog</a>
+                </li>
+              </ul>
+            </div>
+            <div class="site-nav-right">
+              <div class="social-links">
+                <a
+                  class="social-link social-link-ln"
+                  href="https://linkedin.com/in/yifan-xu-945552bb"
+                  target="_blank"
+                  rel="noopener"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+                    /></svg
+                ></a>
+                <a
+                  class="social-link social-link-tw"
+                  href="https://twitter.com/nbv__x"
+                  target="_blank"
+                  rel="noopener"
+                  ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                    <path
+                      d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="social-link social-link-gi"
+                  href="https://github.com/yifan97"
+                  target="_blank"
+                  rel="noopener"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                    /></svg
+                ></a>
+              </div>
+            </div>
+          </nav>
         </div>
-    </div>
-</nav>
-    
-    </div>
-</header>
+      </header>
 
-<!-- Everything inside the #post tags pulls data from the post -->
-<!-- #post -->
+      <!-- Everything inside the #post tags pulls data from the post -->
+      <!-- #post -->
 
-<main id="site-main" class="site-main outer" role="main">
-    <div class="inner">
-
-        <article class="post-full  " style="max-width: 100%;">
-
+      <main id="site-main" class="site-main outer" role="main">
+        <div class="inner">
+          <article class="post-full" style="max-width: 100%;">
             <header class="post-full-header">
-                <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="26 June 2019">26 June 2019</time>
-                    <a style="text-decoration: none">&nbsp| Yifan Xu</a>
-                </section>
-                <h1 class="post-full-title">Optimizing Images for Web</h1>
+              <section class="post-full-meta">
+                <time class="post-full-meta-date" datetime="26 June 2019"
+                  >26 June 2019</time
+                >
+                <a style="text-decoration: none;">&nbsp| Yifan Xu</a>
+              </section>
+              <h1 class="post-full-title">Optimizing Images for Web</h1>
             </header>
 
-            
-            <figure class="post-full-image" style="background-image: url(/blog/assets/images/cover-img/c2.jpg);">
-            </figure>
-            
+            <figure
+              class="post-full-image"
+              style="
+                background-image: url(/blog/assets/images/cover-img/c2.jpg);
+              "
+            ></figure>
 
             <section class="post-full-content" style="max-width: 100%;">
-                <div class="kg-card-markdown">
-                    <p><strong>In this article, I will talk about how to optimize your website images to ensure they provide the best user experience for visitors</strong></p>
+              <div class="kg-card-markdown">
+                <p>
+                  <strong
+                    >In this article, I will talk about how to optimize your
+                    website images to ensure they provide the best user
+                    experience for visitors</strong
+                  >
+                </p>
 
-<hr />
+                <hr />
 
-<p>The use of images are vital in a website as it leaves the visual impression on website visitors. That being said, your images need to be high-resolution and crisp. But this comes at a price. Large, high definition images can have hug files sizes and end up with loading very slowly. Hence, we need to find a good balance between image quality and image file size when you save an image for your site, whether it is a homepage background or a cover photo.</p>
+                <p>
+                  The use of images are vital in a website as it leaves the
+                  visual impression on website visitors. That being said, your
+                  images need to be high-resolution and crisp. But this comes at
+                  a price. Large, high definition images can have hug files
+                  sizes and end up with loading very slowly. Hence, we need to
+                  find a good balance between image quality and image file size
+                  when you save an image for your site, whether it is a homepage
+                  background or a cover photo.
+                </p>
 
-<p><br /><br />
-<strong>Image Types</strong></p>
+                <p>
+                  <br /><br />
+                  <strong>Image Types</strong>
+                </p>
 
-<p>There are three main image file types: <code class="highlighter-rouge">GIF</code>, <code class="highlighter-rouge">JPG</code> and <code class="highlighter-rouge">PNG</code>. Each file type has its own strengths and weaknesses and it is important to know and keep in mind when using.</p>
+                <p>
+                  There are three main image file types:
+                  <code class="highlighter-rouge">GIF</code>,
+                  <code class="highlighter-rouge">JPG</code> and
+                  <code class="highlighter-rouge">PNG</code>. Each file type has
+                  its own strengths and weaknesses and it is important to know
+                  and keep in mind when using.
+                </p>
 
-<ul>
-  <li>
-    <p><code class="highlighter-rouge">JPG</code> Also known as JEPG, is the most popular type on web. It is perfect for photographs or complex images conrtaining lots of colors, shadows, gradients, or complex patterns. This is because <strong>JPG</strong> has a hug color palette to woek with.</p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">PNG</code> is usually used for logos because it can handle transparency. This is one of the biggest differentiation points between <strong>PNG</strong> and <strong>JPG</strong>.</p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">GIF</code> is another popular type but is restricted to only 256 colors(in contrast with <strong>JPF</strong>). It’s use case is narrower than the above two.</p>
-  </li>
-</ul>
+                <ul>
+                  <li>
+                    <p>
+                      <code class="highlighter-rouge">JPG</code> Also known as
+                      JEPG, is the most popular type on web. It is perfect for
+                      photographs or complex images conrtaining lots of colors,
+                      shadows, gradients, or complex patterns. This is because
+                      <strong>JPG</strong> has a hug color palette to woek with.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <code class="highlighter-rouge">PNG</code> is usually used
+                      for logos because it can handle transparency. This is one
+                      of the biggest differentiation points between
+                      <strong>PNG</strong> and <strong>JPG</strong>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <code class="highlighter-rouge">GIF</code> is another
+                      popular type but is restricted to only 256 colors(in
+                      contrast with <strong>JPF</strong>). It’s use case is
+                      narrower than the above two.
+                    </p>
+                  </li>
+                </ul>
 
-<p><br /><br />
-<strong>Image size</strong></p>
+                <p>
+                  <br /><br />
+                  <strong>Image size</strong>
+                </p>
 
-<p>As can be expected, large images take longer to load. When I say large, I’m referring to the file size rather than the dimensions of an image, i.e. the value in KB, MB, etc. Seeing as <a href="https://neilpatel.com/blog/loading-time/?wide=1" style="font-weight:normal;">47% of users expect a webpage to load in under 2 seconds, and 40% will abandon a page that takes more than 3 seconds to load</a>, it’s important that your images are small enough to ensure a speedy site.</p>
+                <p>
+                  As can be expected, large images take longer to load. When I
+                  say large, I’m referring to the file size rather than the
+                  dimensions of an image, i.e. the value in KB, MB, etc. Seeing
+                  as
+                  <a
+                    href="https://neilpatel.com/blog/loading-time/?wide=1"
+                    style="font-weight: normal;"
+                    >47% of users expect a webpage to load in under 2 seconds,
+                    and 40% will abandon a page that takes more than 3 seconds
+                    to load</a
+                  >, it’s important that your images are small enough to ensure
+                  a speedy site.
+                </p>
 
-<p><br /><br />
-<strong>Optimization Scenario</strong></p>
+                <p>
+                  <br /><br />
+                  <strong>Optimization Scenario</strong>
+                </p>
 
-<p>To begin, let’s pretend we are Stiff Salt (actually owned by a friend and Shopify Developer) and we wanted to change the feature image on our online store.</p>
+                <p>
+                  To begin, let’s pretend we are Stiff Salt (actually owned by a
+                  friend and Shopify Developer) and we wanted to change the
+                  feature image on our online store.
+                </p>
 
-<p><img src="./assets/images/Optimize/O-1.jpg" alt="img" style="width: 80%;" /></p>
+                <p>
+                  <img
+                    src="./assets/images/Optimize/O-1.jpg"
+                    alt="img"
+                    style="width: 80%;"
+                  />
+                </p>
 
-<p>We set up a scene, make our salt look absolutely incredible and we take a photo with a DSLR camera. Great we have our photo. What a beauty!</p>
+                <p>
+                  We set up a scene, make our salt look absolutely incredible
+                  and we take a photo with a DSLR camera. Great we have our
+                  photo. What a beauty!
+                </p>
 
-<p><img src="./assets/images/Optimize/O-2.jpg" alt="img" style="width: 80%;" /></p>
+                <p>
+                  <img
+                    src="./assets/images/Optimize/O-2.jpg"
+                    alt="img"
+                    style="width: 80%;"
+                  />
+                </p>
 
-<p>But… the file size is HUGE! 14.6 MB to be exact. And the dimensions of the photo are 5184 × 3456 pixels. This is completely unusable right now. It’s literally big enough to print a movie-sized poster. At 14.6 MB, this image would take significant time to load on a visitor’s computer. This is no good.</p>
+                <p>
+                  But… the file size is HUGE! 14.6 MB to be exact. And the
+                  dimensions of the photo are 5184 × 3456 pixels. This is
+                  completely unusable right now. It’s literally big enough to
+                  print a movie-sized poster. At 14.6 MB, this image would take
+                  significant time to load on a visitor’s computer. This is no
+                  good.
+                </p>
 
-<p><img src="./assets/images/Optimize/O-3.jpg" alt="img" style="width: 100%;" /></p>
+                <p>
+                  <img
+                    src="./assets/images/Optimize/O-3.jpg"
+                    alt="img"
+                    style="width: 100%;"
+                  />
+                </p>
 
-<p>Now, it is necessary that we work on the image and reduce file size. There are usually three things that you can do:</p>
-<ul>
-  <li><strong>Reduce Image Size</strong>: the dimension of the photograph</li>
-  <li><strong>Save Image appropriately to reduce file size</strong>: this is the size of the file and how much space it takes on your computer’s hard drive or web server</li>
-  <li><strong>Compress Image file</strong>: get rid of any additional hidden data taking up space</li>
-</ul>
+                <p>
+                  Now, it is necessary that we work on the image and reduce file
+                  size. There are usually three things that you can do:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Reduce Image Size</strong>: the dimension of the
+                    photograph
+                  </li>
+                  <li>
+                    <strong>Save Image appropriately to reduce file size</strong
+                    >: this is the size of the file and how much space it takes
+                    on your computer’s hard drive or web server
+                  </li>
+                  <li>
+                    <strong>Compress Image file</strong>: get rid of any
+                    additional hidden data taking up space
+                  </li>
+                </ul>
 
-<p><br /><br />
-<strong>Reduce Image Size</strong></p>
+                <p>
+                  <br /><br />
+                  <strong>Reduce Image Size</strong>
+                </p>
 
-<p>To keep things simple, we’re going to first reduce the image size. To do this, we’re going to open the image in Adobe Photoshop (you can use whatever image program you feel most comfortable with).</p>
+                <p>
+                  To keep things simple, we’re going to first reduce the image
+                  size. To do this, we’re going to open the image in Adobe
+                  Photoshop (you can use whatever image program you feel most
+                  comfortable with).
+                </p>
 
-<p>Choose a reasonable target size, for example 1600 x 800 pixels(remember the original was 5184 × 3456 pixels).</p>
+                <p>
+                  Choose a reasonable target size, for example 1600 x 800
+                  pixels(remember the original was 5184 × 3456 pixels).
+                </p>
 
-<p>In Photoshop, we’re going to select Image &gt; Image Size.</p>
+                <p>
+                  In Photoshop, we’re going to select Image &gt; Image Size.
+                </p>
 
-<p><img src="./assets/images/Optimize/O-4.jpg" alt="img" style="width: 80%;" /></p>
+                <p>
+                  <img
+                    src="./assets/images/Optimize/O-4.jpg"
+                    alt="img"
+                    style="width: 80%;"
+                  />
+                </p>
 
-<p>Now, we’ve reduced the size(dimension) of the image to something more appropritate.</p>
+                <p>
+                  Now, we’ve reduced the size(dimension) of the image to
+                  something more appropritate.
+                </p>
 
-<p><br /><br />
-<strong>Save Image Appropriately for Web</strong></p>
+                <p>
+                  <br /><br />
+                  <strong>Save Image Appropriately for Web</strong>
+                </p>
 
-<p>In Photoshop, there’s a specific command called “Save For Web” that optimizes the image file for displaying online. This is important as the regular “Save” command can end up creating file sizes 2-3 times larger than the “Save For Web” command.</p>
+                <p>
+                  In Photoshop, there’s a specific command called “Save For Web”
+                  that optimizes the image file for displaying online. This is
+                  important as the regular “Save” command can end up creating
+                  file sizes 2-3 times larger than the “Save For Web” command.
+                </p>
 
-<p>In the “Save For Web” box, we need to make a few selections.</p>
+                <p>
+                  In the “Save For Web” box, we need to make a few selections.
+                </p>
 
-<ul>
-  <li><strong>Image Type</strong>: The file type will affect the quality and size of the output file</li>
-  <li><strong>Image Quality</strong>: This is important and can heavily affect the final file size</li>
-  <li><strong>Dimensions</strong>: We already did this in the first step, so there’s no need to do it again, but if we didn’t do this in the first step, we could just change the dimensions for the image here</li>
-</ul>
+                <ul>
+                  <li>
+                    <strong>Image Type</strong>: The file type will affect the
+                    quality and size of the output file
+                  </li>
+                  <li>
+                    <strong>Image Quality</strong>: This is important and can
+                    heavily affect the final file size
+                  </li>
+                  <li>
+                    <strong>Dimensions</strong>: We already did this in the
+                    first step, so there’s no need to do it again, but if we
+                    didn’t do this in the first step, we could just change the
+                    dimensions for the image here
+                  </li>
+                </ul>
 
-<p>Based on what we learned at the beginning of this post, we know that JPEG is the best file type for photographs or any image with lots of colors and complexity. We will select JPEG.</p>
+                <p>
+                  Based on what we learned at the beginning of this post, we
+                  know that JPEG is the best file type for photographs or any
+                  image with lots of colors and complexity. We will select JPEG.
+                </p>
 
-<p><img src="./assets/images/Optimize/O-5.jpg" alt="img" style="width: 80%;" /></p>
+                <p>
+                  <img
+                    src="./assets/images/Optimize/O-5.jpg"
+                    alt="img"
+                    style="width: 80%;"
+                  />
+                </p>
 
-<p>For Image Quality, you have a scale you can select with 5 presets that range from Maximum to Low. Let’s take a look at the final output file size of each of the quality levels (this information is displayed in the bottom corner of the image-saving window):</p>
+                <p>
+                  For Image Quality, you have a scale you can select with 5
+                  presets that range from Maximum to Low. Let’s take a look at
+                  the final output file size of each of the quality levels (this
+                  information is displayed in the bottom corner of the
+                  image-saving window):
+                </p>
 
-<ul>
-  <li><strong>Maximum</strong>: 1.38 MB</li>
-  <li><strong>Very High</strong>: 611 KB</li>
-  <li><strong>High</strong>: 339 KB</li>
-  <li><strong>Medium</strong>: 152 KB</li>
-  <li><strong>Low</strong>: 86k</li>
-</ul>
+                <ul>
+                  <li><strong>Maximum</strong>: 1.38 MB</li>
+                  <li><strong>Very High</strong>: 611 KB</li>
+                  <li><strong>High</strong>: 339 KB</li>
+                  <li><strong>Medium</strong>: 152 KB</li>
+                  <li><strong>Low</strong>: 86k</li>
+                </ul>
 
-<p>You can see that for every quality level you go down, the image size reduces by nearly half. In general, we’ve found that High is the best setting for most images. At this level, it’s nearly impossible for the human eye to see any degradation in image quality, and the file size is nearly 4x smaller than if we were to just select the maximum.</p>
+                <p>
+                  You can see that for every quality level you go down, the
+                  image size reduces by nearly half. In general, we’ve found
+                  that High is the best setting for most images. At this level,
+                  it’s nearly impossible for the human eye to see any
+                  degradation in image quality, and the file size is nearly 4x
+                  smaller than if we were to just select the maximum.
+                </p>
 
-<p>If the image is an extremely important image with a lot of detail, you may want to select a level higher and save at Very High.</p>
+                <p>
+                  If the image is an extremely important image with a lot of
+                  detail, you may want to select a level higher and save at Very
+                  High.
+                </p>
 
-<p>Essentially, saving for the web is a balancing act — you must balance the quality of the graphics and the file size of the media to suit your personal needs.</p>
+                <p>
+                  Essentially, saving for the web is a balancing act — you must
+                  balance the quality of the graphics and the file size of the
+                  media to suit your personal needs.
+                </p>
 
-<div style="background-color: #dbdbad; padding: 20px;">
-    <p><strong>Rule of thumb</strong>, we like our product photos to be a maximum 80-150 KB, and for large homepage hero images to be a maximum of 250-350 KB. Those are good benchmark numbers for you to aim for as well.</p>
-</div>
-
-<p><br /><br />
-<strong>Compress Image for Web</strong></p>
-
-<p>If you used Adobe Photoshop, it will have already done a really great job at reducing the image size, however, you can still likely shave off another 5-10% of image size by using a compression app like ImageOptim and/or ShortPixel.</p>
-
-<p>ImageOptim is also the easiest way to quickly reduce image file size if you have used another program to save your images that isn’t as good as Photoshop.</p>
-
-<p>Dropping each of the files from the previous step into ImageOptim, we were able to further reduce the image size by another 5%. Not huge, but again, these were already optimized with Photoshop. Regardless, every KB counts.</p>
-
-<p><br /><br />
-<strong>Conclusion</strong></p>
-
-<p>To recap, our photo was insanely huge when we started, however, with a few simple steps, we reduced the photo size from 5184 × 3456 to 1600 x 800 so that it’s a perfect fit for our homepage and, at the same time, took it from a computer-crashing 14.4MB, down to a much more reasonable 336KB.</p>
-
-<p>Saving images appropriately for the web is an important step to learn early and implement religiously. Even if you only save 10-20% on each image, over time, as your store and website grow, every little KB can add up to some significant savings that will lead to a much more pleasant experience overall for your visitors, customers, and Google.</p>
-
-<p><br /><br />
-<strong>Ackownledge</strong>: This content is largly adapted from <a href="https://www.abetterlemonadestand.com/optimizing-images-for-web/" style="font-weight:normal;">Richard Lazazzera</a></p>
-
-
+                <div style="background-color: #dbdbad; padding: 20px;">
+                  <p>
+                    <strong>Rule of thumb</strong>, we like our product photos
+                    to be a maximum 80-150 KB, and for large homepage hero
+                    images to be a maximum of 250-350 KB. Those are good
+                    benchmark numbers for you to aim for as well.
+                  </p>
                 </div>
+
+                <p>
+                  <br /><br />
+                  <strong>Compress Image for Web</strong>
+                </p>
+
+                <p>
+                  If you used Adobe Photoshop, it will have already done a
+                  really great job at reducing the image size, however, you can
+                  still likely shave off another 5-10% of image size by using a
+                  compression app like ImageOptim and/or ShortPixel.
+                </p>
+
+                <p>
+                  ImageOptim is also the easiest way to quickly reduce image
+                  file size if you have used another program to save your images
+                  that isn’t as good as Photoshop.
+                </p>
+
+                <p>
+                  Dropping each of the files from the previous step into
+                  ImageOptim, we were able to further reduce the image size by
+                  another 5%. Not huge, but again, these were already optimized
+                  with Photoshop. Regardless, every KB counts.
+                </p>
+
+                <p>
+                  <br /><br />
+                  <strong>Conclusion</strong>
+                </p>
+
+                <p>
+                  To recap, our photo was insanely huge when we started,
+                  however, with a few simple steps, we reduced the photo size
+                  from 5184 × 3456 to 1600 x 800 so that it’s a perfect fit for
+                  our homepage and, at the same time, took it from a
+                  computer-crashing 14.4MB, down to a much more reasonable
+                  336KB.
+                </p>
+
+                <p>
+                  Saving images appropriately for the web is an important step
+                  to learn early and implement religiously. Even if you only
+                  save 10-20% on each image, over time, as your store and
+                  website grow, every little KB can add up to some significant
+                  savings that will lead to a much more pleasant experience
+                  overall for your visitors, customers, and Google.
+                </p>
+
+                <p>
+                  <br /><br />
+                  <strong>Ackownledge</strong>: This content is largly adapted
+                  from
+                  <a
+                    href="https://www.abetterlemonadestand.com/optimizing-images-for-web/"
+                    style="font-weight: normal;"
+                    >Richard Lazazzera</a
+                  >
+                </p>
+              </div>
             </section>
 
             <!-- Email subscribe form at the bottom of the page -->
@@ -313,178 +637,182 @@ into the {body} of the default.hbs template -->
                 </section>
              -->
 
+            <div id="disqus_thread"></div>
+            <script>
+              /*
+               *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+               *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+               */
 
-            
-                <div id="disqus_thread"></div>
-                <script>
-                
-                /*
-                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                */
-                
-                var disqus_config = function () {
-                    this.page.url = 'https://yifan97.github.io/blog/optimizing-images-for-web';  // Replace PAGE_URL with your page's canonical URL variable
-                    this.page.identifier = '/optimizing-images-for-web'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                
-                (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://yifan-blog.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
+              var disqus_config = function () {
+                this.page.url =
+                  "https://yifan97.github.io/blog/optimizing-images-for-web"; // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = "/optimizing-images-for-web"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+              };
+
+              (function () {
+                // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                  s = d.createElement("script");
+                s.src = "https://yifan-blog.disqus.com/embed.js";
+                s.setAttribute("data-timestamp", +new Date());
                 (d.head || d.body).appendChild(s);
-                })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>      
-            
-
-        </article>
-
-    </div>
-</main>
-
-<!-- Links to Previous/Next posts -->
-<aside class="read-next outer">
-    <div class="inner">
-        <div class="read-next-feed">
-            
-
-            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
-            
-                
-
-    <article class="post-card ">
-        
-            <a class="post-card-image-link" href="/blog/articles-bookmark">
-                <div class="post-card-image" style="background-image: url(/blog/assets/images/cover-img/c4.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/blog/articles-bookmark">
-                <header class="post-card-header">
-                    
-
-                    <h2 class="post-card-title">Articles/Videos Bookmark</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
+              })();
+            </script>
+            <noscript
+              >Please enable JavaScript to view the
+              <a href="https://disqus.com/?ref_noscript"
+                >comments powered by Disqus.</a
+              ></noscript
+            >
+          </article>
         </div>
-    </article>
+      </main>
 
-            
+      <!-- Links to Previous/Next posts -->
+      <aside class="read-next outer">
+        <div class="inner">
+          <div class="read-next-feed">
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+
+            <article class="post-card">
+              <a class="post-card-image-link" href="/blog/articles-bookmark">
+                <div
+                  class="post-card-image"
+                  style="
+                    background-image: url(/blog/assets/images/cover-img/c4.jpg);
+                  "
+                ></div>
+              </a>
+
+              <div class="post-card-content">
+                <a
+                  class="post-card-content-link"
+                  href="/blog/articles-bookmark"
+                >
+                  <header class="post-card-header">
+                    <h2 class="post-card-title">Articles/Videos Bookmark</h2>
+                  </header>
+                  <section class="post-card-excerpt">
+                    <p></p>
+                  </section>
+                </a>
+              </div>
+            </article>
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
-            
-                
 
-    <article class="post-card ">
-        
-            <a class="post-card-image-link" href="/blog/deploy-jekyll-website-on-github-pages">
-                <div class="post-card-image" style="background-image: url(/blog/assets/images/cover-img/c1.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/blog/deploy-jekyll-website-on-github-pages">
-                <header class="post-card-header">
-                    
+            <article class="post-card">
+              <a
+                class="post-card-image-link"
+                href="/blog/deploy-jekyll-website-on-github-pages"
+              >
+                <div
+                  class="post-card-image"
+                  style="
+                    background-image: url(/blog/assets/images/cover-img/c1.jpg);
+                  "
+                ></div>
+              </a>
 
-                    <h2 class="post-card-title">Deploy jekyll website on github pages</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
+              <div class="post-card-content">
+                <a
+                  class="post-card-content-link"
+                  href="/blog/deploy-jekyll-website-on-github-pages"
+                >
+                  <header class="post-card-header">
+                    <h2 class="post-card-title">
+                      Deploy jekyll website on github pages
+                    </h2>
+                  </header>
+                  <section class="post-card-excerpt">
+                    <p></p>
+                  </section>
+                </a>
+                <footer class="post-card-meta">
+                  <span class="reading-time">
+                    1 min read
+                  </span>
+                </footer>
+              </div>
+            </article>
+          </div>
         </div>
-    </article>
+      </aside>
 
-            
-
-        </div>
-    </div>
-</aside>
-
-<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
-<div class="floating-header">
-    <div class="floating-header-logo">
-        <a href="http://localhost:4000/blog/">
-            
+      <!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+      <div class="floating-header">
+        <div class="floating-header-logo">
+          <a href="http://localhost:4000/blog/">
             <span>Yifan Xu</span>
-        </a>
-    </div>
-    <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Optimizing Images for Web</div>
-    <div class="floating-header-share">
-        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
-</svg>
-</div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Optimizing+Images+for+Web&amp;url=optimizing-images-for-web"
-            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
-
-        </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=optimizing-images-for-web"
-            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
-
-
-        </a>
-    </div>
-    <progress class="progress" value="0">
-        <div class="progress-container">
-            <span class="progress-bar"></span>
+          </a>
         </div>
-    </progress>
-</div>
+        <span class="floating-header-divider">&mdash;</span>
+        <div class="floating-header-title">Optimizing Images for Web</div>
+        <div class="floating-header-share">
+          <div class="floating-header-share-label">
+            Share this
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"
+              />
+            </svg>
+          </div>
+          <a
+            class="floating-header-share-tw"
+            href="https://twitter.com/share?text=Optimizing+Images+for+Web&amp;url=optimizing-images-for-web"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <path
+                d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"
+              />
+            </svg>
+          </a>
+          <a
+            class="floating-header-share-fb"
+            href="https://www.facebook.com/sharer/sharer.php?u=optimizing-images-for-web"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <path
+                d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"
+              />
+            </svg>
+          </a>
+        </div>
+        <progress class="progress" value="0">
+          <div class="progress-container">
+            <span class="progress-bar"></span>
+          </div>
+        </progress>
+      </div>
 
+      <!-- Previous/next page links - displayed on every page -->
 
-        <!-- Previous/next page links - displayed on every page -->
-        
+      <!-- The footer at the very bottom of the screen -->
+      <footer class="site-footer outer">
+        <div class="site-footer-content inner">
+          <section class="copyright">
+            <a href="http://localhost:4000/blog/">Yifan Xu</a> &copy; 2019
+          </section>
 
-        <!-- The footer at the very bottom of the screen -->
-        <footer class="site-footer outer">
-            <div class="site-footer-content inner">
-                <section class="copyright"><a href="http://localhost:4000/blog/">Yifan Xu</a> &copy; 2019</section>
+          <nav class="site-footer-nav">
+            <a href="/blog/blog/">Latest Posts</a>
 
-                <nav class="site-footer-nav">
-                    <a href="/blog/blog/">Latest Posts</a>
-                    
-                    <a href="https://twitter.com/nbv__x" target="_blank" rel="noopener">Twitter</a>
-                    <a href="https://linkedin.com/in/yifan-xu-945552bb" target="_blank" rel="noopener">LinkedIn</a>
-                    <!-- <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> -->
-                </nav>
-            </div>
-        </footer>
-
+            <a href="https://twitter.com/nbv__x" target="_blank" rel="noopener"
+              >Twitter</a
+            >
+            <a
+              href="https://linkedin.com/in/yifan-xu-945552bb"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <!-- <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> -->
+          </nav>
+        </div>
+      </footer>
     </div>
 
     <!-- The big email subscribe modal content -->
@@ -519,13 +847,18 @@ into the {body} of the default.hbs template -->
 
     <!-- jQuery + Fitvids, which makes all video embeds responsive -->
     <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src="/blog/assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
-
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/blog/assets/js/jquery.fitvids.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"
+    ></script>
 
     <!-- Paginator increased to "infinit" in _config.yml -->
     <!-- if paginator.posts  -->
@@ -535,23 +868,21 @@ into the {body} of the default.hbs template -->
     <script src="/blog/assets/js/infinitescroll.js"></script> -->
     <!-- /endif -->
 
-    
-
-
     <!-- Add Google Analytics  -->
- 
 
     <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
-    
 
     <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
     <!-- ghost_foot -->
     <script>
-        MathJax = {
-          "HTML-CSS": {fonts: ["STIX"]},
-          SVG: {font: "STIX-Web"}
-        }
+      MathJax = {
+        "HTML-CSS": { fonts: ["STIX"] },
+        SVG: { font: "STIX-Web" },
+      };
     </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
-</body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"
+      async
+    ></script>
+  </body>
 </html>

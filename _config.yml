@@ -3,7 +3,7 @@ markdown: kramdown
 highlighter: rouge
 paginate: 8 # it will paginate after this number
 paginate_path: /blog/page/:num/
-language: 'en-uk'
+language: "en-uk"
 words_per_minute: 200
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
@@ -11,7 +11,7 @@ baseurl: /blog/
 
 # Website info
 title: Yifan Xu
-description: AI Enthusiast | Software Engineer
+description: Software Engineer
 author: Yifan Xu
 cover: assets/images/test1.jpg
 # logo: assets/images/blog-icon.png
@@ -26,10 +26,9 @@ navigation: True # show the navbar links
 subscribers: True # you need to connect an external service for this to work,
 # if 'True' the submit button is disabled for now, but you can change that
 # by editing `_includes/subscribe-form.html`
-twitter: nbv__x 
+twitter: nbv__x
 github: yifan97
 linkedin: in/yifan-xu-945552bb
-
 
 # Disqus
 disqus: True

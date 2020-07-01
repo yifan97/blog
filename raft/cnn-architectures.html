@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143238901-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-143238901-1"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'UA-143238901-1');
+      gtag("config", "UA-143238901-1");
     </script>
-
 
     <!-- Document Settings -->
     <meta charset="utf-8" />
@@ -19,55 +23,107 @@
     <!-- Base Meta -->
     <!-- dynamically fixing the title for tag/author pages -->
 
-
-
     <title>CNN Architectures</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/favicon.ico"
+    />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="/blog/assets/built/screen.css" />
-    <link rel="stylesheet" type="text/css" href="/blog/assets/built/screen.edited.css" />
-    <link rel="stylesheet" type="text/css" href="/blog/assets/built/syntax.css" />
-    <link rel="stylesheet" type="text/css" href="/blog/assets/built/layout.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/assets/built/screen.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/assets/built/screen.edited.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/assets/built/syntax.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/blog/assets/built/layout.css"
+    />
     <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    <style>.hljs { background: none; }</style>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"
+    />
+    <style>
+      .hljs {
+        background: none;
+      }
+    </style>
 
     <!--[if IE]>
-        <style>
-            p, ol, ul{
-                width: 100%;
-            }
-            blockquote{
-                width: 100%;
-            }
-        </style>
+      <style>
+        p,
+        ol,
+        ul {
+          width: 100%;
+        }
+        blockquote {
+          width: 100%;
+        }
+      </style>
     <![endif]-->
-    
+
     <!-- This tag outputs SEO meta+structured data and other important settings -->
-    <meta name="description" content="AI Enthusiast | Software Engineer" />
-    <link rel="shortcut icon" href="http://localhost:4000/blog/" type="image/png" />
+    <meta name="description" content="Software Engineer" />
+    <link
+      rel="shortcut icon"
+      href="http://localhost:4000/blog/"
+      type="image/png"
+    />
     <link rel="canonical" href="http://localhost:4000/blog/cnn-architectures" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
-     <!--title below is coming from _includes/dynamic_title-->
+    <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Yifan Xu" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="CNN Architectures" />
-    <meta property="og:description" content="In this article, I will introduce some popular CNN architectures LeNet-5 Before CNN was invented, character recognition had been done mostly by using feature engineering by hand, followed by a machine learning model to learn to classify hand engineered features. In , Yann Lecun first proposed a neural network architecture" />
-    <meta property="og:url" content="http://localhost:4000/blog/cnn-architectures" />
-    <meta property="og:image" content="http://localhost:4000/blog/assets/images/cover-img/c10.jpg" />
+    <meta
+      property="og:description"
+      content="In this article, I will introduce some popular CNN architectures LeNet-5 Before CNN was invented, character recognition had been done mostly by using feature engineering by hand, followed by a machine learning model to learn to classify hand engineered features. In , Yann Lecun first proposed a neural network architecture"
+    />
+    <meta
+      property="og:url"
+      content="http://localhost:4000/blog/cnn-architectures"
+    />
+    <meta
+      property="og:image"
+      content="http://localhost:4000/blog/assets/images/cover-img/c10.jpg"
+    />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2019-07-06T00:00:00-04:00" />
-    <meta property="article:modified_time" content="2019-07-06T00:00:00-04:00" />
+    <meta
+      property="article:published_time"
+      content="2019-07-06T00:00:00-04:00"
+    />
+    <meta
+      property="article:modified_time"
+      content="2019-07-06T00:00:00-04:00"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="CNN Architectures" />
-    <meta name="twitter:description" content="In this article, I will introduce some popular CNN architectures LeNet-5 Before CNN was invented, character recognition had been done mostly by using feature engineering by hand, followed by a machine learning model to learn to classify hand engineered features. In , Yann Lecun first proposed a neural network architecture" />
+    <meta
+      name="twitter:description"
+      content="In this article, I will introduce some popular CNN architectures LeNet-5 Before CNN was invented, character recognition had been done mostly by using feature engineering by hand, followed by a machine learning model to learn to classify hand engineered features. In , Yann Lecun first proposed a neural network architecture"
+    />
     <meta name="twitter:url" content="http://localhost:4000/blog/" />
-    <meta name="twitter:image" content="http://localhost:4000/blog/assets/images/cover-img/c10.jpg" />
+    <meta
+      name="twitter:image"
+      content="http://localhost:4000/blog/assets/images/cover-img/c10.jpg"
+    />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Yifan Xu" />
     <meta name="twitter:site" content="@nbv__x" />
@@ -76,27 +132,27 @@
     <meta property="og:image:height" content="933" />
 
     <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Website",
-    "publisher": {
-        "@type": "Organization",
-        "name": "Yifan Xu",
-        "logo": "http://localhost:4000/blog/"
-    },
-    "url": "http://localhost:4000/blog/cnn-architectures",
-    "image": {
-        "@type": "ImageObject",
-        "url": "http://localhost:4000/blog/assets/images/cover-img/c10.jpg",
-        "width": 2000,
-        "height": 666
-    },
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "http://localhost:4000/blog/cnn-architectures"
-    },
-    "description": "In this article, I will introduce some popular CNN architectures LeNet-5 Before CNN was invented, character recognition had been done mostly by using feature engineering by hand, followed by a machine learning model to learn to classify hand engineered features. In , Yann Lecun first proposed a neural network architecture"
-}
+      {
+        "@context": "https://schema.org",
+        "@type": "Website",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Yifan Xu",
+          "logo": "http://localhost:4000/blog/"
+        },
+        "url": "http://localhost:4000/blog/cnn-architectures",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://localhost:4000/blog/assets/images/cover-img/c10.jpg",
+          "width": 2000,
+          "height": 666
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "http://localhost:4000/blog/cnn-architectures"
+        },
+        "description": "In this article, I will introduce some popular CNN architectures LeNet-5 Before CNN was invented, character recognition had been done mostly by using feature engineering by hand, followed by a machine learning model to learn to classify hand engineered features. In , Yann Lecun first proposed a neural network architecture"
+      }
     </script>
 
     <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
@@ -108,377 +164,1621 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="CNN Architectures" href="/blog/feed.xml" />
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
-
-
-</head>
-<body class="home-template">
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="CNN Architectures"
+      href="/blog/feed.xml"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/favicon.ico"
+    />
+  </head>
+  <body class="home-template">
     <div class="site-wrapper">
-        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
-        <!-- default -->
+      <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+      <!-- default -->
 
-<!-- The tag above means: insert everything in this file
+      <!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template -->
 
-<header class="site-header outer">
-    <div class="inner">
-        <nav class="site-nav site-nav-big">
-    <div class="site-nav-left">
-        <!-- 
+      <header class="site-header outer">
+        <div class="inner">
+          <nav class="site-nav site-nav-big">
+            <div class="site-nav-left">
+              <!-- 
             <a class="site-nav-logo" href="http://localhost:4000/blog/">Yifan Xu</a>
          -->
-        
-            <ul class="nav" role="menu">
-    <li class="nav-home" role="menuitem"><a href="/blog/">Home</a></li>
-    <li class="nav-blog" role="menuitem"><a href="/blog/blog/">Blog</a></li>
-</ul>
 
-        
-    </div>
-    <div class="site-nav-right">
-        <div class="social-links">
-            <a class="social-link social-link-ln" href="https://linkedin.com/in/yifan-xu-945552bb" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg></a>
-            <a class="social-link social-link-tw" href="https://twitter.com/nbv__x" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
-</a>
-            <a class="social-link social-link-gi" href="https://github.com/yifan97" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+              <ul class="nav" role="menu">
+                <li class="nav-home" role="menuitem">
+                  <a href="/blog/">Home</a>
+                </li>
+                <li class="nav-blog" role="menuitem">
+                  <a href="/blog/blog/">Blog</a>
+                </li>
+              </ul>
+            </div>
+            <div class="site-nav-right">
+              <div class="social-links">
+                <a
+                  class="social-link social-link-ln"
+                  href="https://linkedin.com/in/yifan-xu-945552bb"
+                  target="_blank"
+                  rel="noopener"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+                    /></svg
+                ></a>
+                <a
+                  class="social-link social-link-tw"
+                  href="https://twitter.com/nbv__x"
+                  target="_blank"
+                  rel="noopener"
+                  ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                    <path
+                      d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="social-link social-link-gi"
+                  href="https://github.com/yifan97"
+                  target="_blank"
+                  rel="noopener"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                    /></svg
+                ></a>
+              </div>
+            </div>
+          </nav>
         </div>
-    </div>
-</nav>
-    
-    </div>
-</header>
+      </header>
 
-<!-- Everything inside the #post tags pulls data from the post -->
-<!-- #post -->
+      <!-- Everything inside the #post tags pulls data from the post -->
+      <!-- #post -->
 
-<main id="site-main" class="site-main outer" role="main">
-    <div class="inner">
-
-        <article class="post-full  " style="max-width: 100%;">
-
+      <main id="site-main" class="site-main outer" role="main">
+        <div class="inner">
+          <article class="post-full" style="max-width: 100%;">
             <header class="post-full-header">
-                <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime=" 6 July 2019"> 6 July 2019</time>
-                    <a style="text-decoration: none">&nbsp| Yifan Xu</a>
-                </section>
-                <h1 class="post-full-title">CNN Architectures</h1>
+              <section class="post-full-meta">
+                <time class="post-full-meta-date" datetime=" 6 July 2019">
+                  6 July 2019</time
+                >
+                <a style="text-decoration: none;">&nbsp| Yifan Xu</a>
+              </section>
+              <h1 class="post-full-title">CNN Architectures</h1>
             </header>
 
-            
-            <figure class="post-full-image" style="background-image: url(/blog/assets/images/cover-img/c10.jpg);">
-            </figure>
-            
+            <figure
+              class="post-full-image"
+              style="
+                background-image: url(/blog/assets/images/cover-img/c10.jpg);
+              "
+            ></figure>
 
             <section class="post-full-content" style="max-width: 100%;">
-                <div class="kg-card-markdown">
-                    <p><strong>In this article, I will introduce some popular CNN architectures</strong></p>
-
-<hr />
-
-<h3>LeNet-5</h3>
-<p><br /></p>
-
-<p>Before CNN was invented, character recognition had been done mostly by using feature engineering by hand, followed by a machine learning model to learn to classify hand engineered features. In <script type="math/tex">1998</script>, Yann Lecun first proposed a neural network architecture for handwritten and machine-printed character recognition–LeNet. LeNet made hand engineering features redundant, because the network learns the best internal representation from raw images automatically.</p>
-
-<p>LeNet-<script type="math/tex">5</script> is a very simple network from the point of current standards. It only has <script type="math/tex">7</script> layers, amomng which are <script type="math/tex">3</script> convolutional layers(C<script type="math/tex">1</script>, C<script type="math/tex">3</script>, C<script type="math/tex">5</script>), <script type="math/tex">2</script> pooling layers(S<script type="math/tex">2</script>, S<script type="math/tex">4</script>), <script type="math/tex">1</script> fully connected layer(F6) and an output layer. 
-<img src="./assets/images/CNN/CNN-1.jpg" alt="cnn-1" style="width: 80%;" />
-<span style="font-size:17px !important; float: right;"><em>LeCun et al., <script type="math/tex">1998</script></em></span></p>
-
-<p><br />
-<strong>C<script type="math/tex">1</script></strong></p>
-
-<p>The input for LeNet-<script type="math/tex">5</script> is a <script type="math/tex">32</script>x<script type="math/tex">32</script> grayscale image which is passed through the first convolutional layer(C<script type="math/tex">1</script>) with <script type="math/tex">6</script> filters(a.k.a convolutional kernels, or receptive fileds) having size <script type="math/tex">5</script>x<script type="math/tex">5</script> and a stride of <script type="math/tex">1</script>. The image is then changed from <script type="math/tex">32</script>x<script type="math/tex">32</script>x<script type="math/tex">1</script> to <script type="math/tex">28</script>x<script type="math/tex">28</script>x<script type="math/tex">6</script>
-<img src="./assets/images/CNN/CNN-2.jpg" alt="cnn-2" style="width: 60%;" /></p>
-
-<p><br />
-<strong>S<script type="math/tex">2</script></strong></p>
-
-<p>Then the LeNet-<script type="math/tex">5</script> applies average pooling layer with a filter size <script type="math/tex">2</script>x<script type="math/tex">2</script> and a stride of <script type="math/tex">2</script>. The resulting image dimensions will be reduced to <script type="math/tex">14</script>x<script type="math/tex">14</script>x<script type="math/tex">6</script>
-<img src="./assets/images/CNN/CNN-3.jpg" alt="cnn-3" style="width: 60%;" /></p>
-
-<p><br />
-<strong>C<script type="math/tex">3</script></strong></p>
-
-<p>Next, there is a second convolutional layer with <script type="math/tex">16</script> filters having size <script type="math/tex">5</script>x<script type="math/tex">5</script> and a stride of <script type="math/tex">1</script>. In this layer, only <script type="math/tex">10</script> out of <script type="math/tex">16</script> filters are connected to <script type="math/tex">6</script> previous feature maps, as shown below:
-<img src="./assets/images/CNN/CNN-4.jpg" alt="cnn-4" style="width: 80%;" />
-<span style="font-size:17px !important; float: right;"><em>LeCun et al., <script type="math/tex">1998</script></em></span></p>
-
-<p>The reason for not fully connecting is to break the symmetry in the network and to keep the number of connections within reasonable bounds.
-<img src="./assets/images/CNN/CNN-5.jpg" alt="cnn-5" style="width: 60%;" /></p>
-
-<p><br />
-<strong>S<script type="math/tex">4</script></strong></p>
-
-<p>THe fourth layer is again an average pooling layer with filter size <script type="math/tex">2</script>x<script type="math/tex">2</script> and a stride of <script type="math/tex">2</script>. This layer is the same as S<script type="math/tex">2</script> and the output would be <script type="math/tex">5</script>x<script type="math/tex">5</script>x<script type="math/tex">16</script>
-<img src="./assets/images/CNN/CNN-6.jpg" alt="cnn-6" style="width: 60%;" /></p>
-
-<p><br />
-<strong>C<script type="math/tex">5</script></strong></p>
-
-<p>The fifth layer is a fully connected convolutional layer with <script type="math/tex">120</script> filters each of size <script type="math/tex">1</script>x<script type="math/tex">1</script>. Each of the <script type="math/tex">120</script> units in C<script type="math/tex">5</script> is connected to all the <script type="math/tex">400</script> node(<script type="math/tex">5</script>x<script type="math/tex">5</script>x<script type="math/tex">16</script>) in the fourth layer S<script type="math/tex">4</script>.
-<img src="./assets/images/CNN/CNN-7.jpg" alt="cnn-7" style="width: 60%;" /></p>
-
-<p><br />
-<strong>F<script type="math/tex">6</script></strong></p>
-
-<p>The sixth layer is a fully connected layer with <script type="math/tex">84</script> units. 
-<img src="./assets/images/CNN/CNN-8.jpg" alt="cnn-8" style="width: 60%;" /></p>
-
-<p><br />
-<strong>Output layer</strong></p>
-
-<p>The final layer is a fully connected softmax output layer <script type="math/tex">\hat y</script> with <script type="math/tex">10</script> possible values corresponding to the digits from <script type="math/tex">0</script> to <script type="math/tex">9</script>.
-<img src="./assets/images/CNN/CNN-9.jpg" alt="cnn-9" style="width: 60%;" /></p>
-
-<p><br /><br /></p>
-<h3>AlexNet</h3>
-<p><br /></p>
-
-<p>Within more than a decade after LeCun proposed LeNet-<script type="math/tex">5</script>, due to the low expressivity of neural net as well as inefficient computating power, neural nets had been making slow progress. This trough continued for many years until landscape AlexNet won the ILSVRC-<script type="math/tex">2012</script> with a top-<script type="math/tex">5</script> error of <script type="math/tex">15.3</script>% and outperformed the runner up by <script type="math/tex">10.8</script>% error point.</p>
-
-<p>AlexNet inherented the idea of LeNet-<script type="math/tex">5</script> but it expanded the neural nets much deeper. Compared to only <script type="math/tex">60</script>k parameters in LeNet-<script type="math/tex"></script>, AlexNet has <script type="math/tex">60</script>M parameters, <script type="math/tex">650</script>k neurons, and <script type="math/tex">630</script>M connections. AlexNet has <script type="math/tex">8</script> layers(not including pooling layers), among which are <script type="math/tex">5</script> convolutional layers and <script type="math/tex">3</script> fully connected layers. Importantly, AlexNet uses max pooling instead of average pooling and are only applied after the <script type="math/tex">1^{st}, 2^{nd}, \text{and} \ 5^{th}</script> convolutional layers.</p>
-
-<p><img src="./assets/images/CNN/CNN-10.jpg" alt="cnn-10" style="width: 80%;" />
-<span style="font-size:17px !important; float: right;"><em>Krizhevsky et al., <script type="math/tex">2012</script></em></span></p>
-
-<p>Let’s look at this architecture closely.
-<img src="./assets/images/CNN/CNN-11.jpg" alt="cnn-11" style="width: 80%;" /></p>
-
-<p>Multiple filters extract interesting features in an image. In a single convolutional layer, there are usually many filters of the same size. For example, the first Conv Layer of AlexNet contains 96 filters of size <script type="math/tex">11</script>x<script type="math/tex">11</script>x<script type="math/tex">3</script>. Note the width and height of the filter are usually the same and the depth is the same as the number of channels(here we have <script type="math/tex">3</script> channels).</p>
-
-<p>The first two Convolutional layers are followed by the Overlapping Max Pooling layers. The third, fourth and fifth convolutional layers are connected directly. The fifth convolutional layer is followed by an Overlapping Max Pooling layer, the output of which goes into a series of two fully connected layers. The second fully connected layer feeds into a softmax classifier with <script type="math/tex">1000</script> class labels.</p>
-
-<p>ReLU nonlinearity is applied after all the convolution and fully connected layers. The ReLU nonlinearity of the first and second convolution layers are followed by a local normalization step before doing pooling. But researchers later didn’t find normalization very useful. So we will not go in detail over that.</p>
-
-<p><strong>Highlights</strong> of AlexNet:</p>
-
-<ul>
-  <li>
-    <p>Use ReLU as activation function, which has better effect than Sigmoid by preventinbg vanishing gradient</p>
-  </li>
-  <li>
-    <p>Use dropout in fully connected layer to prevent overfitting</p>
-  </li>
-  <li>
-    <p>Use Max pooling instead of average pooling to prevent blur</p>
-  </li>
-  <li>
-    <p>Use multiple GPU to parallelly compute</p>
-  </li>
-  <li>
-    <p>Use data augmentation to prevent overfitting</p>
-  </li>
-</ul>
-
-<p><br /></p>
-
-<blockquote>
-  <p>How to reduce overfitting</p>
-</blockquote>
-
-<p>AlexNet uses two methods to reduce overfitting.</p>
-
-<ul>
-  <li><strong>Data Augmentation</strong></li>
-</ul>
-
-<p>Showing a Neural Net different variation of the same image helps prevent overfitting. You are forcing it to not memorize! Often it is possible to generate additional data from existing data for free! Here are few tricks used by the AlexNet team.</p>
-
-<p><strong>Data Augmentation by Mirroring</strong></p>
-
-<p>If we have an image of a cat in our training set, its mirror image is also a valid image of a cat
-<img src="./assets/images/CNN/CNN-12.jpg" alt="cnn-12" style="width: 80%;" /></p>
-
-<p><strong>Data Augmentation by Random Crops</strong></p>
-
-<p>In addition, cropping the original image randomly will also lead to additional data that is just a shifted version of the original data.
-<img src="./assets/images/CNN/CNN-13.jpg" alt="cnn-13" style="width: 80%;" /></p>
-
-<p><br /></p>
-<ul>
-  <li><strong>Dropout</strong></li>
-</ul>
-
-<p>Dropout is a technique introduced by G.E. Hinton in <a src="https://arxiv.org/pdf/1207.0580.pdf">another paper</a> in <script type="math/tex">2012</script>. In dropout, a neuron is dropped from the network with a probability of <script type="math/tex">0.5</script>. When a neuron is dropped, it does not contribute to either forward or backward propagation. So every input goes through a different network architecture, as shown in the animation below. As a result, the learnt weight parameters are more robust and do not get overfitted easily. During testing, there is no dropout and the whole network is used, but output is scaled by a factor of <script type="math/tex">0.5</script> to account for the missed neurons while training. Dropout increases the number of iterations needed to converge by a factor of <script type="math/tex">2</script>, but without dropout, AlexNet would overfit substantially.
-<img src="./assets/images/CNN/CNN-14.gif" alt="cnn-14" style="width: 80%;" /></p>
-
-<p><br /><br /></p>
-<h3>AGGNet</h3>
-<p><br /></p>
-
-<p>ZFNet won the ILSVRC-<script type="math/tex">2013</script> but since it was almost the same as AlexNet except for some size and stride change, I wont’t talk about it in thins article. And then in ILSVRC-<script type="math/tex">2014</script>, we have two very close winners: VGGNet achieved error of <script type="math/tex">7.3</script>% and GoogleNet achieved of <script type="math/tex">6.7</script>%. Let’s first look at VGGNet and then I will talk about GoogleNet in a bit.</p>
-
-<p>For the big pictute, VGGNet uses smaller filters and deeper networks. Usually, when people are talking VGGNet, they are refering to VGGNet-<script type="math/tex">16</script> or VGGNet-<script type="math/tex">19</script>, which differ in that VGGNet-<script type="math/tex">16</script> uses <script type="math/tex">16</script> layes while VGGNet-<script type="math/tex">19</script> usese <script type="math/tex">19</script> layers. Yet they both use <script type="math/tex">3</script>x<script type="math/tex">3</script>x<script type="math/tex">3</script> filters.
-<img src="./assets/images/CNN/CNN-19.jpg" alt="cnn-19" style="width: 80%;" /></p>
-
-<p>VGGNet uses <script type="math/tex">5</script> convolutional layers each followed by a max pooling layer, <script type="math/tex">3</script> fully connected layers, and a Softmax output layer. All activation functions are ReLU.</p>
-
-<p><br />
-<strong>Highlights</strong> of VGGNet:</p>
-
-<ul>
-  <li>
-    <p>Use smaller <script type="math/tex">3</script>x<script type="math/tex">3</script> filters instead of large <script type="math/tex">11</script>x<script type="math/tex">11</script> or <script type="math/tex">7</script>x<script type="math/tex">7</script></p>
-  </li>
-  <li>
-    <p>Use Multi-Scale Training</p>
-  </li>
-  <li>
-    <p>Dense Testing</p>
-  </li>
-  <li>
-    <p>No local response normalization(LRN) since it does not improve much</p>
-  </li>
-</ul>
-
-<p><br /></p>
-<blockquote>
-  <p>Why do we use smaller layers?</p>
-</blockquote>
-
-<ul>
-  <li>No need to use large size filters</li>
-</ul>
-
-<p><img src="./assets/images/CNN/CNN-15.jpg" alt="cnn-15" style="width: 80%;" />
-By using <script type="math/tex">2</script> layers of <script type="math/tex">3</script>×<script type="math/tex">3</script> filters, it actually have already covered <script type="math/tex">5</script>×<script type="math/tex">5</script> area as in the above figure. By using <script type="math/tex">3</script> layers of <script type="math/tex">3</script>×<script type="math/tex">3</script> filters, it actually have already covered <script type="math/tex">7</script>×<script type="math/tex">7</script> effective area. Actually, the size of the effective receptive field of a N convolutional layers stack with <script type="math/tex">3</script>×<script type="math/tex">3</script> filters is equal to (<script type="math/tex">2</script>N+<script type="math/tex">1</script>)x(<script type="math/tex">2</script>N+<script type="math/tex">1</script>) Thus, large-size filters such as <script type="math/tex">11</script>×<script type="math/tex">11</script> in AlexNet and <script type="math/tex">7</script>×<script type="math/tex">7</script> in ZFNet indeed are not needed.</p>
-
-<ul>
-  <li>Number of parameters are fewer. Suppose there is only <script type="math/tex">1</script> filter per layer, <script type="math/tex">1</script> layer at input, and exclude the bias:</li>
-</ul>
-
-<p><script type="math/tex">1</script> layer of <script type="math/tex">11</script>×<script type="math/tex">11</script> filter, number of parameters = <script type="math/tex">11</script>×<script type="math/tex">11</script>=<script type="math/tex">121</script>
-<br />
-<script type="math/tex">5</script> layer of <script type="math/tex">3</script>×<script type="math/tex">3</script> filter, number of parameters = <script type="math/tex">3</script>×<script type="math/tex">3</script>×<script type="math/tex">5</script>=<script type="math/tex">45</script>
-<br />
-Number of parameters is reduced by <script type="math/tex">63%</script>
-<br /><br />
-<script type="math/tex">1</script> layer of <script type="math/tex">7</script>×<script type="math/tex">7</script> filter, number of parameters = <script type="math/tex">7</script>×<script type="math/tex">7</script>=<script type="math/tex">49</script>
-<br />
-<script type="math/tex">3</script> layers of <script type="math/tex">3</script>×<script type="math/tex">3</script> filters, number of parameters = <script type="math/tex">3</script>×<script type="math/tex">3</script>×<script type="math/tex">3</script>=<script type="math/tex">27</script>
-<br />
-Number of parameters is reduced by <script type="math/tex">45%</script>
-<img src="./assets/images/CNN/CNN-16.jpg" alt="cnn-16" style="width: 80%;" /></p>
-
-<ul>
-  <li>More non-linearities</li>
-</ul>
-
-<p><br /></p>
-<blockquote>
-  <p>How does multi-scaling work?</p>
-</blockquote>
-
-<p>As object has different scale within the image, if we only train the network at the same scale, we might miss the detection or have the wrong classification for the objects with other scales. To tackle this, authors propose multi-scale training.</p>
-
-<p>For single-scale training, an image is scaled with smaller-size equal to <script type="math/tex">256</script> or <script type="math/tex">384</script>. Since the network accepts <script type="math/tex">224</script>×<script type="math/tex">224</script> input images only, the scaled image will be cropped to <script type="math/tex">224</script>×<script type="math/tex">224</script>. The concept is as follows:
-<img src="./assets/images/CNN/CNN-17.jpg" alt="cnn-17" style="width: 60%;" /></p>
-
-<p>For multi-scale training, an image is scaled with smaller-size equal to a range from <script type="math/tex">256</script> to <script type="math/tex">512</script>, i.e. S=[<script type="math/tex">256</script>;<script type="math/tex">512</script>], then cropped to <script type="math/tex">224</script>×<script type="math/tex">224</script>. Therefore, with a range of S, we are inputting different scaled objects into the network for training.
-<img src="./assets/images/CNN/CNN-18.jpg" alt="cnn-18" style="width: 70%;" /></p>
-
-<p>By using multi-scale training, we can imagine that it is more accurate for test image objects with different object sizes.</p>
-
-<ul>
-  <li>VGG-13 reduced the error rate from <script type="math/tex">9.3</script>% to <script type="math/tex">8.8</script>%</li>
-  <li>VGG-16 educed the error rate from <script type="math/tex">8.7</script>% to <script type="math/tex">8.1</script>%</li>
-  <li>VGG-19 reduced the error rate from <script type="math/tex">8.7</script>% to <script type="math/tex">8.0</script>%</li>
-</ul>
-
-<p><br /></p>
-<blockquote>
-  <p>What is Dense Testing?</p>
-</blockquote>
-
-<p>During testing, VGGNet replace all <script type="math/tex">3</script> fully connected layers by <script type="math/tex">3</script> convolutional layers. This is to relax the limit of input image size so that neural nets can accept input of any height and width and this is vital in testing.</p>
-
-<p>If we keep fully connected layers, images should be subject to <script type="math/tex">224</script>x<script type="math/tex">224</script>x<script type="math/tex">3</script> to satisfy fixed size vector.
-<img src="./assets/images/CNN/CNN-20.jpg" alt="cnn-20" style="width: 70%;" /></p>
-
-<p>In VGGNet, the first FC is replaced by <script type="math/tex">7</script>×<script type="math/tex">7</script> conv. The second and third FC are replaced by <script type="math/tex">1</script>×<script type="math/tex">1</script> conv.
-<img src="./assets/images/CNN/CNN-21.jpg" alt="cnn-21" style="width: 70%;" /></p>
-
-<p><br /><br /></p>
-<h3>GoogleNet</h3>
-<p><br /></p>
-
-<p>GoogleNet won ILSVRC-2014 with a slightly better result compared to VGGNet. It is a little bot deeper with <script type="math/tex">22</script> layers and abandons the fully connected layers.
-<img src="./assets/images/CNN/CNN-27.jpg" alt="cnn-27" style="width: 70%;" /></p>
-
-<p><br />
-<strong>Highlights</strong></p>
-
-<ul>
-  <li>
-    <p>No FC layers</p>
-  </li>
-  <li>
-    <p>Use efficient “Inception” module</p>
-  </li>
-</ul>
-
-<blockquote>
-  <p>What is Inception module?</p>
-</blockquote>
-
-<p>Inception module is a local network topology that combines different convolutional layers and a max polling layer in parallel and then concatenate their results depth-wise and then stack many of these modules to form the whole neural net.</p>
-
-<p>Here is a naive way of doing this
-<img src="./assets/images/CNN/CNN-22.jpg" alt="cnn-22" style="width: 60%;" /></p>
-
-<p>The problem of this naive inception module is huge computaional complexity. For example we have a input of <script type="math/tex">28</script>x<script type="math/tex">28</script>x<script type="math/tex">256</script> (this is not the initial input to the whole net; it is just the local input from previous module).We use zero padding when needed to maintain the same feature map size in order for depth-wise concatenation. 
-<img src="./assets/images/CNN/CNN-23.jpg" alt="cnn-23" style="width: 60%;" /></p>
-
-<p>We see that it is very expensive to compute. So we apply a bottleneck layer that use <script type="math/tex">1</script>x<script type="math/tex">1</script> convolutions to reduce feature depth.
-<img src="./assets/images/CNN/CNN-24.jpg" alt="cnn-24" style="width: 60%;" /></p>
-
-<p><script type="math/tex">\qquad \qquad \qquad \qquad \qquad \qquad \quad \downarrow</script>
-<img src="./assets/images/CNN/CNN-25.jpg" alt="cnn-25" style="width: 60%;" /></p>
-
-<p><script type="math/tex">\qquad \qquad \qquad \qquad \qquad \qquad \quad \downarrow</script>
-<img src="./assets/images/CNN/CNN-26.jpg" alt="cnn-26" style="width: 60%;" /></p>
-
-<p>In this architecture, we have 12x less parameters than AlexNet.</p>
-
-<p><br /><br /></p>
-<h3>ResNet</h3>
-<p><br /></p>
-
-<p>ResNet is yet another CNN architecture that drastically improve the error rate and won the ILSVRC-2015 with error of <script type="math/tex">3.57</script>%. It is a hugely deeper neural nets with 152 layers and uses residual connections.</p>
-
-<p>So now you might be wondering, since deeper layers has demonstrated explicit improvement(as shown in VGGNet and GoogleNet), can we just make the neural net as deep as possible and achieve the best possible outcome?</p>
-
-<p>The answer is <strong>NO</strong>.</p>
-
-<p>The first obvious reason is overfitting right?
-With the increase of parameters, the model starts to overfit in testing data. However, what’s strange about about it is that the training error for deeper layer is still higher.
-<img src="./assets/images/CNN/CNN-28.jpg" alt="cnn-28" style="width: 60%;" /></p>
-
-<p>So the hypothesis is that it is not caused by overfitting. Rather, it is an optimization problem, i.e harder to optimize.</p>
-
-<p>An intuition is that the deeper model should be able to perform at least as well as the shallower model. Hence, a solution by construction is copying the learned layers from the shallower model and setting additional layers to identity mapping. ResNet uses the so-called <strong>residual block</strong>
-<img src="./assets/images/CNN/CNN-29.jpg" alt="cnn-29" style="width: 60%;" /></p>
-
-<p>Instead of directly trying to fit a desired underlying mapping, use network layers to fit a residual mapping.
-<img src="./assets/images/CNN/CNN-30.jpg" alt="cnn-30" style="width: 60%;" /></p>
-
-<p>So the full ResNet architecture is
-<img src="./assets/images/CNN/CNN-31.jpg" alt="cnn-31" style="width: 60%;" /></p>
-
-<ul>
-  <li>Stack residual blocks</li>
-  <li>Every residual block has <script type="math/tex">2</script> <script type="math/tex">3</script>x<script type="math/tex">3</script> conv. layers</li>
-  <li>Periodically, double # of filters anddownsample spatially using stride <script type="math/tex">2</script>(/<script type="math/tex">2</script> in each dimension)</li>
-</ul>
-
-<p>Here is the summary of ILSVRC and performance of different CNN architectures
-<img src="./assets/images/CNN/CNN-32.jpg" alt="cnn-32" style="width: 90%;" /></p>
-
-<p><br /><br />
-<strong>Ackownledge</strong>:Some AlexNet pictures and contents are adapted from <a href="https://www.learnopencv.com/understanding-alexnet/#disqus_thread" style="font-weight:normal;">SATYA MALLICK</a> and some GoogleNet pictures are from Stanford CS<script type="math/tex">231</script>n.</p>
-
-                </div>
+              <div class="kg-card-markdown">
+                <p>
+                  <strong
+                    >In this article, I will introduce some popular CNN
+                    architectures</strong
+                  >
+                </p>
+
+                <hr />
+
+                <h3>LeNet-5</h3>
+                <p><br /></p>
+
+                <p>
+                  Before CNN was invented, character recognition had been done
+                  mostly by using feature engineering by hand, followed by a
+                  machine learning model to learn to classify hand engineered
+                  features. In
+                  <script type="math/tex">
+                    1998
+                  </script>
+                  , Yann Lecun first proposed a neural network architecture for
+                  handwritten and machine-printed character recognition–LeNet.
+                  LeNet made hand engineering features redundant, because the
+                  network learns the best internal representation from raw
+                  images automatically.
+                </p>
+
+                <p>
+                  LeNet-
+                  <script type="math/tex">
+                    5
+                  </script>
+                  is a very simple network from the point of current standards.
+                  It only has
+                  <script type="math/tex">
+                    7
+                  </script>
+                  layers, amomng which are
+                  <script type="math/tex">
+                    3
+                  </script>
+                  convolutional layers(C
+                  <script type="math/tex">
+                    1
+                  </script>
+                  , C
+                  <script type="math/tex">
+                    3
+                  </script>
+                  , C
+                  <script type="math/tex">
+                    5
+                  </script>
+                  ),
+                  <script type="math/tex">
+                    2
+                  </script>
+                  pooling layers(S
+                  <script type="math/tex">
+                    2
+                  </script>
+                  , S
+                  <script type="math/tex">
+                    4
+                  </script>
+                  ),
+                  <script type="math/tex">
+                    1
+                  </script>
+                  fully connected layer(F6) and an output layer.
+                  <img
+                    src="./assets/images/CNN/CNN-1.jpg"
+                    alt="cnn-1"
+                    style="width: 80%;"
+                  />
+                  <span style="font-size: 17px !important; float: right;"
+                    ><em
+                      >LeCun et al.,
+                      <script type="math/tex">
+                        1998
+                      </script></em
+                    ></span
+                  >
+                </p>
+
+                <p>
+                  <br />
+                  <strong
+                    >C
+                    <script type="math/tex">
+                      1
+                    </script></strong
+                  >
+                </p>
+
+                <p>
+                  The input for LeNet-
+                  <script type="math/tex">
+                    5
+                  </script>
+                  is a
+                  <script type="math/tex">
+                    32
+                  </script>
+                  x
+                  <script type="math/tex">
+                    32
+                  </script>
+                  grayscale image which is passed through the first
+                  convolutional layer(C
+                  <script type="math/tex">
+                    1
+                  </script>
+                  ) with
+                  <script type="math/tex">
+                    6
+                  </script>
+                  filters(a.k.a convolutional kernels, or receptive fileds)
+                  having size
+                  <script type="math/tex">
+                    5
+                  </script>
+                  x
+                  <script type="math/tex">
+                    5
+                  </script>
+                  and a stride of
+                  <script type="math/tex">
+                    1
+                  </script>
+                  . The image is then changed from
+                  <script type="math/tex">
+                    32
+                  </script>
+                  x
+                  <script type="math/tex">
+                    32
+                  </script>
+                  x
+                  <script type="math/tex">
+                    1
+                  </script>
+                  to
+                  <script type="math/tex">
+                    28
+                  </script>
+                  x
+                  <script type="math/tex">
+                    28
+                  </script>
+                  x
+                  <script type="math/tex">
+                    6
+                  </script>
+                  <img
+                    src="./assets/images/CNN/CNN-2.jpg"
+                    alt="cnn-2"
+                    style="width: 60%;"
+                  />
+                </p>
+
+                <p>
+                  <br />
+                  <strong
+                    >S
+                    <script type="math/tex">
+                      2
+                    </script></strong
+                  >
+                </p>
+
+                <p>
+                  Then the LeNet-
+                  <script type="math/tex">
+                    5
+                  </script>
+                  applies average pooling layer with a filter size
+                  <script type="math/tex">
+                    2
+                  </script>
+                  x
+                  <script type="math/tex">
+                    2
+                  </script>
+                  and a stride of
+                  <script type="math/tex">
+                    2
+                  </script>
+                  . The resulting image dimensions will be reduced to
+                  <script type="math/tex">
+                    14
+                  </script>
+                  x
+                  <script type="math/tex">
+                    14
+                  </script>
+                  x
+                  <script type="math/tex">
+                    6
+                  </script>
+                  <img
+                    src="./assets/images/CNN/CNN-3.jpg"
+                    alt="cnn-3"
+                    style="width: 60%;"
+                  />
+                </p>
+
+                <p>
+                  <br />
+                  <strong
+                    >C
+                    <script type="math/tex">
+                      3
+                    </script></strong
+                  >
+                </p>
+
+                <p>
+                  Next, there is a second convolutional layer with
+                  <script type="math/tex">
+                    16
+                  </script>
+                  filters having size
+                  <script type="math/tex">
+                    5
+                  </script>
+                  x
+                  <script type="math/tex">
+                    5
+                  </script>
+                  and a stride of
+                  <script type="math/tex">
+                    1
+                  </script>
+                  . In this layer, only
+                  <script type="math/tex">
+                    10
+                  </script>
+                  out of
+                  <script type="math/tex">
+                    16
+                  </script>
+                  filters are connected to
+                  <script type="math/tex">
+                    6
+                  </script>
+                  previous feature maps, as shown below:
+                  <img
+                    src="./assets/images/CNN/CNN-4.jpg"
+                    alt="cnn-4"
+                    style="width: 80%;"
+                  />
+                  <span style="font-size: 17px !important; float: right;"
+                    ><em
+                      >LeCun et al.,
+                      <script type="math/tex">
+                        1998
+                      </script></em
+                    ></span
+                  >
+                </p>
+
+                <p>
+                  The reason for not fully connecting is to break the symmetry
+                  in the network and to keep the number of connections within
+                  reasonable bounds.
+                  <img
+                    src="./assets/images/CNN/CNN-5.jpg"
+                    alt="cnn-5"
+                    style="width: 60%;"
+                  />
+                </p>
+
+                <p>
+                  <br />
+                  <strong
+                    >S
+                    <script type="math/tex">
+                      4
+                    </script></strong
+                  >
+                </p>
+
+                <p>
+                  THe fourth layer is again an average pooling layer with filter
+                  size
+                  <script type="math/tex">
+                    2
+                  </script>
+                  x
+                  <script type="math/tex">
+                    2
+                  </script>
+                  and a stride of
+                  <script type="math/tex">
+                    2
+                  </script>
+                  . This layer is the same as S
+                  <script type="math/tex">
+                    2
+                  </script>
+                  and the output would be
+                  <script type="math/tex">
+                    5
+                  </script>
+                  x
+                  <script type="math/tex">
+                    5
+                  </script>
+                  x
+                  <script type="math/tex">
+                    16
+                  </script>
+                  <img
+                    src="./assets/images/CNN/CNN-6.jpg"
+                    alt="cnn-6"
+                    style="width: 60%;"
+                  />
+                </p>
+
+                <p>
+                  <br />
+                  <strong
+                    >C
+                    <script type="math/tex">
+                      5
+                    </script></strong
+                  >
+                </p>
+
+                <p>
+                  The fifth layer is a fully connected convolutional layer with
+                  <script type="math/tex">
+                    120
+                  </script>
+                  filters each of size
+                  <script type="math/tex">
+                    1
+                  </script>
+                  x
+                  <script type="math/tex">
+                    1
+                  </script>
+                  . Each of the
+                  <script type="math/tex">
+                    120
+                  </script>
+                  units in C
+                  <script type="math/tex">
+                    5
+                  </script>
+                  is connected to all the
+                  <script type="math/tex">
+                    400
+                  </script>
+                  node(
+                  <script type="math/tex">
+                    5
+                  </script>
+                  x
+                  <script type="math/tex">
+                    5
+                  </script>
+                  x
+                  <script type="math/tex">
+                    16
+                  </script>
+                  ) in the fourth layer S
+                  <script type="math/tex">
+                    4
+                  </script>
+                  .
+                  <img
+                    src="./assets/images/CNN/CNN-7.jpg"
+                    alt="cnn-7"
+                    style="width: 60%;"
+                  />
+                </p>
+
+                <p>
+                  <br />
+                  <strong
+                    >F
+                    <script type="math/tex">
+                      6
+                    </script></strong
+                  >
+                </p>
+
+                <p>
+                  The sixth layer is a fully connected layer with
+                  <script type="math/tex">
+                    84
+                  </script>
+                  units.
+                  <img
+                    src="./assets/images/CNN/CNN-8.jpg"
+                    alt="cnn-8"
+                    style="width: 60%;"
+                  />
+                </p>
+
+                <p>
+                  <br />
+                  <strong>Output layer</strong>
+                </p>
+
+                <p>
+                  The final layer is a fully connected softmax output layer
+                  <script type="math/tex">
+                    \hat y
+                  </script>
+                  with
+                  <script type="math/tex">
+                    10
+                  </script>
+                  possible values corresponding to the digits from
+                  <script type="math/tex">
+                    0
+                  </script>
+                  to
+                  <script type="math/tex">
+                    9
+                  </script>
+                  .
+                  <img
+                    src="./assets/images/CNN/CNN-9.jpg"
+                    alt="cnn-9"
+                    style="width: 60%;"
+                  />
+                </p>
+
+                <p><br /><br /></p>
+                <h3>AlexNet</h3>
+                <p><br /></p>
+
+                <p>
+                  Within more than a decade after LeCun proposed LeNet-
+                  <script type="math/tex">
+                    5
+                  </script>
+                  , due to the low expressivity of neural net as well as
+                  inefficient computating power, neural nets had been making
+                  slow progress. This trough continued for many years until
+                  landscape AlexNet won the ILSVRC-
+                  <script type="math/tex">
+                    2012
+                  </script>
+                  with a top-
+                  <script type="math/tex">
+                    5
+                  </script>
+                  error of
+                  <script type="math/tex">
+                    15.3
+                  </script>
+                  % and outperformed the runner up by
+                  <script type="math/tex">
+                    10.8
+                  </script>
+                  % error point.
+                </p>
+
+                <p>
+                  AlexNet inherented the idea of LeNet-
+                  <script type="math/tex">
+                    5
+                  </script>
+                  but it expanded the neural nets much deeper. Compared to only
+                  <script type="math/tex">
+                    60
+                  </script>
+                  k parameters in LeNet-
+                  <script type="math/tex"></script>
+                  , AlexNet has
+                  <script type="math/tex">
+                    60
+                  </script>
+                  M parameters,
+                  <script type="math/tex">
+                    650
+                  </script>
+                  k neurons, and
+                  <script type="math/tex">
+                    630
+                  </script>
+                  M connections. AlexNet has
+                  <script type="math/tex">
+                    8
+                  </script>
+                  layers(not including pooling layers), among which are
+                  <script type="math/tex">
+                    5
+                  </script>
+                  convolutional layers and
+                  <script type="math/tex">
+                    3
+                  </script>
+                  fully connected layers. Importantly, AlexNet uses max pooling
+                  instead of average pooling and are only applied after the
+                  <script type="math/tex">
+                    1^{st}, 2^{nd}, \text{and} \ 5^{th}
+                  </script>
+                  convolutional layers.
+                </p>
+
+                <p>
+                  <img
+                    src="./assets/images/CNN/CNN-10.jpg"
+                    alt="cnn-10"
+                    style="width: 80%;"
+                  />
+                  <span style="font-size: 17px !important; float: right;"
+                    ><em
+                      >Krizhevsky et al.,
+                      <script type="math/tex">
+                        2012
+                      </script></em
+                    ></span
+                  >
+                </p>
+
+                <p>
+                  Let’s look at this architecture closely.
+                  <img
+                    src="./assets/images/CNN/CNN-11.jpg"
+                    alt="cnn-11"
+                    style="width: 80%;"
+                  />
+                </p>
+
+                <p>
+                  Multiple filters extract interesting features in an image. In
+                  a single convolutional layer, there are usually many filters
+                  of the same size. For example, the first Conv Layer of AlexNet
+                  contains 96 filters of size
+                  <script type="math/tex">
+                    11
+                  </script>
+                  x
+                  <script type="math/tex">
+                    11
+                  </script>
+                  x
+                  <script type="math/tex">
+                    3
+                  </script>
+                  . Note the width and height of the filter are usually the same
+                  and the depth is the same as the number of channels(here we
+                  have
+                  <script type="math/tex">
+                    3
+                  </script>
+                  channels).
+                </p>
+
+                <p>
+                  The first two Convolutional layers are followed by the
+                  Overlapping Max Pooling layers. The third, fourth and fifth
+                  convolutional layers are connected directly. The fifth
+                  convolutional layer is followed by an Overlapping Max Pooling
+                  layer, the output of which goes into a series of two fully
+                  connected layers. The second fully connected layer feeds into
+                  a softmax classifier with
+                  <script type="math/tex">
+                    1000
+                  </script>
+                  class labels.
+                </p>
+
+                <p>
+                  ReLU nonlinearity is applied after all the convolution and
+                  fully connected layers. The ReLU nonlinearity of the first and
+                  second convolution layers are followed by a local
+                  normalization step before doing pooling. But researchers later
+                  didn’t find normalization very useful. So we will not go in
+                  detail over that.
+                </p>
+
+                <p><strong>Highlights</strong> of AlexNet:</p>
+
+                <ul>
+                  <li>
+                    <p>
+                      Use ReLU as activation function, which has better effect
+                      than Sigmoid by preventinbg vanishing gradient
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Use dropout in fully connected layer to prevent
+                      overfitting
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Use Max pooling instead of average pooling to prevent blur
+                    </p>
+                  </li>
+                  <li>
+                    <p>Use multiple GPU to parallelly compute</p>
+                  </li>
+                  <li>
+                    <p>Use data augmentation to prevent overfitting</p>
+                  </li>
+                </ul>
+
+                <p><br /></p>
+
+                <blockquote>
+                  <p>How to reduce overfitting</p>
+                </blockquote>
+
+                <p>AlexNet uses two methods to reduce overfitting.</p>
+
+                <ul>
+                  <li><strong>Data Augmentation</strong></li>
+                </ul>
+
+                <p>
+                  Showing a Neural Net different variation of the same image
+                  helps prevent overfitting. You are forcing it to not memorize!
+                  Often it is possible to generate additional data from existing
+                  data for free! Here are few tricks used by the AlexNet team.
+                </p>
+
+                <p><strong>Data Augmentation by Mirroring</strong></p>
+
+                <p>
+                  If we have an image of a cat in our training set, its mirror
+                  image is also a valid image of a cat
+                  <img
+                    src="./assets/images/CNN/CNN-12.jpg"
+                    alt="cnn-12"
+                    style="width: 80%;"
+                  />
+                </p>
+
+                <p><strong>Data Augmentation by Random Crops</strong></p>
+
+                <p>
+                  In addition, cropping the original image randomly will also
+                  lead to additional data that is just a shifted version of the
+                  original data.
+                  <img
+                    src="./assets/images/CNN/CNN-13.jpg"
+                    alt="cnn-13"
+                    style="width: 80%;"
+                  />
+                </p>
+
+                <p><br /></p>
+                <ul>
+                  <li><strong>Dropout</strong></li>
+                </ul>
+
+                <p>
+                  Dropout is a technique introduced by G.E. Hinton in
+                  <a src="https://arxiv.org/pdf/1207.0580.pdf">another paper</a>
+                  in
+                  <script type="math/tex">
+                    2012
+                  </script>
+                  . In dropout, a neuron is dropped from the network with a
+                  probability of
+                  <script type="math/tex">
+                    0.5
+                  </script>
+                  . When a neuron is dropped, it does not contribute to either
+                  forward or backward propagation. So every input goes through a
+                  different network architecture, as shown in the animation
+                  below. As a result, the learnt weight parameters are more
+                  robust and do not get overfitted easily. During testing, there
+                  is no dropout and the whole network is used, but output is
+                  scaled by a factor of
+                  <script type="math/tex">
+                    0.5
+                  </script>
+                  to account for the missed neurons while training. Dropout
+                  increases the number of iterations needed to converge by a
+                  factor of
+                  <script type="math/tex">
+                    2
+                  </script>
+                  , but without dropout, AlexNet would overfit substantially.
+                  <img
+                    src="./assets/images/CNN/CNN-14.gif"
+                    alt="cnn-14"
+                    style="width: 80%;"
+                  />
+                </p>
+
+                <p><br /><br /></p>
+                <h3>AGGNet</h3>
+                <p><br /></p>
+
+                <p>
+                  ZFNet won the ILSVRC-
+                  <script type="math/tex">
+                    2013
+                  </script>
+                  but since it was almost the same as AlexNet except for some
+                  size and stride change, I wont’t talk about it in thins
+                  article. And then in ILSVRC-
+                  <script type="math/tex">
+                    2014
+                  </script>
+                  , we have two very close winners: VGGNet achieved error of
+                  <script type="math/tex">
+                    7.3
+                  </script>
+                  % and GoogleNet achieved of
+                  <script type="math/tex">
+                    6.7
+                  </script>
+                  %. Let’s first look at VGGNet and then I will talk about
+                  GoogleNet in a bit.
+                </p>
+
+                <p>
+                  For the big pictute, VGGNet uses smaller filters and deeper
+                  networks. Usually, when people are talking VGGNet, they are
+                  refering to VGGNet-
+                  <script type="math/tex">
+                    16
+                  </script>
+                  or VGGNet-
+                  <script type="math/tex">
+                    19
+                  </script>
+                  , which differ in that VGGNet-
+                  <script type="math/tex">
+                    16
+                  </script>
+                  uses
+                  <script type="math/tex">
+                    16
+                  </script>
+                  layes while VGGNet-
+                  <script type="math/tex">
+                    19
+                  </script>
+                  usese
+                  <script type="math/tex">
+                    19
+                  </script>
+                  layers. Yet they both use
+                  <script type="math/tex">
+                    3
+                  </script>
+                  x
+                  <script type="math/tex">
+                    3
+                  </script>
+                  x
+                  <script type="math/tex">
+                    3
+                  </script>
+                  filters.
+                  <img
+                    src="./assets/images/CNN/CNN-19.jpg"
+                    alt="cnn-19"
+                    style="width: 80%;"
+                  />
+                </p>
+
+                <p>
+                  VGGNet uses
+                  <script type="math/tex">
+                    5
+                  </script>
+                  convolutional layers each followed by a max pooling layer,
+                  <script type="math/tex">
+                    3
+                  </script>
+                  fully connected layers, and a Softmax output layer. All
+                  activation functions are ReLU.
+                </p>
+
+                <p>
+                  <br />
+                  <strong>Highlights</strong> of VGGNet:
+                </p>
+
+                <ul>
+                  <li>
+                    <p>
+                      Use smaller
+                      <script type="math/tex">
+                        3
+                      </script>
+                      x
+                      <script type="math/tex">
+                        3
+                      </script>
+                      filters instead of large
+                      <script type="math/tex">
+                        11
+                      </script>
+                      x
+                      <script type="math/tex">
+                        11
+                      </script>
+                      or
+                      <script type="math/tex">
+                        7
+                      </script>
+                      x
+                      <script type="math/tex">
+                        7
+                      </script>
+                    </p>
+                  </li>
+                  <li>
+                    <p>Use Multi-Scale Training</p>
+                  </li>
+                  <li>
+                    <p>Dense Testing</p>
+                  </li>
+                  <li>
+                    <p>
+                      No local response normalization(LRN) since it does not
+                      improve much
+                    </p>
+                  </li>
+                </ul>
+
+                <p><br /></p>
+                <blockquote>
+                  <p>Why do we use smaller layers?</p>
+                </blockquote>
+
+                <ul>
+                  <li>No need to use large size filters</li>
+                </ul>
+
+                <p>
+                  <img
+                    src="./assets/images/CNN/CNN-15.jpg"
+                    alt="cnn-15"
+                    style="width: 80%;"
+                  />
+                  By using
+                  <script type="math/tex">
+                    2
+                  </script>
+                  layers of
+                  <script type="math/tex">
+                    3
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    3
+                  </script>
+                  filters, it actually have already covered
+                  <script type="math/tex">
+                    5
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    5
+                  </script>
+                  area as in the above figure. By using
+                  <script type="math/tex">
+                    3
+                  </script>
+                  layers of
+                  <script type="math/tex">
+                    3
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    3
+                  </script>
+                  filters, it actually have already covered
+                  <script type="math/tex">
+                    7
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    7
+                  </script>
+                  effective area. Actually, the size of the effective receptive
+                  field of a N convolutional layers stack with
+                  <script type="math/tex">
+                    3
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    3
+                  </script>
+                  filters is equal to (
+                  <script type="math/tex">
+                    2
+                  </script>
+                  N+
+                  <script type="math/tex">
+                    1
+                  </script>
+                  )x(
+                  <script type="math/tex">
+                    2
+                  </script>
+                  N+
+                  <script type="math/tex">
+                    1
+                  </script>
+                  ) Thus, large-size filters such as
+                  <script type="math/tex">
+                    11
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    11
+                  </script>
+                  in AlexNet and
+                  <script type="math/tex">
+                    7
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    7
+                  </script>
+                  in ZFNet indeed are not needed.
+                </p>
+
+                <ul>
+                  <li>
+                    Number of parameters are fewer. Suppose there is only
+                    <script type="math/tex">
+                      1
+                    </script>
+                    filter per layer,
+                    <script type="math/tex">
+                      1
+                    </script>
+                    layer at input, and exclude the bias:
+                  </li>
+                </ul>
+
+                <p>
+                  <script type="math/tex">
+                    1
+                  </script>
+                  layer of
+                  <script type="math/tex">
+                    11
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    11
+                  </script>
+                  filter, number of parameters =
+                  <script type="math/tex">
+                    11
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    11
+                  </script>
+                  =
+                  <script type="math/tex">
+                    121
+                  </script>
+                  <br />
+                  <script type="math/tex">
+                    5
+                  </script>
+                  layer of
+                  <script type="math/tex">
+                    3
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    3
+                  </script>
+                  filter, number of parameters =
+                  <script type="math/tex">
+                    3
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    3
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    5
+                  </script>
+                  =
+                  <script type="math/tex">
+                    45
+                  </script>
+                  <br />
+                  Number of parameters is reduced by
+                  <script type="math/tex">
+                    63%
+                  </script>
+                  <br /><br />
+                  <script type="math/tex">
+                    1
+                  </script>
+                  layer of
+                  <script type="math/tex">
+                    7
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    7
+                  </script>
+                  filter, number of parameters =
+                  <script type="math/tex">
+                    7
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    7
+                  </script>
+                  =
+                  <script type="math/tex">
+                    49
+                  </script>
+                  <br />
+                  <script type="math/tex">
+                    3
+                  </script>
+                  layers of
+                  <script type="math/tex">
+                    3
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    3
+                  </script>
+                  filters, number of parameters =
+                  <script type="math/tex">
+                    3
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    3
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    3
+                  </script>
+                  =
+                  <script type="math/tex">
+                    27
+                  </script>
+                  <br />
+                  Number of parameters is reduced by
+                  <script type="math/tex">
+                    45%
+                  </script>
+                  <img
+                    src="./assets/images/CNN/CNN-16.jpg"
+                    alt="cnn-16"
+                    style="width: 80%;"
+                  />
+                </p>
+
+                <ul>
+                  <li>More non-linearities</li>
+                </ul>
+
+                <p><br /></p>
+                <blockquote>
+                  <p>How does multi-scaling work?</p>
+                </blockquote>
+
+                <p>
+                  As object has different scale within the image, if we only
+                  train the network at the same scale, we might miss the
+                  detection or have the wrong classification for the objects
+                  with other scales. To tackle this, authors propose multi-scale
+                  training.
+                </p>
+
+                <p>
+                  For single-scale training, an image is scaled with
+                  smaller-size equal to
+                  <script type="math/tex">
+                    256
+                  </script>
+                  or
+                  <script type="math/tex">
+                    384
+                  </script>
+                  . Since the network accepts
+                  <script type="math/tex">
+                    224
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    224
+                  </script>
+                  input images only, the scaled image will be cropped to
+                  <script type="math/tex">
+                    224
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    224
+                  </script>
+                  . The concept is as follows:
+                  <img
+                    src="./assets/images/CNN/CNN-17.jpg"
+                    alt="cnn-17"
+                    style="width: 60%;"
+                  />
+                </p>
+
+                <p>
+                  For multi-scale training, an image is scaled with smaller-size
+                  equal to a range from
+                  <script type="math/tex">
+                    256
+                  </script>
+                  to
+                  <script type="math/tex">
+                    512
+                  </script>
+                  , i.e. S=[
+                  <script type="math/tex">
+                    256
+                  </script>
+                  ;
+                  <script type="math/tex">
+                    512
+                  </script>
+                  ], then cropped to
+                  <script type="math/tex">
+                    224
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    224
+                  </script>
+                  . Therefore, with a range of S, we are inputting different
+                  scaled objects into the network for training.
+                  <img
+                    src="./assets/images/CNN/CNN-18.jpg"
+                    alt="cnn-18"
+                    style="width: 70%;"
+                  />
+                </p>
+
+                <p>
+                  By using multi-scale training, we can imagine that it is more
+                  accurate for test image objects with different object sizes.
+                </p>
+
+                <ul>
+                  <li>
+                    VGG-13 reduced the error rate from
+                    <script type="math/tex">
+                      9.3
+                    </script>
+                    % to
+                    <script type="math/tex">
+                      8.8
+                    </script>
+                    %
+                  </li>
+                  <li>
+                    VGG-16 educed the error rate from
+                    <script type="math/tex">
+                      8.7
+                    </script>
+                    % to
+                    <script type="math/tex">
+                      8.1
+                    </script>
+                    %
+                  </li>
+                  <li>
+                    VGG-19 reduced the error rate from
+                    <script type="math/tex">
+                      8.7
+                    </script>
+                    % to
+                    <script type="math/tex">
+                      8.0
+                    </script>
+                    %
+                  </li>
+                </ul>
+
+                <p><br /></p>
+                <blockquote>
+                  <p>What is Dense Testing?</p>
+                </blockquote>
+
+                <p>
+                  During testing, VGGNet replace all
+                  <script type="math/tex">
+                    3
+                  </script>
+                  fully connected layers by
+                  <script type="math/tex">
+                    3
+                  </script>
+                  convolutional layers. This is to relax the limit of input
+                  image size so that neural nets can accept input of any height
+                  and width and this is vital in testing.
+                </p>
+
+                <p>
+                  If we keep fully connected layers, images should be subject to
+                  <script type="math/tex">
+                    224
+                  </script>
+                  x
+                  <script type="math/tex">
+                    224
+                  </script>
+                  x
+                  <script type="math/tex">
+                    3
+                  </script>
+                  to satisfy fixed size vector.
+                  <img
+                    src="./assets/images/CNN/CNN-20.jpg"
+                    alt="cnn-20"
+                    style="width: 70%;"
+                  />
+                </p>
+
+                <p>
+                  In VGGNet, the first FC is replaced by
+                  <script type="math/tex">
+                    7
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    7
+                  </script>
+                  conv. The second and third FC are replaced by
+                  <script type="math/tex">
+                    1
+                  </script>
+                  ×
+                  <script type="math/tex">
+                    1
+                  </script>
+                  conv.
+                  <img
+                    src="./assets/images/CNN/CNN-21.jpg"
+                    alt="cnn-21"
+                    style="width: 70%;"
+                  />
+                </p>
+
+                <p><br /><br /></p>
+                <h3>GoogleNet</h3>
+                <p><br /></p>
+
+                <p>
+                  GoogleNet won ILSVRC-2014 with a slightly better result
+                  compared to VGGNet. It is a little bot deeper with
+                  <script type="math/tex">
+                    22
+                  </script>
+                  layers and abandons the fully connected layers.
+                  <img
+                    src="./assets/images/CNN/CNN-27.jpg"
+                    alt="cnn-27"
+                    style="width: 70%;"
+                  />
+                </p>
+
+                <p>
+                  <br />
+                  <strong>Highlights</strong>
+                </p>
+
+                <ul>
+                  <li>
+                    <p>No FC layers</p>
+                  </li>
+                  <li>
+                    <p>Use efficient “Inception” module</p>
+                  </li>
+                </ul>
+
+                <blockquote>
+                  <p>What is Inception module?</p>
+                </blockquote>
+
+                <p>
+                  Inception module is a local network topology that combines
+                  different convolutional layers and a max polling layer in
+                  parallel and then concatenate their results depth-wise and
+                  then stack many of these modules to form the whole neural net.
+                </p>
+
+                <p>
+                  Here is a naive way of doing this
+                  <img
+                    src="./assets/images/CNN/CNN-22.jpg"
+                    alt="cnn-22"
+                    style="width: 60%;"
+                  />
+                </p>
+
+                <p>
+                  The problem of this naive inception module is huge
+                  computaional complexity. For example we have a input of
+                  <script type="math/tex">
+                    28
+                  </script>
+                  x
+                  <script type="math/tex">
+                    28
+                  </script>
+                  x
+                  <script type="math/tex">
+                    256
+                  </script>
+                  (this is not the initial input to the whole net; it is just
+                  the local input from previous module).We use zero padding when
+                  needed to maintain the same feature map size in order for
+                  depth-wise concatenation.
+                  <img
+                    src="./assets/images/CNN/CNN-23.jpg"
+                    alt="cnn-23"
+                    style="width: 60%;"
+                  />
+                </p>
+
+                <p>
+                  We see that it is very expensive to compute. So we apply a
+                  bottleneck layer that use
+                  <script type="math/tex">
+                    1
+                  </script>
+                  x
+                  <script type="math/tex">
+                    1
+                  </script>
+                  convolutions to reduce feature depth.
+                  <img
+                    src="./assets/images/CNN/CNN-24.jpg"
+                    alt="cnn-24"
+                    style="width: 60%;"
+                  />
+                </p>
+
+                <p>
+                  <script type="math/tex">
+                    \qquad \qquad \qquad \qquad \qquad \qquad \quad \downarrow
+                  </script>
+                  <img
+                    src="./assets/images/CNN/CNN-25.jpg"
+                    alt="cnn-25"
+                    style="width: 60%;"
+                  />
+                </p>
+
+                <p>
+                  <script type="math/tex">
+                    \qquad \qquad \qquad \qquad \qquad \qquad \quad \downarrow
+                  </script>
+                  <img
+                    src="./assets/images/CNN/CNN-26.jpg"
+                    alt="cnn-26"
+                    style="width: 60%;"
+                  />
+                </p>
+
+                <p>
+                  In this architecture, we have 12x less parameters than
+                  AlexNet.
+                </p>
+
+                <p><br /><br /></p>
+                <h3>ResNet</h3>
+                <p><br /></p>
+
+                <p>
+                  ResNet is yet another CNN architecture that drastically
+                  improve the error rate and won the ILSVRC-2015 with error of
+                  <script type="math/tex">
+                    3.57
+                  </script>
+                  %. It is a hugely deeper neural nets with 152 layers and uses
+                  residual connections.
+                </p>
+
+                <p>
+                  So now you might be wondering, since deeper layers has
+                  demonstrated explicit improvement(as shown in VGGNet and
+                  GoogleNet), can we just make the neural net as deep as
+                  possible and achieve the best possible outcome?
+                </p>
+
+                <p>The answer is <strong>NO</strong>.</p>
+
+                <p>
+                  The first obvious reason is overfitting right? With the
+                  increase of parameters, the model starts to overfit in testing
+                  data. However, what’s strange about about it is that the
+                  training error for deeper layer is still higher.
+                  <img
+                    src="./assets/images/CNN/CNN-28.jpg"
+                    alt="cnn-28"
+                    style="width: 60%;"
+                  />
+                </p>
+
+                <p>
+                  So the hypothesis is that it is not caused by overfitting.
+                  Rather, it is an optimization problem, i.e harder to optimize.
+                </p>
+
+                <p>
+                  An intuition is that the deeper model should be able to
+                  perform at least as well as the shallower model. Hence, a
+                  solution by construction is copying the learned layers from
+                  the shallower model and setting additional layers to identity
+                  mapping. ResNet uses the so-called
+                  <strong>residual block</strong>
+                  <img
+                    src="./assets/images/CNN/CNN-29.jpg"
+                    alt="cnn-29"
+                    style="width: 60%;"
+                  />
+                </p>
+
+                <p>
+                  Instead of directly trying to fit a desired underlying
+                  mapping, use network layers to fit a residual mapping.
+                  <img
+                    src="./assets/images/CNN/CNN-30.jpg"
+                    alt="cnn-30"
+                    style="width: 60%;"
+                  />
+                </p>
+
+                <p>
+                  So the full ResNet architecture is
+                  <img
+                    src="./assets/images/CNN/CNN-31.jpg"
+                    alt="cnn-31"
+                    style="width: 60%;"
+                  />
+                </p>
+
+                <ul>
+                  <li>Stack residual blocks</li>
+                  <li>
+                    Every residual block has
+                    <script type="math/tex">
+                      2
+                    </script>
+                    <script type="math/tex">
+                      3
+                    </script>
+                    x
+                    <script type="math/tex">
+                      3
+                    </script>
+                    conv. layers
+                  </li>
+                  <li>
+                    Periodically, double # of filters anddownsample spatially
+                    using stride
+                    <script type="math/tex">
+                      2
+                    </script>
+                    (/
+                    <script type="math/tex">
+                      2
+                    </script>
+                    in each dimension)
+                  </li>
+                </ul>
+
+                <p>
+                  Here is the summary of ILSVRC and performance of different CNN
+                  architectures
+                  <img
+                    src="./assets/images/CNN/CNN-32.jpg"
+                    alt="cnn-32"
+                    style="width: 90%;"
+                  />
+                </p>
+
+                <p>
+                  <br /><br />
+                  <strong>Ackownledge</strong>:Some AlexNet pictures and
+                  contents are adapted from
+                  <a
+                    href="https://www.learnopencv.com/understanding-alexnet/#disqus_thread"
+                    style="font-weight: normal;"
+                    >SATYA MALLICK</a
+                  >
+                  and some GoogleNet pictures are from Stanford CS
+                  <script type="math/tex">
+                    231
+                  </script>
+                  n.
+                </p>
+              </div>
             </section>
 
             <!-- Email subscribe form at the bottom of the page -->
@@ -499,178 +1799,178 @@ With the increase of parameters, the model starts to overfit in testing data. Ho
                 </section>
              -->
 
+            <div id="disqus_thread"></div>
+            <script>
+              /*
+               *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+               *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+               */
 
-            
-                <div id="disqus_thread"></div>
-                <script>
-                
-                /*
-                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-                */
-                
-                var disqus_config = function () {
-                    this.page.url = 'https://yifan97.github.io/blog/cnn-architectures';  // Replace PAGE_URL with your page's canonical URL variable
-                    this.page.identifier = '/cnn-architectures'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                
-                (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://yifan-blog.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
+              var disqus_config = function () {
+                this.page.url =
+                  "https://yifan97.github.io/blog/cnn-architectures"; // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = "/cnn-architectures"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+              };
+
+              (function () {
+                // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                  s = d.createElement("script");
+                s.src = "https://yifan-blog.disqus.com/embed.js";
+                s.setAttribute("data-timestamp", +new Date());
                 (d.head || d.body).appendChild(s);
-                })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>      
-            
-
-        </article>
-
-    </div>
-</main>
-
-<!-- Links to Previous/Next posts -->
-<aside class="read-next outer">
-    <div class="inner">
-        <div class="read-next-feed">
-            
-
-            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
-            
-                
-
-    <article class="post-card ">
-        
-            <a class="post-card-image-link" href="/blog/normalizing-flows">
-                <div class="post-card-image" style="background-image: url(/blog/assets/images/cover-img/c11.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/blog/normalizing-flows">
-                <header class="post-card-header">
-                    
-
-                    <h2 class="post-card-title">Normalizing Flows and Autoregressive Flows</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
+              })();
+            </script>
+            <noscript
+              >Please enable JavaScript to view the
+              <a href="https://disqus.com/?ref_noscript"
+                >comments powered by Disqus.</a
+              ></noscript
+            >
+          </article>
         </div>
-    </article>
+      </main>
 
-            
+      <!-- Links to Previous/Next posts -->
+      <aside class="read-next outer">
+        <div class="inner">
+          <div class="read-next-feed">
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+
+            <article class="post-card">
+              <a class="post-card-image-link" href="/blog/normalizing-flows">
+                <div
+                  class="post-card-image"
+                  style="
+                    background-image: url(/blog/assets/images/cover-img/c11.jpg);
+                  "
+                ></div>
+              </a>
+
+              <div class="post-card-content">
+                <a
+                  class="post-card-content-link"
+                  href="/blog/normalizing-flows"
+                >
+                  <header class="post-card-header">
+                    <h2 class="post-card-title">
+                      Normalizing Flows and Autoregressive Flows
+                    </h2>
+                  </header>
+                  <section class="post-card-excerpt">
+                    <p></p>
+                  </section>
+                </a>
+              </div>
+            </article>
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
-            
-                
 
-    <article class="post-card ">
-        
-            <a class="post-card-image-link" href="/blog/cpu-v.s-gpu">
-                <div class="post-card-image" style="background-image: url(/blog/assets/images/cover-img/c8.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/blog/cpu-v.s-gpu">
-                <header class="post-card-header">
-                    
+            <article class="post-card">
+              <a class="post-card-image-link" href="/blog/cpu-v.s-gpu">
+                <div
+                  class="post-card-image"
+                  style="
+                    background-image: url(/blog/assets/images/cover-img/c8.jpg);
+                  "
+                ></div>
+              </a>
 
-                    <h2 class="post-card-title">CPU v.s GPU in Machine Learning</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
+              <div class="post-card-content">
+                <a class="post-card-content-link" href="/blog/cpu-v.s-gpu">
+                  <header class="post-card-header">
+                    <h2 class="post-card-title">
+                      CPU v.s GPU in Machine Learning
+                    </h2>
+                  </header>
+                  <section class="post-card-excerpt">
+                    <p></p>
+                  </section>
+                </a>
+                <footer class="post-card-meta">
+                  <span class="reading-time">
+                    1 min read
+                  </span>
+                </footer>
+              </div>
+            </article>
+          </div>
         </div>
-    </article>
+      </aside>
 
-            
-
-        </div>
-    </div>
-</aside>
-
-<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
-<div class="floating-header">
-    <div class="floating-header-logo">
-        <a href="http://localhost:4000/blog/">
-            
+      <!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+      <div class="floating-header">
+        <div class="floating-header-logo">
+          <a href="http://localhost:4000/blog/">
             <span>Yifan Xu</span>
-        </a>
-    </div>
-    <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">CNN Architectures</div>
-    <div class="floating-header-share">
-        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
-</svg>
-</div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=CNN+Architectures&amp;url=cnn-architectures"
-            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
-
-        </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=cnn-architectures"
-            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
-
-
-        </a>
-    </div>
-    <progress class="progress" value="0">
-        <div class="progress-container">
-            <span class="progress-bar"></span>
+          </a>
         </div>
-    </progress>
-</div>
+        <span class="floating-header-divider">&mdash;</span>
+        <div class="floating-header-title">CNN Architectures</div>
+        <div class="floating-header-share">
+          <div class="floating-header-share-label">
+            Share this
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"
+              />
+            </svg>
+          </div>
+          <a
+            class="floating-header-share-tw"
+            href="https://twitter.com/share?text=CNN+Architectures&amp;url=cnn-architectures"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <path
+                d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"
+              />
+            </svg>
+          </a>
+          <a
+            class="floating-header-share-fb"
+            href="https://www.facebook.com/sharer/sharer.php?u=cnn-architectures"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <path
+                d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"
+              />
+            </svg>
+          </a>
+        </div>
+        <progress class="progress" value="0">
+          <div class="progress-container">
+            <span class="progress-bar"></span>
+          </div>
+        </progress>
+      </div>
 
+      <!-- Previous/next page links - displayed on every page -->
 
-        <!-- Previous/next page links - displayed on every page -->
-        
+      <!-- The footer at the very bottom of the screen -->
+      <footer class="site-footer outer">
+        <div class="site-footer-content inner">
+          <section class="copyright">
+            <a href="http://localhost:4000/blog/">Yifan Xu</a> &copy; 2019
+          </section>
 
-        <!-- The footer at the very bottom of the screen -->
-        <footer class="site-footer outer">
-            <div class="site-footer-content inner">
-                <section class="copyright"><a href="http://localhost:4000/blog/">Yifan Xu</a> &copy; 2019</section>
+          <nav class="site-footer-nav">
+            <a href="/blog/blog/">Latest Posts</a>
 
-                <nav class="site-footer-nav">
-                    <a href="/blog/blog/">Latest Posts</a>
-                    
-                    <a href="https://twitter.com/nbv__x" target="_blank" rel="noopener">Twitter</a>
-                    <a href="https://linkedin.com/in/yifan-xu-945552bb" target="_blank" rel="noopener">LinkedIn</a>
-                    <!-- <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> -->
-                </nav>
-            </div>
-        </footer>
-
+            <a href="https://twitter.com/nbv__x" target="_blank" rel="noopener"
+              >Twitter</a
+            >
+            <a
+              href="https://linkedin.com/in/yifan-xu-945552bb"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <!-- <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> -->
+          </nav>
+        </div>
+      </footer>
     </div>
 
     <!-- The big email subscribe modal content -->
@@ -705,13 +2005,18 @@ With the increase of parameters, the model starts to overfit in testing data. Ho
 
     <!-- jQuery + Fitvids, which makes all video embeds responsive -->
     <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src="/blog/assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
-
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/blog/assets/js/jquery.fitvids.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"
+    ></script>
 
     <!-- Paginator increased to "infinit" in _config.yml -->
     <!-- if paginator.posts  -->
@@ -721,23 +2026,21 @@ With the increase of parameters, the model starts to overfit in testing data. Ho
     <script src="/blog/assets/js/infinitescroll.js"></script> -->
     <!-- /endif -->
 
-    
-
-
     <!-- Add Google Analytics  -->
- 
 
     <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
-    
 
     <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
     <!-- ghost_foot -->
     <script>
-        MathJax = {
-          "HTML-CSS": {fonts: ["STIX"]},
-          SVG: {font: "STIX-Web"}
-        }
+      MathJax = {
+        "HTML-CSS": { fonts: ["STIX"] },
+        SVG: { font: "STIX-Web" },
+      };
     </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
-</body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"
+      async
+    ></script>
+  </body>
 </html>
