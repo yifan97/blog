@@ -8,7 +8,7 @@ date: 2020-10-23
 comments: true
 ---
 
-This is the first of a series of posts discussing somecommon object-oriented programming (OOP) design patterns. I am using [head first design patterns](https://fs.blog/2012/04/feynman-technique/) as my reference. I also recommend watching the video series from [Chris](https://www.youtube.com/channel/UCbF-4yQQAWw-UnuCd2Azfzg) to have a better understanding of this topic. Unlike previous posts, I will try to use [Feynman technique](https://fs.blog/2012/04/feynman-technique/). That being said, I will try to limit the word account to $$50$$ to explain what each design pattern is, and I want to know if you can understand, if not thoroughly, the gist of each of them. I will also include elobaration at the end of this post, for the sake of tutorial and self-refresh. Today is about strategy pattern.
+This is the first of a series of posts discussing some common object-oriented programming (OOP) design patterns. I am using [head first design patterns](https://fs.blog/2012/04/feynman-technique/) as my reference. I also recommend watching the video series from [Chris](https://www.youtube.com/channel/UCbF-4yQQAWw-UnuCd2Azfzg) to have a better understanding of this topic. Unlike previous posts, I will try to use [Feynman technique](https://fs.blog/2012/04/feynman-technique/). That being said, I will try to limit the word ccount to $$50$$ to explain what each design pattern is, and I want to know if you can understand, if not thoroughly, the gist of each of them. I will also include elobaration at the end of this post, for the sake of tutorial and self-refresh. Today is about strategy pattern.
 
 ---
 
