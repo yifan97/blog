@@ -16,7 +16,7 @@ This is the first of a series of posts discussing some common object-oriented pr
 
 ### Further discussion
 
-I am now using a Duck example. Suppose you want to write a OO program that realize two ducks, say DuckA and DuckB, which both have the ability to eat and quack. And you are like, it looks like a inheritance problem which I can create a Duck class that has these two methods, and then have two Ducks extend this class. Something like this:
+I am now using a Duck example. Suppose you want to write a OO program that realizes two ducks, say DuckA and DuckB, which both have the ability to eat and quack. And you are like, it looks like an inheritance problem which I can create a Duck class that has these two methods, and then have two Ducks extend this class. Something like this:
 
 ```java
 public class Duck{
@@ -42,7 +42,7 @@ public class DuckB extends Duck{
 }
 ```
 
-Everything looks good right? Now I want to introduce the thrid type of Duck called DuckC that couldn't quack, say, a toy duck. If we do the same thing for this duck by creating a class extending `Duck`, it's meaningless to have this `quack()` method for it, isn't it? Actually, it obeys the fact by giving it the ability to quack. How to solve it?Easy. Let's just override `quack` in DuckC and have it do nothing.
+Everything looks good right? Now I want to introduce the thrid type of Duck called DuckC that couldn't quack, say, a toy duck. If we do the same thing for this duck by creating a class extending `Duck`, it's meaningless to have this `quack()` method for it, isn't it? Actually, it violates the fact by giving it the ability to quack. How to solve it? Easy. Let's just override `quack` in DuckC and have it do nothing.
 
 ```java
 public class DuckC extends Duck{
