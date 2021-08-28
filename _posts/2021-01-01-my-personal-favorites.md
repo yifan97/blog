@@ -8,7 +8,7 @@ date: 2021-01-01
 comments: true
 ---
 
-Happy New Year ya'll! This is gonna be my first post in (men's) fashion, particularlly menswear. Some of the brands I just got to know for the past months and some of them I've been rocking for a longer time. They are mostly simple and minumum.
+Happy New Year ya'll! This is gonna be my first post in (men's) fashion, particularlly menswear. Some of the brands I just got to know for the past months and some of them I've been rocking for a longer time. They are mostly simple and minimum.
 
 ---
 
