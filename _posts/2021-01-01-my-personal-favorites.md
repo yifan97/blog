@@ -66,12 +66,6 @@ I knew this brand a couple years ago when I first saw the director wearing a sui
 
 Homme Plisse is a new concept of clothing for the contemporary menswear, made by the development of Issey Miyake's original pleating technology. It's possibly the most emerging and popular brands this year and it's arguably the most comfortable pants/cloths to wear.
 
-### **Issey Miyake Homme Plisse**
-
-<img src="assets/images/2020-fashion/item-9.jpg" alt="item-9" style="width: 70%;">
-
-Homme Plisse is a new concept of clothing for the contemporary menswear, made by the development of Issey Miyake's original pleating technology. It's possibly the most emerging and popular brands this year and it's arguably the most comfortable pants/cloths to wear.
-
 ### **Nanamica**
 
 <img src="assets/images/2020-fashion/item-10.jpg" alt="item-10" style="width: 70%;">
